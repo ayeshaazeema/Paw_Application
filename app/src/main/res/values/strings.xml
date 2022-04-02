@@ -1,0 +1,61 @@
+<resources>
+    <string name="app_name">Paw</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="skip">Skip</string>
+    <string name="next">Next</string>
+    <string name="dummy_title">Lorem Ipsum</string>
+    <string name="dummy_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="sign_up_subtitle">Please fill in below to
+        <font color="#FDC761"><b> sign up</b></font>
+    </string>
+    <string name="full_name_edit_text">FULL NAME</string>
+    <string name="email_edit_text">EMAIL</string>
+    <string name="password_edit_text">PASSWORD</string>
+    <string name="confirm_password_edit_text">CONFIRM PASSWORD</string>
+    <string name="sign_up_question">
+        Already have an account?
+        <font color="#FDC761"><b> Sign in</b></font>
+    </string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_in_subtitle">
+        Please
+        <font color="#FDC761"><b> sign in </b></font>
+        to continue
+    </string>
+    <string name="sign_in_question">
+        Don\'t have an account?
+        <font color="#FDC761"><b> Sign up</b></font>
+    </string>
+    <string name="sign_in_forgot_password">Forgot password?</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="forgot_password_subtitle">
+        Please enter your registered email below and we will send you a link to
+        <font color="#FDC761"><b> reset your password</b></font>
+    </string>
+    <string name="send_email">Send Email</string>
+    <string name="forgot_password_question">
+        Back to
+        <font color="#FDC761"><b> sign in</b></font>
+    </string>
+    <string name="dashboard">Dashboard</string>
+    <string name="article">Article</string>
+    <string name="vet">Vet</string>
+    <string name="food">Food</string>
+    <string name="profile">Profile</string>
+    <string name="full_name">Full Name</string>
+    <string name="dummy_email">user@email.com</string>
+    <string name="dummy_name">User</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="search_vet">Search vet</string>
+    <string name="search_vet">Search vet</string>
+    <string name="search_food">Search food</string>
+    <string name="search_article">Search article</string>
+    <string name="price">Price</string>
+    <string name="hospital_name">Hospital Name</string>
+    <string name="location">Location</string>
+    <string name="name">Name</string>
+    <string name="brand">Brand</string>
+    <string name="category">Category</string>
+</resources>

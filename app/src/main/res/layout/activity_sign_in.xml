@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/green"
+    android:padding="@dimen/_20sdp"
+    tools:context=".activity.authentication.SignInActivity">
+
+    <TextView
+        android:id="@+id/tvTitleSignIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_bold"
+        android:includeFontPadding="false"
+        android:text="@string/sign_in"
+        android:textColor="@color/yellow"
+        android:textSize="@dimen/_36ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSubtitleSignIn"
+        style="@style/TextStyleMedium14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:includeFontPadding="false"
+        android:text="@string/sign_in_subtitle"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@+id/tvTitleSignIn"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitleSignIn" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/etlEmailSignIn"
+        style="@style/TextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_40sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSubtitleSignIn"
+        app:startIconDrawable="@drawable/ic_email"
+        app:startIconTint="@color/yellow">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etEmailSignIn"
+            style="@style/TextInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/email_edit_text" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/etlPasswordSignIn"
+        style="@style/TextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etlEmailSignIn"
+        app:startIconDrawable="@drawable/ic_password"
+        app:startIconTint="@color/yellow">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etPasswordSignUp"
+            style="@style/TextInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/password_edit_text"
+            android:inputType="textPassword" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSignIn"
+        style="@style/ButtonInactive"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:text="@string/sign_in"
+        app:layout_constraintBottom_toTopOf="@id/tvQuestionSignIn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvQuestionSignIn"
+        style="@style/TextStyleMedium14"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:includeFontPadding="false"
+        android:text="@string/sign_up_question"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvForgotPasswordSignIn"
+        style="@style/TextStyleMedium14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:includeFontPadding="false"
+        android:text="@string/sign_in_forgot_password"
+        android:textColor="@color/yellow"
+        app:layout_constraintEnd_toEndOf="@+id/etlPasswordSignIn"
+        app:layout_constraintTop_toBottomOf="@+id/etlPasswordSignIn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

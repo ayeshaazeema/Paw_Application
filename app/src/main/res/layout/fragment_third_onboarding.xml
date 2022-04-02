@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.onboarding.ThirdOnboardingFragment">
+
+    <ImageView
+        android:id="@+id/ivThirdOnboarding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/third_onboarding"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTitleThirdOnboarding"
+        style="@style/TextStyle24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:includeFontPadding="false"
+        android:text="@string/dummy_title"
+        android:textColor="@color/black32"
+        app:layout_constraintEnd_toEndOf="@+id/ivThirdOnboarding"
+        app:layout_constraintStart_toStartOf="@+id/ivThirdOnboarding"
+        app:layout_constraintTop_toBottomOf="@+id/ivThirdOnboarding" />
+
+    <TextView
+        android:id="@+id/tvDescriptionThirdOnboarding"
+        style="@style/TextStyleMedium14"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:includeFontPadding="false"
+        android:text="@string/dummy_text"
+        android:textAlignment="center"
+        android:textColor="@color/black50"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitleThirdOnboarding" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

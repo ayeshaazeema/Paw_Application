@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "262377958513",
+    "project_id": "paw-application",
+    "storage_bucket": "paw-application.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:262377958513:android:1b1b7c2e2073bacc80ffd0",
+        "android_client_info": {
+          "package_name": "com.bisha.paw"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "262377958513-hvp6sote91vsti2a7qh75qslknpuq9uf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bisha.paw",
+            "certificate_hash": "02f555f0c88fd9e32d03860f51a496ed1fe47459"
+          }
+        },
+        {
+          "client_id": "262377958513-i7enuasc2ee1lpchlf2c1pr7s9h6sumu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCryIJOOZPbeE_2KzQ4ejoVKtrCSmVeVlQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "262377958513-i7enuasc2ee1lpchlf2c1pr7s9h6sumu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
