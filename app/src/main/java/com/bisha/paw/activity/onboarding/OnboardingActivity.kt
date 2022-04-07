@@ -66,7 +66,7 @@ class OnboardingActivity : AppCompatActivity() {
             if (position < fragmentList.lastIndex) {
                 onboardingViewPager.currentItem = position + 1
             } else {
-                startActivity(Intent(this, SignInActivity::class.java))
+                startActivity(Intent(this, MainActivity::class.java))
                 finish()
             }
         }

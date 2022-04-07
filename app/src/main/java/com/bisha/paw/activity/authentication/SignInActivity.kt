@@ -12,7 +12,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.bisha.paw.activity.MainActivity
 import com.bisha.paw.activity.authentication.SignInActivity.Companion.getLaunchService
 
-class SignInActivity : AppCompatActivity(), View.OnClickListener {
+abstract class SignInActivity : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var mGoogleSignInClient: GoogleSignInClient
     private lateinit var gso: GoogleSignInOptions

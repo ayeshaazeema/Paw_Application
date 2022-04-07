@@ -49,7 +49,6 @@
     <string name="dummy_name">User</string>
     <string name="sign_out">Sign Out</string>
     <string name="search_vet">Search vet</string>
-    <string name="search_vet">Search vet</string>
     <string name="search_food">Search food</string>
     <string name="search_article">Search article</string>
     <string name="price">Price</string>
@@ -58,4 +57,14 @@
     <string name="name">Name</string>
     <string name="brand">Brand</string>
     <string name="category">Category</string>
+    <string name="all">All</string>
+    <string name="cat">Cat</string>
+    <string name="dog">Dog</string>
+    <string name="bird">Bird</string>
+    <string name="fish">Fish</string>
+    <string name="rabbit">Rabbit</string>
+    <string name="birb">Birb</string>
+    <string name="description">Description</string>
+    <string name="descdummy">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </string>
+    <string name="how_to_take_care">How To Take Care</string>
 </resources>
