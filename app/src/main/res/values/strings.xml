@@ -67,4 +67,10 @@
     <string name="description">Description</string>
     <string name="descdummy">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </string>
     <string name="how_to_take_care">How To Take Care</string>
+    <string name="onbs1">Read articles about your pet and learn how to properly take care of it!</string>
+    <string name="onbt1">Monitor</string>
+    <string name="onbt2">Care</string>
+    <string name="onbs2">Take care of your pets by easily look up for veterinarian nearby!</string>
+    <string name="onbt3">Easy</string>
+    <string name="onbs3">Easily sit back and learn about your pet at home and don’t forget to buy them snacks!</string>
 </resources>

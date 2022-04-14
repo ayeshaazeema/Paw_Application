@@ -22,10 +22,10 @@
             android:name="com.bisha.paw.activity.onboarding.OnboardingActivity"
             android:exported="false" />
         <activity
-            android:name="com.bisha.paw.activity.splash.SplashActivity"
+            android:name="com.bisha.paw.activity.MainActivity"
             android:exported="false" />
         <activity
-            android:name="com.bisha.paw.activity.MainActivity"
+            android:name="com.bisha.paw.activity.splash.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

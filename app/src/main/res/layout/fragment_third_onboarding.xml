@@ -8,8 +8,8 @@
 
     <ImageView
         android:id="@+id/ivThirdOnboarding"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="285dp"
+        android:layout_height="353dp"
         android:contentDescription="@string/app_name"
         android:src="@drawable/third_onboarding"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_10sdp"
         android:includeFontPadding="false"
-        android:text="@string/dummy_title"
+        android:text="@string/onbt3"
         android:textColor="@color/black32"
         app:layout_constraintEnd_toEndOf="@+id/ivThirdOnboarding"
         app:layout_constraintStart_toStartOf="@+id/ivThirdOnboarding"
@@ -36,7 +36,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_10sdp"
         android:includeFontPadding="false"
-        android:text="@string/dummy_text"
+        android:text="@string/onbs3"
         android:textAlignment="center"
         android:textColor="@color/black50"
         app:layout_constraintEnd_toEndOf="parent"
