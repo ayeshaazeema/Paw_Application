@@ -12,7 +12,7 @@ import com.bisha.paw.activity.MainActivity
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_sign_in.*
 
-class SignInActivity : AppCompatActivity(), View.OnClickListener {
+abstract class SignInActivity : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var firebaseAuth: FirebaseAuth
 
