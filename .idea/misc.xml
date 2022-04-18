@@ -10,8 +10,10 @@
         <entry key="app/src/main/res/drawable/button_background.xml" value="0.20925925925925926" />
         <entry key="app/src/main/res/drawable/chipbg.xml" value="0.20092592592592592" />
         <entry key="app/src/main/res/drawable/cursor_color.xml" value="0.2962962962962963" />
+        <entry key="app/src/main/res/drawable/dm_background.xml" value="0.20185185185185187" />
         <entry key="app/src/main/res/drawable/ic_bookmark.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_bookmark_outline.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_dark_mode.xml" value="0.20185185185185187" />
         <entry key="app/src/main/res/drawable/ic_sign_out.xml" value="0.18385416666666668" />
         <entry key="app/src/main/res/drawable/ic_vet.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/image_button_background.xml" value="0.2962962962962963" />
@@ -19,6 +21,7 @@
         <entry key="app/src/main/res/drawable/indicator_unselected.xml" value="0.16203703703703703" />
         <entry key="app/src/main/res/drawable/radius.xml" value="0.28888888888888886" />
         <entry key="app/src/main/res/drawable/search_background.xml" value="0.2962962962962963" />
+        <entry key="app/src/main/res/drawable/sign_out_background.xml" value="0.27314814814814814" />
         <entry key="app/src/main/res/drawable/text_field_background.xml" value="0.20925925925925926" />
         <entry key="app/src/main/res/layout/activity_forgot_password.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1648148148148148" />
@@ -33,7 +36,7 @@
         <entry key="app/src/main/res/layout/fragment_dashboard.xml" value="0.1648148148148148" />
         <entry key="app/src/main/res/layout/fragment_first_onboarding.xml" value="0.15925925925925927" />
         <entry key="app/src/main/res/layout/fragment_food.xml" value="0.125" />
-        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.23724015483335684" />
+        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.33632073300580767" />
         <entry key="app/src/main/res/layout/fragment_second_onboarding.xml" value="0.15925925925925927" />
         <entry key="app/src/main/res/layout/fragment_third_onboarding.xml" value="0.15925925925925927" />
         <entry key="app/src/main/res/layout/fragment_vet.xml" value="0.1648148148148148" />
