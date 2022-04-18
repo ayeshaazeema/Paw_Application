@@ -73,7 +73,4 @@ dependencies {
     implementation "androidx.compose.runtime:runtime-livedata:1.2.0-alpha06"
     implementation "androidx.compose.runtime:runtime-rxjava2:1.2.0-alpha06"
     implementation("androidx.compose.material:material:1.2.0-alpha06")
-
-    //Gif
-    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.24'
 }

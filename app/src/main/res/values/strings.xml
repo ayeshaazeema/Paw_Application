@@ -57,6 +57,17 @@
     <string name="name">Name</string>
     <string name="brand">Brand</string>
     <string name="category">Category</string>
+    <string name="error_sign_in">Name or password can\'t be empty!</string>
+    <string name="success_sign_in">Sign in success!</string>
+    <string name="failed_sign_in">Sign in failed!</string>
+    <string name="error_email">Email can\'t be empty!</string>
+    <string name="reset_forgot_password">Please check your email to reset password</string>
+    <string name="failed_forgot_password">Failed to reset password</string>
+    <string name="error_sign_up">Sign up failed</string>
+    <string name="user">User</string>
+    <string name="error_name">Name can\'t be empty!</string>
+    <string name="error_password_sign_up">Password can\'t be empty!</string>
+    <string name="error_confirm_password_sign_up">Password doesn\'t match!</string>
     <string name="all">All</string>
     <string name="cat">Cat</string>
     <string name="dog">Dog</string>
