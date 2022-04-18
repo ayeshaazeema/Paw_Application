@@ -1,12 +1,65 @@
 package com.bisha.paw.activity.authentication
 
+import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.TextUtils
+import android.view.View
+import android.widget.Toast
 import com.bisha.paw.R
+import com.google.firebase.auth.FirebaseAuth
+import kotlinx.android.synthetic.main.activity_forgot_password.*
 
-class ForgotPasswordActivity : AppCompatActivity() {
+class ForgotPasswordActivity : AppCompatActivity(), View.OnClickListener {
+
+    private lateinit var mAuth: FirebaseAuth
+
+    companion object {
+        fun getLaunchService(from: Context) =
+            Intent(from, ForgotPasswordActivity::class.java).apply {
+                addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+            }
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_forgot_password)
+
+        tvQuestionForgotPassword.setOnClickListener(this)
+        btnForgotPassword.setOnClickListener(this)
+
+        mAuth = FirebaseAuth.getInstance()
+    }
+
+    override fun onClick(v: View) {
+        when (v.id) {
+            R.id.tvQuestionForgotPassword -> startActivity(SignInActivity.getLaunchService(this))
+            R.id.btnForgotPassword -> forgotPassword()
+        }
+    }
+
+    private fun forgotPassword() {
+        val email = etEmailForgotPassword.text.toString()
+        if (TextUtils.isEmpty(email)) {
+            Toast.makeText(this, getString(R.string.error_email), Toast.LENGTH_SHORT).show()
+        } else {
+            mAuth.sendPasswordResetEmail(email).addOnCompleteListener {
+                if (it.isSuccessful) {
+                    Toast.makeText(
+                        this,
+                        getString(R.string.reset_forgot_password),
+                        Toast.LENGTH_SHORT
+                    ).show()
+                    startActivity(Intent(SignInActivity.getLaunchService(this)))
+                } else {
+                    Toast.makeText(
+                        this,
+                        getString(R.string.failed_forgot_password),
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
+            }
+        }
     }
 }

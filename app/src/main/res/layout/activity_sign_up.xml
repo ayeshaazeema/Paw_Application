@@ -22,7 +22,7 @@
 
     <TextView
         android:id="@+id/tvSubtitleSignUp"
-        style="@style/TextStyleMedium14"
+        style="@style/TextStyleMedium12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:includeFontPadding="false"
@@ -109,7 +109,7 @@
         app:startIconTint="@color/yellow">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etConfirmPasswordSignIn"
+            android:id="@+id/etConfirmPasswordSignUp"
             style="@style/TextInputEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -131,11 +131,11 @@
 
     <TextView
         android:id="@+id/tvQuestionSignUp"
-        style="@style/TextStyleMedium14"
+        style="@style/TextStyleMedium12"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:includeFontPadding="false"
-        android:text="@string/sign_in_question"
+        android:text="@string/sign_up_question"
         android:textAlignment="center"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
