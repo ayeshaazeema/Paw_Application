@@ -7,6 +7,7 @@ import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
 import com.bisha.paw.R
+import com.bisha.paw.activity.MainActivity
 import com.bisha.paw.activity.authentication.SignInActivity
 import com.bisha.paw.fragment.onboarding.FirstOnboardingFragment
 import com.bisha.paw.fragment.onboarding.SecondOnboardingFragment
