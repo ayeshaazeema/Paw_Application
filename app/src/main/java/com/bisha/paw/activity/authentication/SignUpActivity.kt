@@ -71,7 +71,7 @@ class SignUpActivity : AppCompatActivity(), View.OnClickListener {
                             .child(firebaseUserId)
 
                     val userHashMap = HashMap<String, Any>()
-                    userHashMap["uidi"] = firebaseUserId
+                    userHashMap["uid"] = firebaseUserId
                     userHashMap["name"] = name
                     userHashMap["email"] = email
 
@@ -85,7 +85,7 @@ class SignUpActivity : AppCompatActivity(), View.OnClickListener {
                     val progress = ProgressDialog(this, R.style.Theme_Paw)
                     progress.hide()
                     Toast.makeText(
-                        this, getString(R.string.error_sign_up) + it.exception!!
+                        this, it.exception!!
                             .message.toString(), Toast.LENGTH_SHORT
                     ).show()
                     finish()

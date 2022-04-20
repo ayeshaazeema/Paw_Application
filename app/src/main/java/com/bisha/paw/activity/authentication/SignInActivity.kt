@@ -12,7 +12,7 @@ import com.bisha.paw.activity.MainActivity
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_sign_in.*
 
-abstract class SignInActivity : AppCompatActivity(), View.OnClickListener {
+class SignInActivity : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var firebaseAuth: FirebaseAuth
 
@@ -42,14 +42,6 @@ abstract class SignInActivity : AppCompatActivity(), View.OnClickListener {
             )
             R.id.tvQuestionSignIn -> startActivity(SignUpActivity.getLaunchService(this))
             R.id.btnSignIn -> signInEmailPassword()
-        }
-    }
-
-    override fun onStart() {
-        super.onStart()
-        val user = FirebaseAuth.getInstance().currentUser
-        if (user != null) {
-            startActivity(MainActivity.getLaunchService(this))
         }
     }
 

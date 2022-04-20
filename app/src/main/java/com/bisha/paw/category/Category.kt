@@ -1,8 +1,6 @@
 package com.bisha.paw.category
 
-import androidx.lifecycle.Transformations.map
 import kotlin.reflect.KProperty1
-
 
 enum class Category(val value: String){
     ALL("All"),

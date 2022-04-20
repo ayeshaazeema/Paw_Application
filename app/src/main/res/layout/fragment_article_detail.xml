@@ -6,128 +6,122 @@
     android:layout_height="match_parent"
     tools:context=".fragment.article.ArticleFragment">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clArticleDetail"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_250sdp"
+        android:background="@drawable/background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
- <androidx.constraintlayout.widget.ConstraintLayout
-    android:id="@+id/constraintLayout2"
-    android:layout_width="match_parent"
-    android:layout_height="@dimen/_300dp"
-    android:background="@drawable/background"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvArticleDetail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/_20sdp"
+            android:elevation="@dimen/_20sdp"
+            app:cardCornerRadius="@dimen/_20sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-     <ImageView
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:src="@drawable/detailbird"
-         app:layout_constraintBottom_toBottomOf="parent"
-         app:layout_constraintEnd_toEndOf="parent"
-         app:layout_constraintStart_toStartOf="parent"
-         app:layout_constraintTop_toTopOf="parent" />
- </androidx.constraintlayout.widget.ConstraintLayout>
+            <ImageView
+                android:id="@+id/ivArticleDetail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/app_name"
+                android:elevation="@dimen/_10sdp"
+                android:scaleType="centerCrop"
+                tools:src="@tools:sample/avatars" />
 
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ToggleButton
-        android:id="@+id/toggleButton"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:id="@+id/tbArticleDetail"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
         android:layout_gravity="end"
-        android:layout_margin="30dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="30dp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
         android:background="@drawable/bookmark_selector"
         android:checked="false"
         android:text=""
         android:textOff=""
         android:textOn=""
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
+        app:layout_constraintTop_toBottomOf="@+id/clArticleDetail" />
 
     <TextView
         android:id="@+id/detailArticleTitle"
+        style="@style/TextStyle24"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="30dp"
-        android:fontFamily="@font/poppins_bold"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_20sdp"
         android:gravity="start"
-        android:lineSpacingExtra="-12sp"
         android:text="@string/birb"
-        android:textColor="@color/black"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toStartOf="@+id/toggleButton"
-        app:layout_constraintHorizontal_bias="0.053"
+        android:textColor="@color/black32"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
+        app:layout_constraintTop_toBottomOf="@+id/clArticleDetail" />
 
     <TextView
         android:id="@+id/detailArticleSub"
+        style="@style/TextStyleMedium14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentBottom="true"
         android:fontFamily="@font/poppins_medium"
-        android:gravity="top"
-        android:lineSpacingExtra="3sp"
         android:text="@string/bird"
-        android:textColor="@color/black"
-        android:textSize="14sp"
-        android:translationY="-1.5sp"
+        android:textColor="@color/black50"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.117"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/detailArticleTitle"
         app:layout_constraintTop_toBottomOf="@+id/detailArticleTitle" />
 
     <TextView
         android:id="@+id/DescTitle"
+        style="@style/TextStyleSemiBold18"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="15dp"
-        android:fontFamily="@font/poppins_semibold"
-        android:gravity="top"
-        android:lineSpacingExtra="3sp"
+        android:layout_marginTop="@dimen/_10sdp"
         android:text="@string/description"
-        android:textColor="@color/black"
-
-        android:textSize="18sp"
+        android:textColor="@color/black32"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.146"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/detailArticleSub"
         app:layout_constraintTop_toBottomOf="@+id/detailArticleSub" />
 
     <TextView
         android:id="@+id/DescContent"
-        android:layout_width="315dp"
-        android:layout_height="120dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentBottom="true"
-        android:fontFamily="@font/poppins_medium"
-        android:gravity="top"
-        android:lineSpacingExtra="3sp"
+        style="@style/TextStyleMedium12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_20sdp"
         android:text="@string/descdummy"
-        android:textColor="@color/black"
-        android:textSize="14sp"
-        android:translationY="-1.5sp"
+        android:textColor="@color/black32"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/DescTitle" />
 
     <TextView
         android:id="@+id/HowToTitle"
+        style="@style/TextStyleSemiBold14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentBottom="true"
-        android:fontFamily="@font/poppins_semibold"
-        android:gravity="top"
+        android:layout_marginTop="@dimen/_10sdp"
         android:lineSpacingExtra="3sp"
         android:text="@string/how_to_take_care"
-        android:textColor="@color/black"
+        android:textColor="@color/black32"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.169"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/DescContent"
         app:layout_constraintTop_toBottomOf="@+id/DescContent" />
 
 

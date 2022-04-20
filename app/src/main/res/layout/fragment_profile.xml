@@ -7,7 +7,7 @@
     tools:context=".fragment.profile.ProfileFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
+        android:id="@+id/clProfile"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/background"
@@ -62,18 +62,67 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <TextView
+        android:id="@+id/tvPreference"
+        style="@style/TextStyleSemiBold18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:text="@string/preference"
+        android:textColor="@color/black32"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clProfile" />
 
+    <ImageButton
+        android:id="@+id/ibDarkMode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/dark_mode_background"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_dark_mode"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPreference" />
+
+    <Switch
+        android:id="@+id/tbDarkMode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_20sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/ibDarkMode"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvDarkMode"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <TextView
+        android:id="@+id/tvDarkMode"
+        style="@style/TextStyleMedium14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:text="@string/dark_mode"
+        android:textColor="@color/black32"
+        app:layout_constraintBottom_toBottomOf="@+id/ibDarkMode"
+        app:layout_constraintEnd_toStartOf="@+id/tbDarkMode"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/ibDarkMode"
+        app:layout_constraintTop_toTopOf="@id/ibDarkMode" />
 
     <ImageButton
         android:id="@+id/ibSignOut"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_10sdp"
         android:background="@drawable/sign_out_background"
         android:contentDescription="@string/app_name"
         android:src="@drawable/ic_sign_out"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="598dp" />
+        app:layout_constraintTop_toBottomOf="@+id/ibDarkMode" />
 
     <TextView
         android:id="@+id/tvSignOut"
@@ -86,55 +135,5 @@
         app:layout_constraintBottom_toBottomOf="@+id/ibSignOut"
         app:layout_constraintStart_toEndOf="@+id/ibSignOut"
         app:layout_constraintTop_toTopOf="@+id/ibSignOut" />
-
-    <TextView
-        android:id="@+id/tvPreference"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:fontFamily="@font/poppins_semibold"
-        android:text="Preference"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.045"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
-
-    <ImageView
-        android:id="@+id/ivDarkmode"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/dm_background"
-        android:src="@drawable/ic_dark_mode"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvPreference" />
-
-    <Switch
-        android:id="@+id/btnSwitch"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="76dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintBottom_toBottomOf="@+id/ivDarkmode"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
-        tools:ignore="UseSwitchCompatOrMaterialXml" />
-
-    <TextView
-        android:id="@+id/tvDarktitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:text="Dark Mode"
-        app:layout_constraintBottom_toBottomOf="@+id/ivDarkmode"
-        app:layout_constraintEnd_toStartOf="@+id/btnSwitch"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/ivDarkmode"
-        app:layout_constraintTop_toBottomOf="@+id/tvPreference"
-        app:layout_constraintVertical_bias="0.829" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
