@@ -84,4 +84,10 @@
     <string name="onbs2">Take care of your pets by easily look up for veterinarian nearby!</string>
     <string name="onbt3">Easy</string>
     <string name="onbs3">Easily sit back and learn about your pet at home and don’t forget to buy them snacks!</string>
+    <string name="vetname">drh. Anggi Anggini</string>
+    <string name="vethos">North Animal Clinic</string>
+    <string name="information">Information</string>
+    <string name="practical_schedule">Practical Schedule</string>
+    <string name="detailoc">North Jakarta, Indonesia</string>
+    <string name="harga">Rp. 200.000,00</string>
 </resources>

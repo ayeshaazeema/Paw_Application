@@ -9,8 +9,15 @@
         <entry key="app/src/main/res/drawable/button_background.xml" value="0.20925925925925926" />
         <entry key="app/src/main/res/drawable/chipbg.xml" value="0.20092592592592592" />
         <entry key="app/src/main/res/drawable/cursor_color.xml" value="0.2962962962962963" />
+        <entry key="app/src/main/res/drawable/detail_bg.xml" value="0.3260416666666667" />
+        <entry key="app/src/main/res/drawable/dm_background.xml" value="0.20185185185185187" />
+        <entry key="app/src/main/res/drawable/ic_article.xml" value="0.20185185185185187" />
         <entry key="app/src/main/res/drawable/ic_bookmark.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_bookmark_outline.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_dashboard.xml" value="0.20185185185185187" />
+        <entry key="app/src/main/res/drawable/ic_edit.xml" value="0.20185185185185187" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.20185185185185187" />
+        <entry key="app/src/main/res/drawable/ic_sign_out.xml" value="0.20185185185185187" />
         <entry key="app/src/main/res/drawable/ic_vet.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/image_button_background.xml" value="0.2962962962962963" />
         <entry key="app/src/main/res/drawable/indicator_selected.xml" value="0.16203703703703703" />
@@ -25,10 +32,12 @@
         <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.1685185185185185" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.12129629629629629" />
         <entry key="app/src/main/res/layout/article_item.xml" value="0.17223910840932116" />
+        <entry key="app/src/main/res/layout/dropdown_item.xml" value="0.29583333333333334" />
         <entry key="app/src/main/res/layout/food_item.xml" value="0.17223910840932116" />
         <entry key="app/src/main/res/layout/fragment_article.xml" value="0.23178544088023892" />
         <entry key="app/src/main/res/layout/fragment_article_detail.xml" value="0.21445245233972005" />
         <entry key="app/src/main/res/layout/fragment_dashboard.xml" value="0.1648148148148148" />
+        <entry key="app/src/main/res/layout/fragment_detail_vet.xml" value="0.31612503596561337" />
         <entry key="app/src/main/res/layout/fragment_first_onboarding.xml" value="0.15925925925925927" />
         <entry key="app/src/main/res/layout/fragment_food.xml" value="0.125" />
         <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.1" />
