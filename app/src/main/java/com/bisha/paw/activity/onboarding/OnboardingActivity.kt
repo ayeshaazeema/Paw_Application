@@ -22,6 +22,8 @@ class OnboardingActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_onboarding)
 
+        supportActionBar?.hide()
+
         val adapter = OnboardingAdapter(this)
         onboardingViewPager.adapter = adapter
 

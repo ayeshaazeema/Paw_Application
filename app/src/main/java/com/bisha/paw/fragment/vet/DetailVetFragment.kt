@@ -14,10 +14,8 @@ class DetailVetFragment : Fragment(){
         super.onCreate(savedInstanceState)
         binding = FragmentDetailVetBinding.inflate(layoutInflater)
 
-        val items = listOf("Monday,April 25 2022", "Wednesday,April 27 2022", "Saturday,April 30 2022","Sunday,May 1 2022")
-        val adapter = ArrayAdapter(this, R.layout.dropdown_item, items)
-        binding.dropdownField.setAdapter(adapter)
+//        val items = listOf("Monday,April 25 2022", "Wednesday,April 27 2022", "Saturday,April 30 2022","Sunday,May 1 2022")
+//        val adapter = ArrayAdapter(this, R.layout.dropdown_item, items)
+//        binding.dropdownField.setAdapter(adapter)
     }
-
-
 }

@@ -30,6 +30,8 @@ class SignUpActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)
 
+        supportActionBar?.hide()
+
         tvQuestionSignUp.setOnClickListener(this)
         btnSignUp.setOnClickListener(this)
 

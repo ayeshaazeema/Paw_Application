@@ -26,6 +26,8 @@ class SignInActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_in)
 
+        supportActionBar?.hide()
+
         firebaseAuth = FirebaseAuth.getInstance()
 
         tvForgotPasswordSignIn.setOnClickListener(this)

@@ -24,11 +24,14 @@
         <entry key="app/src/main/res/layout/activity_sign_in.xml" value="0.1685185185185185" />
         <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.1685185185185185" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.12129629629629629" />
+        <entry key="app/src/main/res/layout/article_dashboard_item.xml" value="0.3625" />
         <entry key="app/src/main/res/layout/article_item.xml" value="0.17223910840932116" />
+        <entry key="app/src/main/res/layout/dropdown_item.xml" value="0.18591691995947315" />
         <entry key="app/src/main/res/layout/food_item.xml" value="0.17223910840932116" />
         <entry key="app/src/main/res/layout/fragment_article.xml" value="0.23178544088023892" />
         <entry key="app/src/main/res/layout/fragment_article_detail.xml" value="0.21445245233972005" />
-        <entry key="app/src/main/res/layout/fragment_dashboard.xml" value="0.1648148148148148" />
+        <entry key="app/src/main/res/layout/fragment_dashboard.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_detail_vet.xml" value="0.18591691995947315" />
         <entry key="app/src/main/res/layout/fragment_first_onboarding.xml" value="0.15925925925925927" />
         <entry key="app/src/main/res/layout/fragment_food.xml" value="0.125" />
         <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.1" />
@@ -37,7 +40,7 @@
         <entry key="app/src/main/res/layout/fragment_vet.xml" value="0.1648148148148148" />
         <entry key="app/src/main/res/layout/just_notes.xml" value="0.12760416666666666" />
         <entry key="app/src/main/res/layout/vet_item.xml" value="0.17223910840932116" />
-        <entry key="app/src/main/res/menu/main_menu.xml" value="0.125" />
+        <entry key="app/src/main/res/menu/main_menu.xml" value="0.25" />
       </map>
     </option>
   </component>
