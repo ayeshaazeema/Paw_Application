@@ -38,6 +38,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_5sdp"
         app:layout_constraintTop_toBottomOf="@id/clSearchVet"
+        tools:layout_editor_absoluteX="0dp"
         tools:listitem="@layout/vet_item" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
