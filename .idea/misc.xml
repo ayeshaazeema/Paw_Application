@@ -7,6 +7,7 @@
         <entry key="../../../../../layout/custom_preview.xml" value="0.3312820512820513" />
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.321025641025641" />
         <entry key="app/src/main/res/drawable/background.xml" value="0.17222222222222222" />
+        <entry key="app/src/main/res/drawable/bg_splash.xml" value="0.321025641025641" />
         <entry key="app/src/main/res/drawable/bookmark_selector.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/button_background.xml" value="0.20925925925925926" />
         <entry key="app/src/main/res/drawable/chipbg.xml" value="0.20092592592592592" />
@@ -38,7 +39,7 @@
         <entry key="app/src/main/res/layout/fragment_article.xml" value="0.18107121119902617" />
         <entry key="app/src/main/res/layout/fragment_article_detail.xml" value="0.21445245233972005" />
         <entry key="app/src/main/res/layout/fragment_dashboard.xml" value="0.1648148148148148" />
-        <entry key="app/src/main/res/layout/fragment_detail_vet.xml" value="0.18900343642611683" />
+        <entry key="app/src/main/res/layout/fragment_detail_vet.xml" value="0.23128677540696616" />
         <entry key="app/src/main/res/layout/fragment_first_onboarding.xml" value="0.15925925925925927" />
         <entry key="app/src/main/res/layout/fragment_food.xml" value="0.125" />
         <entry key="app/src/main/res/layout/fragment_profile.xml" value="5.181959550875221" />

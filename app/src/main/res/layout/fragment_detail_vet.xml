@@ -117,6 +117,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/poppins_semibold"
         android:lineSpacingExtra="3sp"
@@ -127,13 +128,16 @@
         style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tvSchTitle"
-        android:hint="Choose a date">
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_below="@+id/tvSchTitle">
 
         <AutoCompleteTextView
             android:id="@+id/dropdown_field"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/gray"
+            android:hint="Choose a date"
             android:inputType="none" />
     </com.google.android.material.textfield.TextInputLayout>
 
