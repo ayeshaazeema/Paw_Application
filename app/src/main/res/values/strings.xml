@@ -57,4 +57,48 @@
     <string name="name">Name</string>
     <string name="brand">Brand</string>
     <string name="category">Category</string>
+    <string name="error_sign_in">Name or password can\'t be empty!</string>
+    <string name="success_sign_in">Sign in success!</string>
+    <string name="failed_sign_in">Sign in failed!</string>
+    <string name="error_email">Email can\'t be empty!</string>
+    <string name="reset_forgot_password">Please check your email to reset password</string>
+    <string name="failed_forgot_password">Failed to reset password</string>
+    <string name="error_sign_up">Sign up failed</string>
+    <string name="user">User</string>
+    <string name="error_name">Name can\'t be empty!</string>
+    <string name="error_password_sign_up">Password can\'t be empty!</string>
+    <string name="error_confirm_password_sign_up">Password doesn\'t match!</string>
+    <string name="all">All</string>
+    <string name="cat">Cat</string>
+    <string name="dog">Dog</string>
+    <string name="bird">Bird</string>
+    <string name="fish">Fish</string>
+    <string name="rabbit">Rabbit</string>
+    <string name="birb">Birb</string>
+    <string name="description">Description</string>
+    <string name="descdummy">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </string>
+    <string name="how_to_take_care">How To Take Care</string>
+    <string name="onbs1">Read articles about your pet and learn how to properly take care of it!</string>
+    <string name="onbt1">Monitor</string>
+    <string name="onbt2">Care</string>
+    <string name="onbs2">Take care of your pets by easily look up for veterinarian nearby!</string>
+    <string name="onbt3">Easy</string>
+    <string name="onbs3">Easily sit back and learn about your pet at home and don’t forget to buy them snacks!</string>
+    <string name="vetname">drh. Anggi Anggini</string>
+    <string name="vethos">North Animal Clinic</string>
+    <string name="information">Information</string>
+    <string name="practical_schedule">Practical Schedule</string>
+    <string name="detailoc">North Jakarta, Indonesia</string>
+    <string name="harga">Rp. 200.000,00</string>
+    <string name="preference">Preference</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="recommended_articles">Recommended Articles</string>
+    <string name="show_all">Show All</string>
+    <string name="recommended_foods">Recommended Foods</string>
+    <string-array name="ListDropdown">
+        <item>Monday,April 25 2022</item>
+        <item>Wednesday,April 27 2022</item>
+        <item>Saturday,April 30 2022</item>
+        <item>Sunday,May 1 2022</item>
+    </string-array>
 </resources>

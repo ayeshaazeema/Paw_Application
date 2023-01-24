@@ -8,8 +8,8 @@
 
     <ImageView
         android:id="@+id/ivFirstOnboarding"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="271dp"
+        android:layout_height="350dp"
         android:contentDescription="@string/app_name"
         android:src="@drawable/first_onboarding"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_10sdp"
         android:includeFontPadding="false"
-        android:text="@string/dummy_title"
+        android:text="@string/onbt1"
         android:textColor="@color/black32"
         app:layout_constraintEnd_toEndOf="@+id/ivFirstOnboarding"
         app:layout_constraintStart_toStartOf="@+id/ivFirstOnboarding"
@@ -36,11 +36,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_10sdp"
         android:includeFontPadding="false"
-        android:text="@string/dummy_text"
+        android:text="@string/onbs1"
         android:textAlignment="center"
         android:textColor="@color/black50"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvTitleFirstOnboarding" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

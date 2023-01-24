@@ -17,7 +17,9 @@
             android:exported="false" />
         <activity
             android:name="com.bisha.paw.activity.authentication.SignInActivity"
-            android:exported="false" />
+            android:exported="true" >
+
+        </activity>
         <activity
             android:name="com.bisha.paw.activity.onboarding.OnboardingActivity"
             android:exported="false" />

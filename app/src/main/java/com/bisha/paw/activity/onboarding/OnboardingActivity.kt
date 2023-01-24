@@ -22,6 +22,8 @@ class OnboardingActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_onboarding)
 
+        supportActionBar?.hide()
+
         val adapter = OnboardingAdapter(this)
         onboardingViewPager.adapter = adapter
 
@@ -56,7 +58,7 @@ class OnboardingActivity : AppCompatActivity() {
         })
 
         onboardingSkip.setOnClickListener {
-            startActivity(Intent(this, SignInActivity::class.java))
+            startActivity(Intent(SignInActivity.getLaunchService(this)))
             finish()
         }
 
@@ -66,7 +68,7 @@ class OnboardingActivity : AppCompatActivity() {
             if (position < fragmentList.lastIndex) {
                 onboardingViewPager.currentItem = position + 1
             } else {
-                startActivity(Intent(this, SignInActivity::class.java))
+                startActivity(Intent(SignInActivity.getLaunchService(this)))
                 finish()
             }
         }
