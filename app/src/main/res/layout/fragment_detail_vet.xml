@@ -139,6 +139,7 @@
             android:background="@color/gray"
             android:hint="Choose a date"
             android:inputType="none" />
+
     </com.google.android.material.textfield.TextInputLayout>
 
 </RelativeLayout>

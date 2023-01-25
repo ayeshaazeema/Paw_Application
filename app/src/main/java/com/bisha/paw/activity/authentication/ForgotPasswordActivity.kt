@@ -34,8 +34,8 @@ class ForgotPasswordActivity : AppCompatActivity(), View.OnClickListener {
         mAuth = FirebaseAuth.getInstance()
     }
 
-    override fun onClick(v: View) {
-        when (v.id) {
+    override fun onClick(p0: View) {
+        when (p0.id) {
             R.id.tvQuestionForgotPassword -> startActivity(SignInActivity.getLaunchService(this))
             R.id.btnForgotPassword -> forgotPassword()
         }

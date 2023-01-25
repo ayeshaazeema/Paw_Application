@@ -21,7 +21,7 @@
     <string name="sign_in">Sign In</string>
     <string name="sign_in_subtitle">
         Please
-        <font color="#FDC761"><b> sign in </b></font>
+        <font color="#FDC761"><b> Sign in </b></font>
         to continue
     </string>
     <string name="sign_in_question">
