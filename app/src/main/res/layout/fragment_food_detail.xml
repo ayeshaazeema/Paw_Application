@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragment.article.ArticleFragment">
+    tools:context=".fragment.food.FoodDetailFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/clArticleDetail"
+        android:id="@+id/clFoodDetail"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_250sdp"
         android:background="@drawable/background"
@@ -16,7 +16,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/cvArticleDetail"
+            android:id="@+id/cvFoodDetail"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="@dimen/_20sdp"
@@ -28,7 +28,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
-                android:id="@+id/ivArticleDetail"
+                android:id="@+id/ivFoodDetail"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:contentDescription="@string/app_name"
@@ -40,46 +40,31 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <ToggleButton
-        android:id="@+id/tbArticleDetail"
-        android:layout_width="@dimen/_30sdp"
-        android:layout_height="@dimen/_30sdp"
-        android:layout_gravity="end"
-        android:layout_marginTop="@dimen/_20sdp"
-        android:layout_marginEnd="@dimen/_20sdp"
-        android:background="@drawable/bookmark_selector"
-        android:checked="false"
-        android:text=""
-        android:textOff=""
-        android:textOn=""
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/clArticleDetail" />
-
     <TextView
-        android:id="@+id/detailArticleTitle"
+        android:id="@+id/detailFoodTitle"
         style="@style/TextStyle24"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_20sdp"
-        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginTop="20dp"
         android:gravity="start"
-        android:text="@string/bird"
+        android:text="Food Name Title"
         android:textColor="@color/black32"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/clArticleDetail" />
+        app:layout_constraintTop_toBottomOf="@+id/clFoodDetail" />
 
     <TextView
-        android:id="@+id/detailArticleSub"
+        android:id="@+id/detailFoodSub"
         style="@style/TextStyleMedium14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins_medium"
-        android:text="@string/bird"
+        android:text="Food sub"
         android:textColor="@color/black50"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/detailArticleTitle"
-        app:layout_constraintTop_toBottomOf="@+id/detailArticleTitle" />
+        app:layout_constraintStart_toStartOf="@+id/detailFoodTitle"
+        app:layout_constraintTop_toBottomOf="@+id/detailFoodTitle" />
 
     <TextView
         android:id="@+id/DescTitle"
@@ -93,8 +78,8 @@
         android:textColor="@color/black32"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/detailArticleSub"
-        app:layout_constraintTop_toBottomOf="@+id/detailArticleSub" />
+        app:layout_constraintStart_toStartOf="@+id/detailFoodSub"
+        app:layout_constraintTop_toBottomOf="@+id/detailFoodSub" />
 
     <TextView
         android:id="@+id/DescContent"
@@ -109,7 +94,7 @@
         app:layout_constraintTop_toBottomOf="@+id/DescTitle" />
 
     <TextView
-        android:id="@+id/HowToTitle"
+        android:id="@+id/tvComposition"
         style="@style/TextStyleSemiBold14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -117,7 +102,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginTop="@dimen/_10sdp"
         android:lineSpacingExtra="3sp"
-        android:text="@string/how_to_take_care"
+        android:text="@string/composition"
         android:textColor="@color/black32"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -125,20 +110,45 @@
         app:layout_constraintTop_toBottomOf="@+id/DescContent" />
 
     <TextView
-        android:id="@+id/HowToTakeCare"
+        android:id="@+id/tvCompositionDesc"
         style="@style/TextStyleMedium12"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/_20sdp"
-        android:layout_marginTop="10dp"
-        android:text="@string/descdummy"
+        android:layout_marginBottom="5dp"
+        android:text="@string/shortdesc"
         android:textColor="@color/black32"
+        app:layout_constraintBottom_toTopOf="@+id/btnShop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvComposition"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btnShop"
+        android:layout_width="335dp"
+        android:layout_height="wrap_content"
+        android:text="SHOP"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/HowToTitle" />
+        app:layout_constraintStart_toStartOf="parent" />
 
+    <TextView
+        android:id="@+id/tvFoodPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        app:layout_constraintBottom_toBottomOf="@+id/detailFoodTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/detailFoodTitle"
+        app:layout_constraintTop_toBottomOf="@+id/clFoodDetail"
+        app:layout_constraintVertical_bias="0.0"
+        android:text="Rp.30.000,00"
+        style="@style/TextStyleSemiBold14"
+        android:textColor="@color/green"
 
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

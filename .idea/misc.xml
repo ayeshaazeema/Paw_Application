@@ -42,10 +42,11 @@
         <entry key="app/src/main/res/layout/fragment_detail_vet.xml" value="0.23128677540696616" />
         <entry key="app/src/main/res/layout/fragment_first_onboarding.xml" value="0.15925925925925927" />
         <entry key="app/src/main/res/layout/fragment_food.xml" value="0.125" />
+        <entry key="app/src/main/res/layout/fragment_food_detail.xml" value="0.34926796692098205" />
         <entry key="app/src/main/res/layout/fragment_profile.xml" value="5.181959550875221" />
         <entry key="app/src/main/res/layout/fragment_second_onboarding.xml" value="0.15925925925925927" />
         <entry key="app/src/main/res/layout/fragment_third_onboarding.xml" value="0.15925925925925927" />
-        <entry key="app/src/main/res/layout/fragment_vet.xml" value="0.1648148148148148" />
+        <entry key="app/src/main/res/layout/fragment_vet.xml" value="0.10674157303370786" />
         <entry key="app/src/main/res/layout/just_notes.xml" value="0.12760416666666666" />
         <entry key="app/src/main/res/layout/vet_item.xml" value="0.17223910840932116" />
         <entry key="app/src/main/res/menu/main_menu.xml" value="0.25422197070549846" />
