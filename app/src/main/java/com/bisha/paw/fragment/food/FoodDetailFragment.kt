@@ -28,7 +28,11 @@ class FoodDetailFragment : Fragment() {
         btnShop.setOnclickListener {
             val openURL= Intent(intent.ACTION_VIEW)
             openURL.data= Uri.parse("https://shopee.co.id/whiskas.id")
+
+            startActivity(openURL)
         }
+
+
     }
 }
 
