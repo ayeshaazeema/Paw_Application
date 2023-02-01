@@ -1,4 +1,9 @@
 package com.bisha.paw.fragment.food
 
-class FoodAdapter {
-}
+import java.util.ArrayList
+
+class FoodAdapter(
+    foodFragment: FoodFragment,
+    FoodArrayList: ArrayList<Food>,
+    foodFragment1: FoodFragment
+)

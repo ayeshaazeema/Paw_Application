@@ -10,9 +10,6 @@ import com.bisha.paw.R
  public class VetFragment : Fragment() {
 
 
-
-
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
