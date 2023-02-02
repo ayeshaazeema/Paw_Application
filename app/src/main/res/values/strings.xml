@@ -21,7 +21,7 @@
     <string name="sign_in">Sign In</string>
     <string name="sign_in_subtitle">
         Please
-        <font color="#FDC761"><b> Sign in </b></font>
+        <font color="#FDC761"><b> sign in </b></font>
         to continue
     </string>
     <string name="sign_in_question">
@@ -95,6 +95,7 @@
     <string name="recommended_articles">Recommended Articles</string>
     <string name="show_all">Show All</string>
     <string name="recommended_foods">Recommended Foods</string>
+    <string name="imageview">imageView</string>
     <string-array name="ListDropdown">
         <item>Monday,April 25 2022</item>
         <item>Wednesday,April 27 2022</item>
