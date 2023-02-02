@@ -27,7 +27,7 @@
             tools:srcCompat="@tools:sample/avatars" />
 
         <TextView
-            android:id="@+id/tvNameVetItem"
+            android:id="@+id/VetName"
             style="@style/TextStyleSemiBold18"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -38,29 +38,29 @@
             app:layout_constraintTop_toTopOf="@+id/ivVetItem" />
 
         <TextView
-            android:id="@+id/tvHospitalVetItem"
+            android:id="@+id/HospitalName"
             style="@style/TextStyleSemiBold14"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_15sdp"
             android:text="@string/hospital_name"
             android:textColor="@color/black32"
-            app:layout_constraintBottom_toTopOf="@id/tvLocationVetItem"
-            app:layout_constraintStart_toStartOf="@+id/tvNameVetItem"
-            app:layout_constraintTop_toBottomOf="@+id/tvNameVetItem" />
+            app:layout_constraintBottom_toTopOf="@id/LocationVet"
+            app:layout_constraintStart_toStartOf="@+id/VetName"
+            app:layout_constraintTop_toBottomOf="@+id/VetName" />
 
         <TextView
-            android:id="@+id/tvLocationVetItem"
+            android:id="@+id/LocationVet"
             style="@style/TextStyleSemiBold14"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/location"
             android:textColor="@color/black50"
-            app:layout_constraintStart_toStartOf="@+id/tvHospitalVetItem"
-            app:layout_constraintTop_toBottomOf="@+id/tvHospitalVetItem" />
+            app:layout_constraintStart_toStartOf="@+id/HospitalName"
+            app:layout_constraintTop_toBottomOf="@+id/HospitalName" />
 
         <TextView
-            android:id="@+id/tvPriceVetItem"
+            android:id="@+id/VetPrice"
             style="@style/TextStyleSemiBold14"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
