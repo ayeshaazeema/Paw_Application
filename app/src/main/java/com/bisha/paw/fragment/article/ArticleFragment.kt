@@ -80,9 +80,4 @@ class ArticleFragment : Fragment() {
         super.onDestroyView()
         binding = null
     }
-
-    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        super.onCreateOptionsMenu(menu, inflater)
-    }
-
 }
