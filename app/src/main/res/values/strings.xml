@@ -97,6 +97,7 @@
     <string name="recommended_foods">Recommended Foods</string>
     <string name="search_here">Search here...</string>
     <string name="imagebutton">imageButton</string>
+    <string name="imageview">imageView</string>
     <string-array name="ListDropdown">
         <item>Monday,April 25 2022</item>
         <item>Wednesday,April 27 2022</item>
