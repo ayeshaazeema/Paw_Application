@@ -37,7 +37,7 @@
             android:background="@drawable/search_background"
             android:iconifiedByDefault="false"
             android:queryBackground="@android:color/transparent"
-            android:queryHint="@string/search_food" />
+            android:queryHint="@string/search_here" />
 
     </LinearLayout>
 
