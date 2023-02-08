@@ -28,7 +28,7 @@
 
         <TextView
             android:id="@+id/tvNameArticleItem"
-            style="@style/TextStyleSemiBold18"
+            style="@style/TextStyleSemiBold14"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_10sdp"
@@ -40,7 +40,7 @@
 
         <TextView
             android:id="@+id/tvCategoryArticleItem"
-            style="@style/TextStyleMedium14"
+            style="@style/TextStyleMedium12"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/category"

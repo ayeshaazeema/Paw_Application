@@ -1,4 +1,4 @@
-package com.bisha.paw
+package com.bisha.paw.fragment.article
 
 import android.app.Activity
 import android.view.LayoutInflater
@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bisha.paw.R
 
 class ArticleAdapter(var data: ArrayList<ArticleModel>, var context: Activity?) :
     RecyclerView.Adapter<ArticleAdapter.MyViewHolder>() {

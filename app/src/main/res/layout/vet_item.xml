@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/_130sdp"
+    android:layout_height="@dimen/_115sdp"
     android:layout_marginHorizontal="@dimen/_20sdp"
     android:layout_marginVertical="@dimen/_5sdp"
     app:cardCornerRadius="@dimen/_15sdp"
@@ -15,8 +15,8 @@
         android:padding="@dimen/_10sdp">
 
         <ImageView
-            android:id="@+id/ivVetItem"
-            android:layout_width="@dimen/_90sdp"
+            android:id="@+id/ivVet"
+            android:layout_width="@dimen/_80sdp"
             android:layout_height="match_parent"
             android:contentDescription="@string/app_name"
             android:scaleType="centerCrop"
@@ -27,48 +27,51 @@
             tools:srcCompat="@tools:sample/avatars" />
 
         <TextView
-            android:id="@+id/VetName"
-            style="@style/TextStyleSemiBold18"
+            android:id="@+id/tvVetName"
+            style="@style/TextStyleSemiBold16"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_10sdp"
             android:text="@string/full_name"
             android:textColor="@color/black32"
-            app:layout_constraintStart_toEndOf="@+id/ivVetItem"
-            app:layout_constraintTop_toTopOf="@+id/ivVetItem" />
+            app:layout_constraintStart_toEndOf="@+id/ivVet"
+            app:layout_constraintTop_toTopOf="@+id/ivVet" />
 
         <TextView
-            android:id="@+id/HospitalName"
-            style="@style/TextStyleSemiBold14"
+            android:id="@+id/tvVetHospital"
+            style="@style/TextStyleSemiBold12"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_15sdp"
             android:text="@string/hospital_name"
             android:textColor="@color/black32"
-            app:layout_constraintBottom_toTopOf="@id/LocationVet"
-            app:layout_constraintStart_toStartOf="@+id/VetName"
-            app:layout_constraintTop_toBottomOf="@+id/VetName" />
+            app:layout_constraintBottom_toTopOf="@id/tvVetLocation"
+            app:layout_constraintStart_toStartOf="@+id/tvVetName"
+            app:layout_constraintTop_toBottomOf="@+id/tvVetName" />
 
         <TextView
-            android:id="@+id/LocationVet"
-            style="@style/TextStyleSemiBold14"
+            android:id="@+id/tvVetLocation"
+            style="@style/TextStyleSemiBold12"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_10sdp"
             android:text="@string/location"
             android:textColor="@color/black50"
-            app:layout_constraintStart_toStartOf="@+id/HospitalName"
-            app:layout_constraintTop_toBottomOf="@+id/HospitalName" />
+            app:layout_constraintBottom_toTopOf="@+id/tvVetPrice"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tvVetHospital"
+            app:layout_constraintTop_toBottomOf="@+id/tvVetHospital" />
 
         <TextView
-            android:id="@+id/VetPrice"
+            android:id="@+id/tvVetPrice"
             style="@style/TextStyleSemiBold14"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_10sdp"
             android:text="@string/price"
             android:textColor="@color/green"
-            app:layout_constraintBottom_toBottomOf="@+id/ivVetItem"
-            app:layout_constraintStart_toEndOf="@+id/ivVetItem" />
+            app:layout_constraintBottom_toBottomOf="@+id/ivVet"
+            app:layout_constraintStart_toEndOf="@+id/ivVet" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

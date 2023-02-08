@@ -1,5 +1,7 @@
 package com.bisha.paw.fragment.article
 
+import android.app.SearchManager
+import android.content.Context
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
@@ -7,8 +9,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager.widget.ViewPager
 import android.widget.SearchView
-import com.bisha.paw.ArticleAdapter
-import com.bisha.paw.ArticleModel
 import com.bisha.paw.R
 import com.bisha.paw.databinding.FragmentArticleBinding
 
@@ -25,7 +25,7 @@ class ArticleFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_article, container, false)
 
-        //<-- RecyclerView Apparel -->
+        //<-- RecyclerView -->
         val lm = LinearLayoutManager(activity)
         lm.orientation = LinearLayoutManager.VERTICAL
         rvArticle = view.findViewById(R.id.rvArticle)
@@ -36,7 +36,16 @@ class ArticleFragment : Fragment() {
         rvArticle.adapter = articleAdapter
 
         return view
+    }
 
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater);
+        inflater.inflate(R.menu.main_menu, menu)
+
+        val searchManager = activity?.getSystemService(Context.SEARCH_SERVICE) as SearchManager
+        val searchView = menu.findItem(R.id.svArticle).actionView as SearchView
+
+        searchView.queryHint = getString(R.string.search_hint)
     }
 
     val ArticleArray: ArrayList<ArticleModel>

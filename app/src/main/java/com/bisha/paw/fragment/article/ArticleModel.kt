@@ -1,4 +1,4 @@
-package com.bisha.paw
+package com.bisha.paw.fragment.article
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize

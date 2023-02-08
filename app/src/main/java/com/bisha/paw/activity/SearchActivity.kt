@@ -2,6 +2,8 @@ package com.bisha.paw.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.SearchView
+import androidx.recyclerview.widget.RecyclerView
 import com.bisha.paw.R
 
 class SearchActivity : AppCompatActivity() {

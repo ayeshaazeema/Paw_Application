@@ -1,7 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
-//    id 'kotlin-android-extensions'
+    id 'kotlin-android-extensions'
     id 'com.google.gms.google-services'
 }
 
@@ -59,7 +59,11 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
-    //Motion Layout
+    // Glide
+    implementation 'com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.2'
+    implementation 'com.github.bumptech.glide:glide:4.13.0'
+
+    // Motion Layout
     implementation 'androidx.constraintlayout:constraintlayout:2.2.0-alpha05'
 
 

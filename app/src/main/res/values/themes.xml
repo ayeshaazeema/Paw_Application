@@ -54,6 +54,18 @@
         <item name="android:includeFontPadding">false</item>
     </style>
 
+    <style name="TextStyleMedium16">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textSize">@dimen/_16ssp</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="TextStyleSemiBold16">
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:textSize">@dimen/_16ssp</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
     <style name="TextStyleBold18">
         <item name="android:fontFamily">@font/poppins_bold</item>
         <item name="android:textSize">@dimen/_18ssp</item>
@@ -89,6 +101,19 @@
         <item name="android:textSize">@dimen/_12ssp</item>
         <item name="android:includeFontPadding">false</item>
     </style>
+
+    <style name="TextStyleBold10">
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="android:textSize">@dimen/_10ssp</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="TextStyleMedium10">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textSize">@dimen/_10ssp</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
 
     <style name="TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
         <item name="android:textColorHint">@color/black50</item>
