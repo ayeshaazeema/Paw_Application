@@ -124,23 +124,37 @@
         android:text="@string/practical_schedule"
         android:textColor="@color/black32" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+    <Spinner
+        android:id="@+id/sch_spinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/tvSchTitle"
+        android:spinnerMode="dropdown"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="9dp"
+        android:layout_marginBottom="12dp"
         android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
-        android:layout_below="@+id/tvSchTitle">
+        android:layout_marginEnd="30dp" />
 
-        <AutoCompleteTextView
-            android:id="@+id/dropdown_field"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/gray"
-            android:hint="Choose a date"
-            android:inputType="none" />
 
-    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="30dp"-->
+<!--        android:layout_marginEnd="30dp"-->
+<!--        android:layout_below="@+id/tvSchTitle">-->
+
+<!--        <AutoCompleteTextView-->
+<!--            android:id="@+id/dropdown_field"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="@color/gray"-->
+<!--            android:hint="Choose a date"-->
+<!--            android:inputType="none" />-->
+
+<!--    </com.google.android.material.textfield.TextInputLayout>-->
 
 </RelativeLayout>
 
