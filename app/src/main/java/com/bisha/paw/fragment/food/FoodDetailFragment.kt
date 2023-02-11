@@ -1,31 +1,38 @@
-//package com.bisha.paw.fragment.food
-//
-//import android.content.Intent
-//import android.net.Uri
-//import android.os.Bundle
-//import androidx.fragment.app.Fragment
-//import android.view.LayoutInflater
-//import android.view.View
-//import android.view.ViewGroup
-//import android.widget.Button
-//import com.bisha.paw.R
-//
-//// TODO: Rename parameter arguments, choose names that match
-//// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-//private const val ARG_PARAM1 = "param1"
-//private const val ARG_PARAM2 = "param2"
-//
-///**
-// * A simple [Fragment] subclass.
-// * Use the [FoodDetailFragment.newInstance] factory method to
-// * create an instance of this fragment.
-// */
-//class FoodDetailFragment : Fragment() {
-//
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-//        val btnShop = Button.findViewById(R.id.btnShop)
-//
+package com.bisha.paw.fragment.food
+
+import android.content.Intent
+import android.net.Uri
+import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.Button
+import androidx.fragment.app.Fragment
+import com.bisha.paw.R
+
+
+class FoodDetailFragment : Fragment() {
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        // Inflate the layout for this fragment
+        val view = inflater.inflate(R.layout.fragment_food_detail, container, false)
+
+        val btnShop: Button = view.findViewById(R.id.btnShop)
+
+        btnShop.setOnClickListener {
+            val openURL = Intent(Intent.ACTION_VIEW)
+            openURL.data = Uri.parse("https://shopee.co.id/whiskas.id")
+
+            startActivity(openURL)
+        }
+
+        return view
+    }
+}
+
 //        btnShop.setOnclickListener {
 //            val openURL = Intent(intent.ACTION_VIEW)
 //            openURL.data = Uri.parse("https://shopee.co.id/whiskas.id")
@@ -34,13 +41,3 @@
 //        }
 //
 //
-//    }
-//}
-//
-//fun onCreateView(
-//    inflater: LayoutInflater, container: ViewGroup?,
-//    savedInstanceState: Bundle?
-//): View? {
-//    // Inflate the layout for this fragment
-//    return inflater.inflate(R.layout.fragment_food_detail, container, false)
-//}

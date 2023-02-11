@@ -1,9 +1,8 @@
 package com.bisha.paw.activity.splash
 
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import androidx.appcompat.app.AppCompatActivity
 import com.bisha.paw.R
 import com.bisha.paw.activity.onboarding.OnboardingActivity
 
@@ -15,7 +14,7 @@ class SplashActivity : AppCompatActivity() {
         supportActionBar?.hide()
 
         Handler().postDelayed({
-            startActivity(Intent(this@SplashActivity, OnboardingActivity::class.java))
+            OnboardingActivity.start(this@SplashActivity)
             finish()
         }, 4000)
     }

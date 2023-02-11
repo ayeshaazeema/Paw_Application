@@ -1,32 +1,20 @@
-//package com.bisha.paw.fragment.food
-//
-//class Food(
-//    private var FoodName: String,
-//    private var FoodBrand: String,
-//    private var FoodPrice: Int
-//) {
-//    // creating getter and setter methods.
-//    fun getFoodName(): String {
-//        return FoodName
-//    }
-//
-//    fun setFoodName(FoodName: String) {
-//        this.FoodName = FoodName
-//    }
-//
-//    fun getFoodBrand(): String {
-//        return FoodBrand
-//    }
-//
-//    fun setFoodBrand(FoodBrand: String) {
-//        this.FoodBrand = FoodBrand
-//    }
-//
-//    fun getFoodPrice(): Int {
-//        return FoodPrice
-//    }
-//
-//    fun setFoodPrice(FoodPrice: Int) {
-//        this.FoodPrice = FoodPrice
-//    }
-//}
+package com.bisha.paw.fragment.food
+
+
+data class Food(
+    val foodName: String,
+    val foodBrand: String,
+    val foodPrice: Int
+) {
+    companion object {
+        fun getFoods(): ArrayList<Food> {
+            return arrayListOf(
+                Food("Whiskas® Dry Adult 1+ Indoor", "Whiskas", 48000),
+                Food("WHISKAS® Wet Food Pouch Junior 80gr", "Whiskas", 28000),
+                Food("Royal Canin Kitten Dry 400gr", "Royal Canin", 158620),
+                Food("Royal Canin Indoor Long Hair (2kg)", "Royal Canin", 314500),
+                Food("Korean Collagen 150gr Biotin Zinc Vitamin ", "PetGlow", 128325)
+            )
+        }
+    }
+}
