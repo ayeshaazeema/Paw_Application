@@ -1,5 +1,6 @@
 package com.bisha.paw.activity.onboarding
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -17,6 +18,12 @@ import kotlinx.android.synthetic.main.activity_onboarding.*
 class OnboardingActivity : AppCompatActivity() {
 
     private val fragmentList = ArrayList<Fragment>()
+
+    companion object {
+        fun start(context: Context) {
+            context.startActivity(Intent(context, OnboardingActivity::class.java))
+        }
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -58,7 +65,7 @@ class OnboardingActivity : AppCompatActivity() {
         })
 
         onboardingSkip.setOnClickListener {
-            startActivity(Intent(SignInActivity.getLaunchService(this)))
+            SignInActivity.start(this)
             finish()
         }
 
@@ -68,7 +75,7 @@ class OnboardingActivity : AppCompatActivity() {
             if (position < fragmentList.lastIndex) {
                 onboardingViewPager.currentItem = position + 1
             } else {
-                startActivity(Intent(SignInActivity.getLaunchService(this)))
+                SignInActivity.start(this)
                 finish()
             }
         }

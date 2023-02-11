@@ -16,10 +16,11 @@ class ForgotPasswordActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var mAuth: FirebaseAuth
 
     companion object {
-        fun getLaunchService(from: Context) =
-            Intent(from, ForgotPasswordActivity::class.java).apply {
+        fun start(context: Context) {
+            context.startActivity(Intent(context, ForgotPasswordActivity::class.java).apply {
                 addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
-            }
+            })
+        }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -36,7 +37,7 @@ class ForgotPasswordActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(p0: View) {
         when (p0.id) {
-            R.id.tvQuestionForgotPassword -> startActivity(SignInActivity.getLaunchService(this))
+            R.id.tvQuestionForgotPassword -> SignInActivity.start(this)
             R.id.btnForgotPassword -> forgotPassword()
         }
     }
@@ -53,7 +54,7 @@ class ForgotPasswordActivity : AppCompatActivity(), View.OnClickListener {
                         getString(R.string.reset_forgot_password),
                         Toast.LENGTH_SHORT
                     ).show()
-                    startActivity(Intent(SignInActivity.getLaunchService(this)))
+                    SignInActivity.start(this)
                 } else {
                     Toast.makeText(
                         this,

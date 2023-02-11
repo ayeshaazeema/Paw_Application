@@ -17,8 +17,10 @@ class SignInActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var firebaseAuth: FirebaseAuth
 
     companion object {
-        fun getLaunchService(from: Context) = Intent(from, SignInActivity::class.java).apply {
-            addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+        fun start(context: Context) {
+            context.startActivity(Intent(context, SignInActivity::class.java).apply {
+                addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+            })
         }
     }
 
@@ -37,12 +39,8 @@ class SignInActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(p0: View) {
         when (p0.id) {
-            R.id.tvForgotPasswordSignIn -> startActivity(
-                ForgotPasswordActivity.getLaunchService(
-                    this
-                )
-            )
-            R.id.tvQuestionSignIn -> startActivity(SignUpActivity.getLaunchService(this))
+            R.id.tvForgotPasswordSignIn -> ForgotPasswordActivity.start(this)
+            R.id.tvQuestionSignIn -> SignUpActivity.start(this)
             R.id.btnSignIn -> signInEmailPassword()
         }
     }
@@ -60,7 +58,7 @@ class SignInActivity : AppCompatActivity(), View.OnClickListener {
                 if (it.isSuccessful) {
                     Toast.makeText(this, getString(R.string.success_sign_in), Toast.LENGTH_SHORT)
                         .show()
-                    startActivity(MainActivity.getLaunchService(this))
+                    MainActivity.start(this)
                     return@addOnCompleteListener
                 } else {
                     Toast.makeText(this, getString(R.string.failed_sign_in), Toast.LENGTH_SHORT)
