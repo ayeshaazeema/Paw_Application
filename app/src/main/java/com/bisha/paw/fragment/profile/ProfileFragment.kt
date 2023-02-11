@@ -19,13 +19,6 @@ class ProfileFragment : Fragment(), View.OnClickListener {
 
     var refUser: DatabaseReference? = null
     var firebaseUser: FirebaseUser? = null
-    lateinit var auth: FirebaseAuth
-
-    companion object {
-        fun getLaunchService(from: Context) = Intent(from, ProfileFragment::class.java).apply {
-            addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
-        }
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -47,7 +40,7 @@ class ProfileFragment : Fragment(), View.OnClickListener {
 
             override fun onDataChange(snapshot: DataSnapshot) {
                 for (p0 in snapshot.children) {
-                    val name = snapshot.child("fullName").value.toString()
+                    val name = snapshot.child("name").value.toString()
                     val email = snapshot.child("email").value.toString()
                     val profileImage = snapshot.child("profile_image").value.toString()
 
@@ -64,9 +57,7 @@ class ProfileFragment : Fragment(), View.OnClickListener {
         super.onViewCreated(view, savedInstanceState)
         view.findViewById<View>(R.id.tvSignOut).setOnClickListener {
             FirebaseAuth.getInstance().signOut()
-            val intent = Intent(this@ProfileFragment.context, SignInActivity::class.java)
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
-            startActivity(intent)
+            SignInActivity.start(this@ProfileFragment.requireContext())
         }
     }
 

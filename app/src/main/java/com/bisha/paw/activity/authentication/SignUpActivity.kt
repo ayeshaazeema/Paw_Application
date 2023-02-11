@@ -21,8 +21,10 @@ class SignUpActivity : AppCompatActivity(), View.OnClickListener {
     private var firebaseUserId: String = ""
 
     companion object {
-        fun getLaunchService(from: Context) = Intent(from, SignUpActivity::class.java).apply {
-            addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+        fun start(context: Context) {
+            context.startActivity(Intent(context, SignUpActivity::class.java).apply {
+                addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+            })
         }
     }
 
@@ -40,7 +42,7 @@ class SignUpActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(p0: View) {
         when (p0.id) {
-            R.id.tvQuestionSignUp -> startActivity(SignInActivity.getLaunchService(this))
+            R.id.tvQuestionSignUp -> SignInActivity.start(this)
             R.id.btnSignUp -> signUpUser()
         }
     }
@@ -79,7 +81,7 @@ class SignUpActivity : AppCompatActivity(), View.OnClickListener {
 
                     refUsers.updateChildren(userHashMap).addOnCompleteListener {
                         if (it.isSuccessful) {
-                            startActivity(Intent(MainActivity.getLaunchService(this)))
+                            MainActivity.start(this)
                             finish()
                         }
                     }

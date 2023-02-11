@@ -30,8 +30,6 @@ class ArticleAdapter(var data: ArrayList<ArticleModel>, var context: Activity?) 
         holder.articleImage.setImageResource(data[position].articleImg)
     }
 
-    override fun getItemCount(): Int {
-        return data.size
-    }
+    override fun getItemCount(): Int = data.size
 
 }
