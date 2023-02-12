@@ -9,6 +9,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bisha.paw.R
+import com.bumptech.glide.Glide
 
 class FoodAdapter(
     private val foods: ArrayList<Food>
@@ -40,7 +41,6 @@ class FoodAdapter(
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         holder.bind(foods[position])
-
     }
 
     override fun getItemCount(): Int = foods.size

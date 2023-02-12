@@ -54,12 +54,8 @@
             style="@style/TextStyleMedium12"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/_10sdp"
             android:text="@string/location"
             android:textColor="@color/black50"
-            app:layout_constraintBottom_toTopOf="@+id/tvVetPrice"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/tvVetHospital"
             app:layout_constraintTop_toBottomOf="@+id/tvVetHospital" />
 

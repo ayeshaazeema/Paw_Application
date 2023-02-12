@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bisha.paw.R
 import com.bisha.paw.databinding.FragmentVetBinding
 
- class VetFragment : Fragment() {
+class VetFragment : Fragment() {
 
     private var binding: FragmentVetBinding? = null
     lateinit var rvVet: RecyclerView
@@ -22,6 +22,8 @@ import com.bisha.paw.databinding.FragmentVetBinding
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_vet, container, false)
 
+        rvVet = view.findViewById(R.id.rvVet)
+
         rvVet.apply {
             setHasFixedSize(true)
             adapter = VetAdapter(VetArray, activity)
@@ -29,7 +31,7 @@ import com.bisha.paw.databinding.FragmentVetBinding
                 orientation = LinearLayoutManager.VERTICAL
             }
         }
-        rvVet = view.findViewById(R.id.rvVet)
+
         return view
     }
 

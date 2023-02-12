@@ -24,7 +24,6 @@ class FoodFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_food, container, false)
-
         val rvFoodItem = view.findViewById<RecyclerView>(R.id.rvFoodItem)
         rvFoodItem.apply {
             this.setHasFixedSize(true)
