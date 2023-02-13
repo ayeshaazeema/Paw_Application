@@ -127,14 +127,14 @@
     <Spinner
         android:id="@+id/sch_spinner"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_below="@+id/tvSchTitle"
-        android:spinnerMode="dropdown"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="9dp"
-        android:layout_marginBottom="12dp"
         android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp" />
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="12dp"
+        android:spinnerMode="dropdown" />
 
 
 
