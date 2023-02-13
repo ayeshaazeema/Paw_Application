@@ -6,27 +6,27 @@
     app:startDestination="@id/dashboardFragment">
     <fragment
         android:id="@+id/dashboardFragment"
-        android:name="com.bisha.paw.fragment.dashboard.DashboardFragment"
+        android:name="com.bisha.paw.presentation.dashboard.DashboardFragment"
         android:label="Dashboard"
         tools:layout="@layout/fragment_dashboard" />
     <fragment
         android:id="@+id/articleFragment"
-        android:name="com.bisha.paw.fragment.article.ArticleFragment"
+        android:name="com.bisha.paw.presentation.article.ArticleFragment"
         android:label="Article"
         tools:layout="@layout/fragment_article" />
     <fragment
         android:id="@+id/vetFragment"
-        android:name="com.bisha.paw.fragment.vet.VetFragment"
+        android:name="com.bisha.paw.presentation.vet.VetFragment"
         android:label="Vet"
         tools:layout="@layout/fragment_vet" />
     <fragment
         android:id="@+id/foodFragment"
-        android:name="com.bisha.paw.fragment.food.FoodFragment"
+        android:name="com.bisha.paw.presentation.food.FoodFragment"
         android:label="Food"
         tools:layout="@layout/fragment_food" />
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.bisha.paw.fragment.profile.ProfileFragment"
+        android:name="com.bisha.paw.presentation.profile.ProfileFragment"
         android:label="Profile"
         tools:layout="@layout/fragment_profile" />
 </navigation>

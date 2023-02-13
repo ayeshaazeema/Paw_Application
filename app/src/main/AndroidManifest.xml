@@ -10,26 +10,26 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Paw" >
         <activity
-            android:name=".activity.SearchActivity"
+            android:name=".presentation.SearchActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.authentication.ForgotPasswordActivity"
+            android:name=".presentation.authentication.ForgotPasswordActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.authentication.SignUpActivity"
+            android:name=".presentation.authentication.SignUpActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.authentication.SignInActivity"
+            android:name=".presentation.authentication.SignInActivity"
             android:exported="true" >
         </activity>
         <activity
-            android:name=".activity.onboarding.OnboardingActivity"
+            android:name=".presentation.onboarding.OnboardingActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.MainActivity"
+            android:name=".presentation.MainActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.splash.SplashActivity"
+            android:name=".presentation.splash.SplashActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
