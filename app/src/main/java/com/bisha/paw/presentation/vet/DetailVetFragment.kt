@@ -1,4 +1,4 @@
-package com.bisha.paw.presentation.vet
+package com.bisha.paw.fragment.vet
 
 import android.content.Context
 import android.os.Bundle
@@ -13,7 +13,7 @@ import com.bisha.paw.databinding.FragmentDetailVetBinding
 import kotlinx.android.synthetic.main.fragment_detail_vet.*
 
 class DetailVetFragment() : Fragment()
-//AdapterView.OnItemSelectedListener, Parcelable {
+    //AdapterView.OnItemSelectedListener, Parcelable {
 //
 //    private lateinit var binding: FragmentDetailVetBinding
 //    var schedule = arrayOf("Monday,April 25 2022", "Wednesday,April 27 2022", "Saturday,April 30 2022", "Sunday,May 1 2022")
