@@ -4,7 +4,9 @@ import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.MenuItem
+import android.view.View
 import android.widget.Switch
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
@@ -13,9 +15,16 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.bisha.paw.R
+import com.bisha.paw.utils.ArticleClickEvent
+import com.bisha.paw.utils.FoodClickEvent
+import com.bisha.paw.utils.RxEventBus
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
+import io.reactivex.rxjava3.disposables.CompositeDisposable
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var bottomNavigationView: BottomNavigationView
 
     companion object {
         fun start(context: Context) {
@@ -32,7 +41,7 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.hide()
 
         // Bottom Navigation
-        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
+        bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
         val navController = findNavController(R.id.fragment)
 
         val appBarConfiguration = AppBarConfiguration(
@@ -47,5 +56,29 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
 
         bottomNavigationView.setupWithNavController(navController)
+        initRxBusEvent()
     }
+
+
+    private fun initRxBusEvent() {
+        RxEventBus.subscribe<ArticleClickEvent>()
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribe {
+                Log.d("ArticleClickEvent", "SUBCRIBED")
+                moveToOtherTab(R.id.articleFragment)
+            }.dispose()
+
+        RxEventBus.subscribe<FoodClickEvent>()
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribe {
+                Log.d("FoodClickEvent", "SUBCRIBED")
+                moveToOtherTab(R.id.foodFragment)
+            }.dispose()
+    }
+
+    private fun moveToOtherTab(tabId: Int) {
+        val viewTab: View = bottomNavigationView.findViewById(tabId)
+        viewTab.performClick()
+    }
+
 }

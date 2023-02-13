@@ -23,13 +23,14 @@ class VetFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_vet, container, false)
 
         rvVet = view.findViewById(R.id.rvVet)
+        val linearLayoutManager = object : LinearLayoutManager(requireContext()) {
+            override fun canScrollVertically() = false
+        }
 
         rvVet.apply {
             setHasFixedSize(true)
             adapter = VetAdapter(VetArray, activity)
-            layoutManager = LinearLayoutManager(activity).apply {
-                orientation = LinearLayoutManager.VERTICAL
-            }
+            layoutManager = linearLayoutManager
         }
 
         return view
