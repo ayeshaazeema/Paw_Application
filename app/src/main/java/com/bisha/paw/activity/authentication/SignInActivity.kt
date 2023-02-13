@@ -14,8 +14,6 @@ import kotlinx.android.synthetic.main.activity_sign_in.*
 
 class SignInActivity : AppCompatActivity(), View.OnClickListener {
 
-    private lateinit var firebaseAuth: FirebaseAuth
-
     companion object {
         fun start(context: Context) {
             context.startActivity(Intent(context, SignInActivity::class.java).apply {
@@ -27,10 +25,7 @@ class SignInActivity : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_in)
-
         supportActionBar?.hide()
-
-        firebaseAuth = FirebaseAuth.getInstance()
 
         tvForgotPasswordSignIn.setOnClickListener(this)
         tvQuestionSignIn.setOnClickListener(this)

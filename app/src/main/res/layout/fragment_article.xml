@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginBottom="@dimen/_40sdp"
     android:orientation="vertical"
     tools:context=".fragment.article.ArticleFragment">
 
@@ -75,7 +74,6 @@
                 android:id="@+id/rvArticle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingBottom="20dp"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 tools:listitem="@layout/article_item" />
 

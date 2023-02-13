@@ -12,7 +12,7 @@ enum class Category(val value: String) {
 
     companion object {
         fun getAllCategories(): List<Category> {
-            return listOf(ALL, Category.CAT, Category.DOG, Category.BIRD, Category.FISH, Category.RABBIT)
+            return listOf(ALL, CAT, DOG, BIRD, FISH, RABBIT)
         }
 
         fun getCategory(value: String): Map<KProperty1<Category, String>, Category> {

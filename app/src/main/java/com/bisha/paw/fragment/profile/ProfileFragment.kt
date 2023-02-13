@@ -1,12 +1,10 @@
 package com.bisha.paw.fragment.profile
 
-import android.content.Context
-import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import com.bisha.paw.R
 import com.bisha.paw.activity.authentication.SignInActivity
 import com.bisha.paw.databinding.FragmentProfileBinding
@@ -39,7 +37,7 @@ class ProfileFragment : Fragment(), View.OnClickListener {
             }
 
             override fun onDataChange(snapshot: DataSnapshot) {
-                for (p0 in snapshot.children) {
+                snapshot.children.forEach { _ ->
                     val name = snapshot.child("name").value.toString()
                     val email = snapshot.child("email").value.toString()
                     val profileImage = snapshot.child("profile_image").value.toString()
@@ -47,7 +45,7 @@ class ProfileFragment : Fragment(), View.OnClickListener {
                     binding.tvNameProfile.text = name
                     binding.tvEmailProfile.text = email
 
-                    Glide.with(this@ProfileFragment).load(profileImage).into(binding.ivProfile)
+//                    Glide.with(requireActivity()).load(profileImage).into(binding.ivProfile)
                 }
             }
         })
