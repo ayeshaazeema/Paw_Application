@@ -1,162 +1,164 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".presentation.vet.VetDetailActivity">
 
-
-    <ImageView
-        android:id="@+id/ivDetailVet"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="0dp"
-        android:background="@drawable/background"
-        android:paddingBottom="20dp"
-        android:src="@drawable/vet" />
-
-    <TextView
-        android:id="@+id/detailVetName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/ivDetailVet"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="0dp"
-        android:fontFamily="@font/poppins_bold"
-        android:gravity="start"
-        android:lineSpacingExtra="-12sp"
-        android:text="@string/vetname"
-        android:textColor="@color/black32"
-        android:textSize="24sp" />
-
-    <TextView
-        android:id="@+id/tvVetLocation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/detailVetName"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="20dp"
-        android:fontFamily="@font/poppins_semibold"
-        android:lineSpacingExtra="3sp"
-        android:text="@string/vethos"
-        android:textColor="@color/black32"
-        android:textSize="18sp" />
-
-    <TextView
-        android:id="@+id/detailVetLocation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tvVetLocation"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="30dp"
-        android:fontFamily="@font/poppins_medium"
-        android:lineSpacingExtra="3sp"
-        android:text="@string/detailoc"
-        android:textColor="@color/black50"
-        android:textSize="14sp" />
+        android:layout_height="match_parent">
 
 
-    <TextView
-        android:id="@+id/tvVetRange"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/detailVetLocation"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="20dp"
-        android:fontFamily="@font/poppins_semibold"
-        android:lineSpacingExtra="3sp"
-        android:text="@string/harga"
-        android:textColor="@color/green"
-        android:textSize="18sp" />
+        <ImageView
+            android:id="@+id/ivDetailVet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/background"
+            android:paddingBottom="20dp"
+            android:src="@drawable/vet" />
 
-    <TextView
-        android:id="@+id/tvInformation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tvVetRange"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="20dp"
-        android:fontFamily="@font/poppins_semibold"
-        android:lineSpacingExtra="3sp"
-        android:text="@string/information"
-        android:textColor="@color/black32"
-        android:textSize="18sp" />
+        <TextView
+            android:id="@+id/detailVetName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivDetailVet"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/poppins_bold"
+            android:gravity="start"
+            android:lineSpacingExtra="-12sp"
+            android:text="@string/vetname"
+            android:textColor="@color/black32"
+            android:textSize="24sp" />
 
-    <TextView
-        android:id="@+id/InfoContent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tvInformation"
-        android:fontFamily="@font/poppins_medium"
-        android:lineSpacingExtra="3sp"
-        android:paddingHorizontal="30dp"
-        android:text="@string/descdummy"
-        android:textColor="@color/black50"
-        android:textSize="14sp" />
+        <TextView
+            android:id="@+id/tvVetLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/detailVetName"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:lineSpacingExtra="3sp"
+            android:text="@string/vethos"
+            android:textColor="@color/black32"
+            android:textSize="18sp" />
 
-    <TextView
-        android:id="@+id/tvSchTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/InfoContent"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginTop="20dp"
-        android:fontFamily="@font/poppins_semibold"
-        android:lineSpacingExtra="3sp"
-        android:text="@string/practical_schedule"
-        android:textColor="@color/black32" />
-
-    <Spinner
-        android:id="@+id/sch_spinner"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tvSchTitle"
-        android:spinnerMode="dropdown"
-        android:layout_alignParentBottom="true"
-        android:layout_marginTop="9dp"
-        android:layout_marginBottom="12dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp" />
+        <TextView
+            android:id="@+id/detailVetLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvVetLocation"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginHorizontal="30dp"
+            android:fontFamily="@font/poppins_medium"
+            android:lineSpacingExtra="3sp"
+            android:text="@string/detailoc"
+            android:textColor="@color/black50"
+            android:textSize="14sp" />
 
 
+        <TextView
+            android:id="@+id/tvVetRange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/detailVetLocation"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:lineSpacingExtra="3sp"
+            android:text="@string/harga"
+            android:textColor="@color/green"
+            android:textSize="18sp" />
 
-    <!--    <com.google.android.material.textfield.TextInputLayout-->
-<!--        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginStart="30dp"-->
-<!--        android:layout_marginEnd="30dp"-->
-<!--        android:layout_below="@+id/tvSchTitle">-->
+        <TextView
+            android:id="@+id/tvInformation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvVetRange"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:lineSpacingExtra="3sp"
+            android:text="@string/information"
+            android:textColor="@color/black32"
+            android:textSize="18sp" />
 
-<!--        <AutoCompleteTextView-->
-<!--            android:id="@+id/dropdown_field"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:background="@color/gray"-->
-<!--            android:hint="Choose a date"-->
-<!--            android:inputType="none" />-->
+        <TextView
+            android:id="@+id/InfoContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvInformation"
+            android:fontFamily="@font/poppins_medium"
+            android:lineSpacingExtra="3sp"
+            android:layout_marginHorizontal="30dp"
+            android:text="@string/descdummy"
+            android:textColor="@color/black50"
+            android:textSize="14sp" />
 
-<!--    </com.google.android.material.textfield.TextInputLayout>-->
+        <TextView
+            android:id="@+id/tvSchTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/InfoContent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:lineSpacingExtra="3sp"
+            android:text="@string/practical_schedule"
+            android:textColor="@color/black32" />
 
-</RelativeLayout>
+        <AutoCompleteTextView
+            android:id="@+id/sch_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:layout_below="@+id/tvSchTitle"
+            android:focusableInTouchMode="false"
+            android:longClickable="false"
+            android:cursorVisible="false"
+            android:layout_marginTop="9dp"
+            android:background="@drawable/spinner_background"
+            android:drawableEnd="@drawable/ic_dropdown"
+            android:paddingHorizontal="14dp"
+            android:hint="Choose a date"
+            style="@style/TextStyleMedium14"
+            android:textColorHint="#707070"
+            android:popupBackground="@drawable/spinner_popup_background"
+            android:layout_marginHorizontal="30dp" />
+
+        <Button
+            android:id="@+id/btn_appointment"
+            style="@style/TextStyleSemiBold18"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="@string/button_shop"
+            android:layout_below="@+id/sch_spinner"
+            android:background="@drawable/btn_green_bg"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp" />
+
+    </RelativeLayout>
+
+</ScrollView>
 
 
 
