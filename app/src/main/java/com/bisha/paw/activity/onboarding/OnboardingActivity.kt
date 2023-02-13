@@ -13,11 +13,16 @@ import com.bisha.paw.activity.authentication.SignInActivity
 import com.bisha.paw.fragment.onboarding.FirstOnboardingFragment
 import com.bisha.paw.fragment.onboarding.SecondOnboardingFragment
 import com.bisha.paw.fragment.onboarding.ThirdOnboardingFragment
+import com.bisha.paw.utils.SessionManager
 import kotlinx.android.synthetic.main.activity_onboarding.*
 
 class OnboardingActivity : AppCompatActivity() {
 
     private val fragmentList = ArrayList<Fragment>()
+
+    private val sessionManager: SessionManager by lazy {
+        return@lazy SessionManager(this)
+    }
 
     companion object {
         fun start(context: Context) {
@@ -56,17 +61,16 @@ class OnboardingActivity : AppCompatActivity() {
 
                 if (position < fragmentList.lastIndex) {
                     onboardingSkip.visibility = View.VISIBLE
-                    onboardingNext.text = "Next"
+                    onboardingNext.text = getString(R.string.button_next)
                 } else {
                     onboardingSkip.visibility = View.GONE
-                    onboardingNext.text = "Start"
+                    onboardingNext.text = getString(R.string.button_start)
                 }
             }
         })
 
         onboardingSkip.setOnClickListener {
-            SignInActivity.start(this)
-            finish()
+            doFinishOnboard()
         }
 
         onboardingNext.setOnClickListener {
@@ -75,9 +79,14 @@ class OnboardingActivity : AppCompatActivity() {
             if (position < fragmentList.lastIndex) {
                 onboardingViewPager.currentItem = position + 1
             } else {
-                SignInActivity.start(this)
-                finish()
+                doFinishOnboard()
             }
         }
+    }
+
+    private fun doFinishOnboard() {
+        SignInActivity.start(this)
+        finish()
+        sessionManager.saveHasOnBoard()
     }
 }

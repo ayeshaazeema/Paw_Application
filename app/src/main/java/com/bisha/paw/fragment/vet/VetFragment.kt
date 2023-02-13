@@ -11,7 +11,7 @@ import com.bisha.paw.R
 import com.bisha.paw.databinding.FragmentVetBinding
 
 
-public class VetFragment : Fragment() {
+class VetFragment : Fragment() {
 
     private var binding: FragmentVetBinding? = null
     lateinit var rvVet: RecyclerView
