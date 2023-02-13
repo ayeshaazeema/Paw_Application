@@ -10,8 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bisha.paw.R
 import com.bisha.paw.databinding.FragmentVetBinding
 
-
-public class VetFragment : Fragment() {
+ class VetFragment : Fragment() {
 
     private var binding: FragmentVetBinding? = null
     lateinit var rvVet: RecyclerView
@@ -23,16 +22,14 @@ public class VetFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_vet, container, false)
 
-        //<-- RecyclerView -->
-        val lm = LinearLayoutManager(activity)
-        lm.orientation = LinearLayoutManager.VERTICAL
+        rvVet.apply {
+            setHasFixedSize(true)
+            adapter = VetAdapter(VetArray, activity)
+            layoutManager = LinearLayoutManager(activity).apply {
+                orientation = LinearLayoutManager.VERTICAL
+            }
+        }
         rvVet = view.findViewById(R.id.rvVet)
-
-        val vetAdapter = VetAdapter(VetArray, activity)
-        rvVet.setHasFixedSize(true)
-        rvVet.layoutManager = lm
-        rvVet.adapter = vetAdapter
-
         return view
     }
 

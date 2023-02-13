@@ -14,7 +14,7 @@
         android:layout_height="match_parent"
         android:padding="@dimen/_10sdp">
 
-        <ImageView
+        <com.makeramen.roundedimageview.RoundedImageView
             android:id="@+id/ivVet"
             android:layout_width="@dimen/_80sdp"
             android:layout_height="match_parent"
@@ -23,7 +23,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:riv_corner_radius="@dimen/_20sdp"
+            app:riv_corner_radius="15dp"
             tools:srcCompat="@tools:sample/avatars" />
 
         <TextView
@@ -40,8 +40,9 @@
         <TextView
             android:id="@+id/tvVetHospital"
             style="@style/TextStyleSemiBold12"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:text="@string/hospital_name"
             android:textColor="@color/black32"
             app:layout_constraintBottom_toTopOf="@id/tvVetLocation"
@@ -50,8 +51,8 @@
 
         <TextView
             android:id="@+id/tvVetLocation"
-            style="@style/TextStyleSemiBold12"
-            android:layout_width="wrap_content"
+            style="@style/TextStyleMedium12"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/_10sdp"
             android:text="@string/location"

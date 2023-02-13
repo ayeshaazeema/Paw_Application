@@ -4,17 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="@dimen/_130sdp"
     android:layout_height="@dimen/_180sdp"
-    android:layout_marginVertical="30dp"
-    app:cardCornerRadius="@dimen/_15sdp"
-    app:cardElevation="@dimen/_10sdp">
+    android:layout_marginVertical="10dp"
+    android:layout_marginHorizontal="10dp"
+    app:cardElevation="8dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="@dimen/_10sdp">
 
-        <ImageView
-            android:id="@+id/imageView"
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/ivFood"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_90sdp"
             android:contentDescription="@string/app_name"
@@ -22,11 +22,11 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:riv_corner_radius="@dimen/_20sdp"
+            app:riv_corner_radius="12dp"
             tools:srcCompat="@tools:sample/avatars" />
 
         <TextView
-            android:id="@+id/FoodName"
+            android:id="@+id/tvFoodName"
             style="@style/TextStyleSemiBold18"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -35,13 +35,13 @@
             android:text="@string/name"
             android:textAlignment="center"
             android:textColor="@color/black32"
-            app:layout_constraintBottom_toTopOf="@id/FoodBrand"
-            app:layout_constraintEnd_toEndOf="@+id/imageView"
-            app:layout_constraintStart_toStartOf="@+id/imageView"
-            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+            app:layout_constraintBottom_toTopOf="@id/tvFoodBrand"
+            app:layout_constraintEnd_toEndOf="@+id/ivFood"
+            app:layout_constraintStart_toStartOf="@+id/ivFood"
+            app:layout_constraintTop_toBottomOf="@+id/ivFood" />
 
         <TextView
-            android:id="@+id/FoodBrand"
+            android:id="@+id/tvFoodBrand"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins_medium"
@@ -49,13 +49,13 @@
             android:textAlignment="center"
             android:textColor="@color/black50"
             android:textSize="@dimen/_12ssp"
-            app:layout_constraintBottom_toTopOf="@id/FoodPrice"
-            app:layout_constraintEnd_toEndOf="@id/FoodName"
-            app:layout_constraintStart_toStartOf="@id/FoodName"
-            app:layout_constraintTop_toBottomOf="@id/FoodName" />
+            app:layout_constraintBottom_toTopOf="@id/tvFoodPrice"
+            app:layout_constraintEnd_toEndOf="@id/tvFoodName"
+            app:layout_constraintStart_toStartOf="@id/tvFoodName"
+            app:layout_constraintTop_toBottomOf="@id/tvFoodName" />
 
         <TextView
-            android:id="@+id/FoodPrice"
+            android:id="@+id/tvFoodPrice"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins_semibold"
@@ -64,9 +64,9 @@
             android:textColor="@color/green"
             android:textSize="@dimen/_12ssp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@id/FoodBrand"
-            app:layout_constraintStart_toStartOf="@id/FoodBrand"
-            app:layout_constraintTop_toBottomOf="@id/FoodBrand" />
+            app:layout_constraintEnd_toEndOf="@id/tvFoodBrand"
+            app:layout_constraintStart_toStartOf="@id/tvFoodBrand"
+            app:layout_constraintTop_toBottomOf="@id/tvFoodBrand" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
