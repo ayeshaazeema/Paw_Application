@@ -9,8 +9,6 @@ import android.widget.*
 import androidx.databinding.DataBindingUtil.setContentView
 import androidx.fragment.app.Fragment
 import com.bisha.paw.R
-import com.bisha.paw.databinding.FragmentDetailVetBinding
-import kotlinx.android.synthetic.main.fragment_detail_vet.*
 
 class DetailVetFragment() : Fragment()
     //AdapterView.OnItemSelectedListener, Parcelable {

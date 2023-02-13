@@ -1,10 +1,14 @@
 package com.bisha.paw.data
 
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
+
+@Parcelize
 data class Food(
     val foodName: String,
     val foodBrand: String,
     val foodPrice: Int
-) {
+): Parcelable {
     companion object {
         fun getFoods(): ArrayList<Food> {
             return arrayListOf(
