@@ -42,7 +42,7 @@ class DashboardFragment : Fragment() {
 
         rvArticleDashboard.apply {
             setHasFixedSize(true)
-            adapter = FoodAdapter(Food.getFoods())
+            adapter = FoodAdapter(Food.getFoods()) { _ -> }
             layoutManager = LinearLayoutManager(activity).apply {
                 orientation = LinearLayoutManager.HORIZONTAL
             }
@@ -50,7 +50,7 @@ class DashboardFragment : Fragment() {
 
         rvFoodDashboard.apply {
             setHasFixedSize(true)
-            adapter = FoodAdapter(Food.getFoods())
+            adapter = FoodAdapter(Food.getFoods()) { _ -> }
             layoutManager = LinearLayoutManager(activity).apply {
                 orientation = LinearLayoutManager.HORIZONTAL
             }

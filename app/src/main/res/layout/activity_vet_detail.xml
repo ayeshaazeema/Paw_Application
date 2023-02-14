@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.article.ArticleFragment">
+    tools:context=".presentation.vet.VetDetailActivity">
 
 
     <ImageView
@@ -117,8 +117,8 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
         android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
         android:fontFamily="@font/poppins_semibold"
         android:lineSpacingExtra="3sp"
         android:text="@string/practical_schedule"
@@ -127,7 +127,7 @@
     <Spinner
         android:id="@+id/sch_spinner"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/tvSchTitle"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="30dp"
@@ -137,24 +137,23 @@
         android:spinnerMode="dropdown" />
 
 
-
     <!--    <com.google.android.material.textfield.TextInputLayout-->
-<!--        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginStart="30dp"-->
-<!--        android:layout_marginEnd="30dp"-->
-<!--        android:layout_below="@+id/tvSchTitle">-->
+    <!--        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginStart="30dp"-->
+    <!--        android:layout_marginEnd="30dp"-->
+    <!--        android:layout_below="@+id/tvSchTitle">-->
 
-<!--        <AutoCompleteTextView-->
-<!--            android:id="@+id/dropdown_field"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:background="@color/gray"-->
-<!--            android:hint="Choose a date"-->
-<!--            android:inputType="none" />-->
+    <!--        <AutoCompleteTextView-->
+    <!--            android:id="@+id/dropdown_field"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:background="@color/gray"-->
+    <!--            android:hint="Choose a date"-->
+    <!--            android:inputType="none" />-->
 
-<!--    </com.google.android.material.textfield.TextInputLayout>-->
+    <!--    </com.google.android.material.textfield.TextInputLayout>-->
 
 </RelativeLayout>
 

@@ -28,7 +28,10 @@ class ArticleFragment : Fragment() {
         rvArticle = view.findViewById(R.id.rvArticle)
         ivArticle = view.findViewById(R.id.ivArticle)
 
-        val articleAdapter = ArticleAdapter(ArticleModel.getArticles(), activity)
+        val articleAdapter = ArticleAdapter(ArticleModel.getArticles()) {
+            ArticleDetailActivity.start(requireContext(), it)
+        }
+
         val linearLayoutManager = object : LinearLayoutManager(requireContext()) {
             override fun canScrollVertically() = false
         }
