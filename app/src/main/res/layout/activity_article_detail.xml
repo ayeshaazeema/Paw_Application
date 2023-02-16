@@ -61,7 +61,7 @@
 
         <TextView
             android:id="@+id/detailArticleTitle"
-            style="@style/TextStyle24"
+            style="@style/TextStyleBold18"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_20sdp"
@@ -91,7 +91,7 @@
 
         <TextView
             android:id="@+id/DescTitle"
-            style="@style/TextStyleSemiBold18"
+            style="@style/TextStyleSemiBold14"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
