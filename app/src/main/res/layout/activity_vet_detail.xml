@@ -20,7 +20,6 @@
             android:layout_alignParentEnd="true"
             android:layout_marginStart="0dp"
             android:layout_marginTop="0dp"
-            android:background="@drawable/background"
             android:paddingBottom="20dp"
             android:src="@drawable/vet" />
 
