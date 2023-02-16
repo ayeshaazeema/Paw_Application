@@ -105,6 +105,7 @@
     <string name="button_start">Start</string>
     <string name="shop">Shop</string>
     <string name="button_shop">SHOP</string>
+    <string name="make_appointment">MAKE APPOINTMENT</string>
     <string-array name="sch_array">
         <item>Monday,April 25 2022</item>
         <item>Wednesday,April 27 2022</item>
