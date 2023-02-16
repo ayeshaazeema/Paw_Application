@@ -59,10 +59,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_20sdp"
                 android:layout_marginTop="20dp"
-                android:gravity="start"
-                android:text="Food Name Title"
                 android:ellipsize="end"
+                android:gravity="start"
                 android:maxLines="2"
+                android:text="Food Name Title"
                 android:textColor="@color/black32"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -153,17 +153,17 @@
 
             <TextView
                 android:id="@+id/tvFoodPrice"
+                style="@style/TextStyleSemiBold14"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="35dp"
+                android:text="Rp.30.000,00"
+                android:textColor="@color/green"
                 app:layout_constraintBottom_toBottomOf="@+id/detailFoodTitle"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/detailFoodTitle"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0"
-                android:text="Rp.30.000,00"
-                style="@style/TextStyleSemiBold14"
-                android:textColor="@color/green" />
+                app:layout_constraintVertical_bias="0.0" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

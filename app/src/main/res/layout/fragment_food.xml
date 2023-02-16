@@ -31,6 +31,21 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <!--        <SearchView-->
+        <!--            android:id="@+id/svFood"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="@dimen/_50sdp"-->
+        <!--            android:layout_marginHorizontal="@dimen/_20sdp"-->
+        <!--            android:layout_marginTop="@dimen/_20sdp"-->
+        <!--            android:layout_marginBottom="@dimen/_20sdp"-->
+        <!--            android:background="@drawable/search_background"-->
+        <!--            android:iconifiedByDefault="false"-->
+        <!--            android:queryBackground="@android:color/transparent"-->
+        <!--            android:queryHint="@string/search_food"-->
+        <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toTopOf="parent" />-->
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -41,10 +56,8 @@
         android:paddingHorizontal="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/clFood"
         tools:listitem="@layout/food_item" />
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

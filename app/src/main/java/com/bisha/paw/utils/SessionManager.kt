@@ -12,7 +12,10 @@ object PreferenceKeys {
 class SessionManager(private val context: Context) {
 
     private val mPreferences: SharedPreferences by lazy {
-        return@lazy context.getSharedPreferences(PreferenceKeys.PREFERENCE_NAME, Context.MODE_PRIVATE)
+        return@lazy context.getSharedPreferences(
+            PreferenceKeys.PREFERENCE_NAME,
+            Context.MODE_PRIVATE
+        )
     }
 
     private val firebaseAuth: FirebaseAuth by lazy {

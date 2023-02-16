@@ -30,7 +30,12 @@ class VetDetailActivity : AppCompatActivity() {
 
     private var vet: VetModel? = null
     private var selectedAppoinmentTime: String = ""
-    private var schedules = listOf("Monday,April 25 2022", "Wednesday,April 27 2022", "Saturday,April 30 2022", "Sunday,May 1 2022")
+    private var schedules = listOf(
+        "Monday,April 25 2022",
+        "Wednesday,April 27 2022",
+        "Saturday,April 30 2022",
+        "Sunday,May 1 2022"
+    )
 
     private fun initIntent() {
         vet = intent.getParcelableExtra(VET_ITEM)

@@ -13,7 +13,7 @@ class VetModel(
     var vetImg: Int = 0
 ) : Parcelable {
     companion object {
-        fun getVets(): ArrayList<VetModel>  {
+        fun getVets(): ArrayList<VetModel> {
             //1
             val vet1 = VetModel()
             vet1.vetName = "Anggi Anggini"

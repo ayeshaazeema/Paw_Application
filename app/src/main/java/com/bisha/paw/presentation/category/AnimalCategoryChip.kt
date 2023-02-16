@@ -13,18 +13,18 @@ import androidx.compose.ui.unit.dp
 @Composable
 fun AnimalCategoryChip(
     category: String,
-    onExecuteSearch: (String)-> Unit,
-){
+    onExecuteSearch: (String) -> Unit,
+) {
     Surface(
         modifier = androidx.compose.ui.Modifier.padding(end = 8.dp),
         elevation = 8.dp,
         shape = MaterialTheme.shapes.medium,
         color = MaterialTheme.colors.primary
-    ){
+    ) {
         Row(
             modifier = androidx.compose.ui.Modifier
-                .clickable(onClick ={onExecuteSearch(category)})
-        ){
+                .clickable(onClick = { onExecuteSearch(category) })
+        ) {
             Text(
                 text = category,
                 style = MaterialTheme.typography.body2,

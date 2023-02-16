@@ -61,17 +61,17 @@
 
         <TextView
             android:id="@+id/detailArticleTitle"
-            style="@style/TextStyle24"
+            style="@style/TextStyleBold18"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="30dp"
             android:layout_marginStart="@dimen/_20sdp"
             android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="30dp"
+            android:ellipsize="end"
             android:gravity="start"
+            android:maxLines="2"
             android:text="@string/bird"
             android:textColor="@color/black32"
-            android:ellipsize="end"
-            android:maxLines="2"
             app:layout_constraintEnd_toStartOf="@+id/tbArticleDetail"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/clArticleDetail" />
@@ -91,7 +91,7 @@
 
         <TextView
             android:id="@+id/DescTitle"
-            style="@style/TextStyleSemiBold18"
+            style="@style/TextStyleSemiBold14"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
