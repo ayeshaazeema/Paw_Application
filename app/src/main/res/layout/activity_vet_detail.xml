@@ -8,120 +8,116 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
+        android:layout_height="wrap_content">
 
         <ImageView
             android:id="@+id/ivDetailVet"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/_200sdp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginStart="0dp"
-            android:layout_marginTop="0dp"
-            android:paddingBottom="20dp"
-            android:src="@drawable/vet" />
+            android:scaleType="centerCrop"
+            tools:src="@tools:sample/avatars" />
+
+        <ImageView
+            android:id="@+id/ivBackVet"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_alignTop="@id/ivDetailVet"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/background_back_button"
+            app:srcCompat="@drawable/ic_arrow_back_white" />
+
 
         <TextView
             android:id="@+id/detailVetName"
+            style="@style/TextStyleSemiBold18"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/ivDetailVet"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginHorizontal="30dp"
-            android:layout_marginTop="30dp"
-            android:fontFamily="@font/poppins_bold"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_20sdp"
             android:gravity="start"
-            android:lineSpacingExtra="-12sp"
             android:text="@string/vetname"
-            android:textColor="@color/black32"
-            android:textSize="24sp" />
+            android:textColor="@color/black32" />
 
         <TextView
             android:id="@+id/tvVetLocation"
+            style="@style/TextStyleSemiBold14"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/detailVetName"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginHorizontal="30dp"
-            android:layout_marginTop="20dp"
-            android:fontFamily="@font/poppins_semibold"
-            android:lineSpacingExtra="3sp"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_10sdp"
             android:text="@string/vethos"
-            android:textColor="@color/black32"
-            android:textSize="18sp" />
+            android:textColor="@color/black32" />
 
         <TextView
             android:id="@+id/detailVetLocation"
+            style="@style/TextStyleMedium12"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/tvVetLocation"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginHorizontal="30dp"
-            android:fontFamily="@font/poppins_medium"
-            android:lineSpacingExtra="3sp"
+            android:layout_marginHorizontal="@dimen/_20sdp"
             android:text="@string/detailoc"
-            android:textColor="@color/black50"
-            android:textSize="14sp" />
+            android:textColor="@color/black50" />
 
 
         <TextView
             android:id="@+id/tvVetRange"
+            style="@style/TextStyleSemiBold14"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/detailVetLocation"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginHorizontal="30dp"
-            android:layout_marginTop="20dp"
-            android:fontFamily="@font/poppins_semibold"
-            android:lineSpacingExtra="3sp"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_10sdp"
             android:text="@string/harga"
-            android:textColor="@color/green"
-            android:textSize="18sp" />
+            android:textColor="@color/green" />
 
         <TextView
             android:id="@+id/tvInformation"
+            style="@style/TextStyleSemiBold14"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/tvVetRange"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginHorizontal="30dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_10sdp"
             android:fontFamily="@font/poppins_semibold"
-            android:lineSpacingExtra="3sp"
             android:text="@string/information"
-            android:textColor="@color/black32"
-            android:textSize="18sp" />
+            android:textColor="@color/black32" />
 
         <TextView
             android:id="@+id/InfoContent"
+            style="@style/TextStyleMedium12"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/tvInformation"
-            android:layout_marginHorizontal="30dp"
-            android:fontFamily="@font/poppins_medium"
-            android:lineSpacingExtra="3sp"
+            android:layout_marginHorizontal="@dimen/_20sdp"
             android:text="@string/descdummy"
-            android:textColor="@color/black50"
-            android:textSize="14sp" />
+            android:textColor="@color/black50" />
 
         <TextView
             android:id="@+id/tvSchTitle"
+            style="@style/TextStyleSemiBold14"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/InfoContent"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginHorizontal="30dp"
-            android:layout_marginTop="20dp"
-            android:fontFamily="@font/poppins_semibold"
-            android:lineSpacingExtra="3sp"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_10sdp"
             android:text="@string/practical_schedule"
             android:textColor="@color/black32" />
 
@@ -129,29 +125,28 @@
             android:id="@+id/sch_spinner"
             style="@style/TextStyleMedium14"
             android:layout_width="match_parent"
-            android:layout_height="43dp"
+            android:layout_height="@dimen/_40sdp"
             android:layout_below="@+id/tvSchTitle"
-            android:layout_marginHorizontal="30dp"
-            android:layout_marginTop="9dp"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_5sdp"
             android:background="@drawable/spinner_background"
             android:cursorVisible="false"
             android:drawableEnd="@drawable/ic_dropdown"
             android:focusableInTouchMode="false"
             android:hint="Choose a date"
             android:longClickable="false"
-            android:paddingHorizontal="14dp"
+            android:paddingHorizontal="@dimen/_10sdp"
             android:popupBackground="@drawable/spinner_popup_background"
             android:textColorHint="#707070" />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_appointment"
-            style="@style/TextStyleSemiBold18"
+            style="@style/ButtonActiveGreen"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="@dimen/_40sdp"
             android:layout_below="@+id/sch_spinner"
-            android:layout_marginHorizontal="20dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginBottom="30dp"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginVertical="@dimen/_20sdp"
             android:background="@drawable/btn_green_bg"
             android:text="@string/make_appointment" />
 
