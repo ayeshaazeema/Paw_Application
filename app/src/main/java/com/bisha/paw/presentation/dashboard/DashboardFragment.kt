@@ -10,7 +10,9 @@ import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bisha.paw.R
+import com.bisha.paw.data.ArticleModel
 import com.bisha.paw.data.Food
+import com.bisha.paw.presentation.article.ArticleAdapter
 import com.bisha.paw.presentation.food.FoodAdapter
 import com.bisha.paw.utils.ArticleClickEvent
 import com.bisha.paw.utils.FoodClickEvent
@@ -42,7 +44,7 @@ class DashboardFragment : Fragment() {
 
         rvArticleDashboard.apply {
             setHasFixedSize(true)
-            adapter = FoodAdapter(Food.getFoods()) { _ -> }
+            adapter = ArticleAdapter(ArticleModel.getArticles()) { _ -> }
             layoutManager = LinearLayoutManager(activity).apply {
                 orientation = LinearLayoutManager.HORIZONTAL
             }
