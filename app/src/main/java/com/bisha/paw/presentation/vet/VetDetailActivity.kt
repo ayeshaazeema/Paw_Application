@@ -31,10 +31,10 @@ class VetDetailActivity : AppCompatActivity() {
     private var vet: VetModel? = null
     private var selectedAppoinmentTime: String = ""
     private var schedules = listOf(
-        "Monday,April 25 2022",
-        "Wednesday,April 27 2022",
-        "Saturday,April 30 2022",
-        "Sunday,May 1 2022"
+        "Monday, April 25 2022",
+        "Wednesday, April 27 2022",
+        "Saturday, April 30 2022",
+        "Sunday, May 1 2022"
     )
 
     private fun initIntent() {
@@ -58,7 +58,7 @@ class VetDetailActivity : AppCompatActivity() {
         val schSpinner: AutoCompleteTextView = findViewById(R.id.sch_spinner)
         schSpinner.apply {
             setAdapter(adapter)
-            setOnFocusChangeListener { _, _ ->
+            setOnClickListener {
                 showDropDown()
             }
             setOnItemClickListener { parent, _, position, _ ->
@@ -69,7 +69,9 @@ class VetDetailActivity : AppCompatActivity() {
 
         val btnAppointment: Button = findViewById(R.id.btn_appointment)
         btnAppointment.setOnClickListener {
-            Log.d("ONCLICK", "Show Dialog $selectedAppoinmentTime")
+            VetAppointmentDialog {
+                finish()
+            }.show(supportFragmentManager, VetAppointmentDialog.VET_DIALOG)
         }
     }
 
