@@ -76,7 +76,7 @@ class VetDetailActivity : AppCompatActivity() {
     }
 
     private fun setDetailData(model: VetModel) {
-        val ivDetailVet: ImageView = findViewById(R.id.ivDetailVet)
+        val ivDetailVet: ImageView = findViewById(R.id.ivVetDetail)
         val tvVetName: TextView = findViewById(R.id.detailVetName)
         val tvVetPlacename: TextView = findViewById(R.id.tvVetLocation)
         val tvVetLocation: TextView = findViewById(R.id.detailVetLocation)
