@@ -20,7 +20,7 @@ class VetModel(
             vet1.vetHospital = "North Animal Clinic"
             vet1.vetLocation = "North Jakarta, Indonesia"
             vet1.vetPrice = 200000
-            vet1.vetImg = R.drawable.anggi_anggini
+            vet1.vetImg = R.drawable.abel_sudrajat
 
             //2
             val vet2 = VetModel()
