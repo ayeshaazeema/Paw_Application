@@ -7,6 +7,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
+import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bisha.paw.R
@@ -31,6 +33,7 @@ class DashboardFragment : Fragment() {
         val rvFoodDashboard = view.findViewById<RecyclerView>(R.id.rvFoodDashboard)
         val tvShowAllArticles = view.findViewById<TextView>(R.id.tvShowAllArticlesDashboard)
         val tvShowAllFoods = view.findViewById<TextView>(R.id.tvShowAllFoodDashboard)
+        val cvDonate = view.findViewById<CardView>(R.id.cvDonate)
 
         tvShowAllArticles.setOnClickListener {
             Log.d("CLICK", "ArticleClickEvent")
@@ -40,6 +43,10 @@ class DashboardFragment : Fragment() {
         tvShowAllFoods.setOnClickListener {
             Log.d("CLICK", "FoodClickEvent")
             RxEventBus.post(FoodClickEvent())
+        }
+
+        cvDonate.setOnClickListener {
+            Toast.makeText(requireContext(), "DONATED", Toast.LENGTH_SHORT).show()
         }
 
         rvArticleDashboard.apply {

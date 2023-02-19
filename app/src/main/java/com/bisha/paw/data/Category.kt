@@ -2,21 +2,24 @@ package com.bisha.paw.data
 
 import kotlin.reflect.KProperty1
 
-enum class Category(val value: String) {
-    ALL("All"),
-    CAT("Cat"),
-    DOG("Dog"),
-    BIRD("Bird"),
-    FISH("Fish"),
-    RABBIT("Rabbit");
-
+data class Category(
+    val value: String,
+    var isSelected: Boolean = false
+) {
     companion object {
-        fun getAllCategories(): List<Category> {
-            return listOf(ALL, CAT, DOG, BIRD, FISH, RABBIT)
+        fun getAllCategories(): ArrayList<Category> {
+            return arrayListOf(
+                Category("All"),
+                Category("Cat"),
+                Category("Dog"),
+                Category("Bird"),
+                Category("Fish"),
+                Category("Rabbit")
+            )
         }
 
         fun getCategory(value: String): Map<KProperty1<Category, String>, Category> {
-            return values().associateBy { Category::value }
+            return getAllCategories().associateBy { Category::value }
         }
     }
 }

@@ -3,6 +3,7 @@ package com.bisha.paw.presentation.article
 import android.app.SearchManager
 import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import android.view.*
 import android.widget.ImageView
 import androidx.fragment.app.Fragment
@@ -12,6 +13,7 @@ import android.widget.SearchView
 import com.bisha.paw.R
 import com.bisha.paw.data.ArticleModel
 import com.bisha.paw.databinding.FragmentArticleBinding
+import com.bisha.paw.presentation.category.CategoryAdapter
 
 class ArticleFragment : Fragment() {
 
@@ -26,6 +28,7 @@ class ArticleFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_article, container, false)
 
         rvArticle = view.findViewById(R.id.rvArticle)
+        val rvCategory: RecyclerView = view.findViewById(R.id.rvCategory)
         ivArticle = view.findViewById(R.id.ivArticle)
 
         val articleAdapter = ArticleAdapter(ArticleModel.getArticles()) {
@@ -40,6 +43,10 @@ class ArticleFragment : Fragment() {
             this.layoutManager = linearLayoutManager
             this.adapter = articleAdapter
             this.setHasFixedSize(true)
+        }
+
+        CategoryAdapter.setupCategoryList(requireContext(), rvCategory) {
+            Log.d("kokok", "SELECTED CATEGORY $it")
         }
 
         ivArticle.setImageResource(R.drawable.bird)

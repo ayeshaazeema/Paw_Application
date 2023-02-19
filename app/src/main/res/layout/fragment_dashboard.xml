@@ -49,10 +49,10 @@
                 android:contentDescription="@string/imageview"
                 android:elevation="@dimen/_10sdp"
                 android:scaleType="centerCrop"
+                android:src="@drawable/img_donate"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/clArticleDetail"
-                tools:src="@tools:sample/avatars" />
+                app:layout_constraintTop_toBottomOf="@+id/clArticleDetail" />
 
         </androidx.cardview.widget.CardView>
 
