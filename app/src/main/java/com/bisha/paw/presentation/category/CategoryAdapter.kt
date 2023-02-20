@@ -20,6 +20,9 @@ class CategoryAdapter(
     private val onClick: (Category) -> Unit
 ): RecyclerView.Adapter<CategoryAdapter.MyViewHolder>() {
 
+    var selectedItemPos = -1
+    var lastItemSelectedPos = -1
+
     companion object {
         fun setupCategoryList(context: Context, recyclerView: RecyclerView, onClick: (Category) -> Unit) {
             recyclerView.apply {
@@ -41,16 +44,15 @@ class CategoryAdapter(
 
         fun bind(model: Category) {
             tvCategory.text = model.value
-            updateOnClick(model)
         }
 
-        fun updateOnClick(model: Category) {
+        fun updateOnClick(isSelected: Boolean) {
             val white = itemView.context.getColorResource(R.color.white)
             val black = itemView.context.getColorResource(R.color.black)
             val yellow = itemView.context.getColorResource(R.color.yellow)
 
-            tvCategory.setTextColor(if (model.isSelected) white else black)
-            cvCategory.setCardBackgroundColor(if (model.isSelected) yellow else white)
+            tvCategory.setTextColor(if (isSelected) white else black)
+            cvCategory.setCardBackgroundColor(if (isSelected) yellow else white)
         }
     }
 
@@ -61,17 +63,18 @@ class CategoryAdapter(
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        holder.bind(categories[position])
         holder.itemView.setOnClickListener {
-//            val newCategories = categories.mapIndexed { index, category ->
-//                category.copy(isSelected = index == position)
-//            }
-//
-//            setList(newCategories)
-
+            selectedItemPos = position
+            lastItemSelectedPos = if (lastItemSelectedPos == -1) selectedItemPos else {
+                notifyItemChanged(lastItemSelectedPos)
+                selectedItemPos
+            }
+            notifyItemChanged(selectedItemPos)
             onClick(categories[position])
-            holder.updateOnClick(categories[position])
         }
+
+        holder.updateOnClick(position == selectedItemPos)
+        holder.bind(categories[position])
     }
 
     override fun getItemCount(): Int = categories.size

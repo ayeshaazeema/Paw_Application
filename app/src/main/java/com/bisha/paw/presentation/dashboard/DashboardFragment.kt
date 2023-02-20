@@ -15,7 +15,9 @@ import com.bisha.paw.R
 import com.bisha.paw.data.ArticleModel
 import com.bisha.paw.data.Food
 import com.bisha.paw.presentation.article.ArticleAdapter
+import com.bisha.paw.presentation.article.ArticleDetailActivity
 import com.bisha.paw.presentation.food.FoodAdapter
+import com.bisha.paw.presentation.food.FoodDetailActivity
 import com.bisha.paw.utils.ArticleClickEvent
 import com.bisha.paw.utils.FoodClickEvent
 import com.bisha.paw.utils.RxEventBus
@@ -51,18 +53,18 @@ class DashboardFragment : Fragment() {
 
         rvArticleDashboard.apply {
             setHasFixedSize(true)
-            adapter = ArticleAdapter(ArticleModel.getArticles()) { _ -> }
-            layoutManager = LinearLayoutManager(activity).apply {
-                orientation = LinearLayoutManager.HORIZONTAL
+            adapter = DashboardArticleAdapter(ArticleModel.getArticles()) {
+                ArticleDetailActivity.start(requireContext(), it)
             }
+            layoutManager = LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false)
         }
 
         rvFoodDashboard.apply {
             setHasFixedSize(true)
-            adapter = FoodAdapter(Food.getFoods()) { _ -> }
-            layoutManager = LinearLayoutManager(activity).apply {
-                orientation = LinearLayoutManager.HORIZONTAL
+            adapter = FoodAdapter(Food.getFoods()) {
+                FoodDetailActivity.start(requireContext(), it)
             }
+            layoutManager = LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false)
         }
 
         return view
