@@ -42,19 +42,18 @@
 
         <TextView
             android:id="@+id/detailVetName"
+            style="@style/TextStyleSemiBold14"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/rlVetDetail"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginHorizontal="30dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_20sdp"
             android:fontFamily="@font/poppins_bold"
             android:gravity="start"
-            android:lineSpacingExtra="-12sp"
             android:text="@string/vetname"
-            android:textColor="@color/black32"
-            android:textSize="24sp" />
+            android:textColor="@color/black32"/>
 
         <TextView
             android:id="@+id/tvVetLocation"
@@ -113,7 +112,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/tvInformation"
-            android:layout_marginHorizontal="30dp"
+            android:layout_marginHorizontal="@dimen/_20sdp"
             android:text="@string/descdummy"
             android:textColor="@color/black50" />
 
@@ -162,6 +161,7 @@
     </RelativeLayout>
 
 </ScrollView>
+
 
 
 

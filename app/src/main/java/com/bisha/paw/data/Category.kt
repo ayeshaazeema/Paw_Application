@@ -11,8 +11,8 @@ enum class Category(val value: String) {
     RABBIT("Rabbit");
 
     companion object {
-        fun getAllCategories(): List<Category> {
-            return listOf(ALL, CAT, DOG, BIRD, FISH, RABBIT)
+        fun getAllCategories(): ArrayList<Category> {
+            return arrayListOf(ALL, CAT, DOG, BIRD, FISH, RABBIT)
         }
 
         fun getCategory(value: String): Map<KProperty1<Category, String>, Category> {

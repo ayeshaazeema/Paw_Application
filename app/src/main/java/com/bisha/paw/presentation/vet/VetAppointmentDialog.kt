@@ -10,13 +10,17 @@ import com.bisha.paw.R
 
 class VetAppointmentDialog(
     private val onClick: () -> Unit
-): DialogFragment() {
+) : DialogFragment() {
 
     companion object {
         const val VET_DIALOG = "vet_dialog"
     }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         dialog?.window?.setBackgroundDrawableResource(R.drawable.dialog_round_corner)
         val view = inflater.inflate(R.layout.dialog_appointment_layout, container, false)
 

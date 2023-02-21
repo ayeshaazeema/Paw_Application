@@ -41,6 +41,7 @@
         </RelativeLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
+
             android:id="@+id/clFoodDetail2"
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -50,22 +51,23 @@
 
             <TextView
                 android:id="@+id/detailFoodTitle"
-                style="@style/TextStyleSemiBold18"
-                android:layout_width="220dp"
+                style="@style/TextStyleSemiBold14"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_20sdp"
-                android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_20sdp"
                 android:ellipsize="end"
                 android:gravity="start"
                 android:maxLines="2"
                 android:text="Food Name Title"
                 android:textColor="@color/black32"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/detailFoodSub"
-                style="@style/TextStyleMedium14"
+                style="@style/TextStyleMedium12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_medium"
@@ -89,7 +91,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/detailFoodSub"
-                app:layout_constraintTop_toBottomOf="@+id/detailFoodSub" />
+                app:layout_constraintTop_toBottomOf="@+id/tvFoodPrice" />
 
             <TextView
                 android:id="@+id/DescContent"
@@ -111,7 +113,6 @@
                 android:layout_alignParentTop="true"
                 android:layout_alignParentBottom="true"
                 android:layout_marginTop="@dimen/_10sdp"
-                android:lineSpacingExtra="3sp"
                 android:text="@string/composition"
                 android:textColor="@color/black32"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -132,34 +133,30 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvComposition" />
 
-            <Button
-                android:id="@+id/btnShop"
-                style="@style/TextStyleSemiBold18"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_marginHorizontal="20dp"
-                android:layout_marginTop="40dp"
-                android:layout_marginBottom="30dp"
-                android:background="@drawable/btn_green_bg"
-                android:text="@string/button_shop"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvCompositionDesc" />
-
             <TextView
                 android:id="@+id/tvFoodPrice"
                 style="@style/TextStyleSemiBold14"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="35dp"
-                android:text="Rp.30.000,00"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/price_30"
                 android:textColor="@color/green"
-                app:layout_constraintBottom_toBottomOf="@+id/detailFoodTitle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/detailFoodSub" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnShop"
+                style="@style/ButtonActiveGreen"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginVertical="@dimen/_20sdp"
+                android:text="@string/shop"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/detailFoodTitle"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvCompositionDesc" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

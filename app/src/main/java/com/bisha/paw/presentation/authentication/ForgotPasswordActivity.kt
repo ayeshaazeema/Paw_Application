@@ -42,6 +42,26 @@ class ForgotPasswordActivity : AppCompatActivity(), View.OnClickListener {
         }
     }
 
+//    private fun forgotPassword() {
+//        val email = etEmailForgotPassword.text.toString()
+//        if (TextUtils.isEmpty(email)) {
+//            Toast.makeText(this, getString(R.string.error_email), Toast.LENGTH_SHORT).show()
+//        } else {
+//            mAuth.sendPasswordResetEmail(email).addOnCompleteListener {
+//                if (it.isSuccessful) {
+//                    Toast.makeText(this, getString(R.string.reset_forgot_password), Toast.LENGTH_SHORT).show()
+//                    SignInActivity.start(this)
+//                } else {
+//                    Toast.makeText(
+//                        this,
+//                        getString(R.string.failed_forgot_password),
+//                        Toast.LENGTH_SHORT
+//                    ).show()
+//                }
+//            }
+//        }
+//    }
+
     private fun forgotPassword() {
         val email = etEmailForgotPassword.text.toString()
         if (TextUtils.isEmpty(email)) {

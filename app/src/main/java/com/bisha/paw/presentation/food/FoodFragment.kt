@@ -2,6 +2,7 @@ package com.bisha.paw.presentation.food
 
 
 import android.os.Bundle
+import android.util.Log
 import android.view.*
 import android.widget.Toast
 import androidx.appcompat.widget.SearchView
@@ -10,6 +11,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bisha.paw.R
 import com.bisha.paw.data.Food
+import com.bisha.paw.presentation.category.CategoryAdapter
 import com.google.android.material.bottomsheet.BottomSheetDialog
 
 class FoodFragment : Fragment() {
@@ -24,6 +26,11 @@ class FoodFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_food, container, false)
         val rvFoodItem = view.findViewById<RecyclerView>(R.id.rvFoodItem)
+        val rvCategory = view.findViewById<RecyclerView>(R.id.rvCategory)
+
+        CategoryAdapter.setupCategoryList(requireContext(), rvCategory) {
+            Log.d("kokok", "SELECTED CATEGORY $it")
+        }
 
         rvFoodItem.apply {
             this.setHasFixedSize(true)

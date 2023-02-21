@@ -1,5 +1,6 @@
 package com.bisha.paw.utils
 
+import android.content.Context
 import java.text.NumberFormat
 import java.util.*
 
@@ -14,3 +15,5 @@ fun Int.toFormatRupiah(): String {
     val stringResult = formatRupiah.format(this)
     return stringResult.replace("Rp", "Rp ").substringBefore(",")
 }
+
+fun Context.getColorResource(id: Int) = resources.getColor(id)

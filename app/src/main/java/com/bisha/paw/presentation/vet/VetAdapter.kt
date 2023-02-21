@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bisha.paw.R
 import com.bisha.paw.data.VetModel
 import com.bisha.paw.utils.toFormatRupiah
+import com.bumptech.glide.Glide
 
 class VetAdapter(
     private val data: ArrayList<VetModel>,
@@ -28,7 +29,7 @@ class VetAdapter(
             vetHospital.text = model.vetHospital
             vetLocation.text = model.vetLocation
             vetPrice.text = model.vetPrice.toFormatRupiah()
-            vetImage.setImageResource(model.vetImg)
+            Glide.with(itemView).load(model.vetImg).into(vetImage)
         }
     }
 
