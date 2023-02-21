@@ -23,7 +23,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:riv_corner_radius="15dp"
+            app:riv_corner_radius="@dimen/_10sdp"
             tools:srcCompat="@tools:sample/avatars" />
 
         <TextView
@@ -42,7 +42,7 @@
             style="@style/TextStyleSemiBold12"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="@dimen/_10sdp"
             android:text="@string/hospital_name"
             android:textColor="@color/black32"
             app:layout_constraintBottom_toTopOf="@id/tvVetLocation"

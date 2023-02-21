@@ -25,6 +25,7 @@
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
+                android:contentDescription="@string/imageview"
                 android:scaleType="centerCrop"
                 tools:src="@tools:sample/avatars" />
 
@@ -36,6 +37,7 @@
                 android:layout_marginStart="@dimen/_10sdp"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:background="@drawable/background_back_button"
+                android:contentDescription="@string/imageview"
                 app:srcCompat="@drawable/ic_arrow_back_white" />
 
         </RelativeLayout>

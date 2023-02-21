@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="@dimen/_130sdp"
     android:layout_height="@dimen/_180sdp"
-    android:layout_margin="10dp"
+    android:layout_margin="@dimen/_10sdp"
     app:cardCornerRadius="@dimen/_15sdp"
-    app:cardElevation="8dp">
+    app:cardElevation="@dimen/_10sdp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -22,7 +22,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:riv_corner_radius="12dp"
+            app:riv_corner_radius="@dimen/_10sdp"
             tools:srcCompat="@tools:sample/avatars" />
 
         <TextView
@@ -42,13 +42,12 @@
 
         <TextView
             android:id="@+id/tvFoodBrand"
+            style="@style/TextStyleMedium12"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/poppins_medium"
             android:text="@string/brand"
             android:textAlignment="center"
             android:textColor="@color/black50"
-            android:textSize="@dimen/_12ssp"
             app:layout_constraintBottom_toTopOf="@id/tvFoodPrice"
             app:layout_constraintEnd_toEndOf="@id/tvFoodName"
             app:layout_constraintStart_toStartOf="@id/tvFoodName"
@@ -56,13 +55,12 @@
 
         <TextView
             android:id="@+id/tvFoodPrice"
+            style="@style/TextStyleSemiBold14"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/poppins_semibold"
             android:text="@string/price"
             android:textAlignment="center"
             android:textColor="@color/green"
-            android:textSize="@dimen/_12ssp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@id/tvFoodBrand"
             app:layout_constraintStart_toStartOf="@id/tvFoodBrand"

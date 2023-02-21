@@ -25,6 +25,7 @@
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
+                android:contentDescription="@string/imageview"
                 android:scaleType="centerCrop"
                 tools:src="@tools:sample/avatars" />
 
@@ -36,6 +37,7 @@
                 android:layout_marginStart="@dimen/_10sdp"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:background="@drawable/background_back_button"
+                android:contentDescription="@string/imageview"
                 app:srcCompat="@drawable/ic_arrow_back_white" />
 
         </RelativeLayout>
@@ -56,10 +58,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/_20sdp"
                 android:layout_marginTop="@dimen/_20sdp"
-                android:ellipsize="end"
                 android:gravity="start"
                 android:maxLines="2"
-                android:text="Food Name Title"
+                android:text="@string/food_brand"
                 android:textColor="@color/black32"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -71,7 +72,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_medium"
-                android:text="Food sub"
+                android:text="@string/food_subtitle"
                 android:textColor="@color/black50"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -126,7 +127,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/_20sdp"
-                android:layout_marginBottom="5dp"
                 android:text="@string/shortdesc"
                 android:textColor="@color/black32"
                 app:layout_constraintEnd_toEndOf="parent"

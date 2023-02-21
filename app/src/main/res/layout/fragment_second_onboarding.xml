@@ -8,8 +8,8 @@
 
     <ImageView
         android:id="@+id/ivSecondOnboarding"
-        android:layout_width="271dp"
-        android:layout_height="350dp"
+        android:layout_width="@dimen/_271dp"
+        android:layout_height="@dimen/_350dp"
         android:src="@drawable/second_onboarding"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -53,7 +53,7 @@
             android:fontFamily="@font/poppins_bold"
             android:gravity="start"
             android:text="@string/vetname"
-            android:textColor="@color/black32"/>
+            android:textColor="@color/black32" />
 
         <TextView
             android:id="@+id/tvVetLocation"
@@ -130,10 +130,10 @@
             android:textColor="@color/black32" />
 
         <AutoCompleteTextView
-            android:id="@+id/sch_spinner"
+            android:id="@+id/schSpinner"
             style="@style/TextStyleMedium14"
             android:layout_width="match_parent"
-            android:layout_height="43dp"
+            android:layout_height="@dimen/_40sdp"
             android:layout_below="@+id/tvSchTitle"
             android:layout_marginHorizontal="@dimen/_20sdp"
             android:layout_marginTop="@dimen/_5sdp"
@@ -141,18 +141,18 @@
             android:cursorVisible="false"
             android:drawableEnd="@drawable/ic_dropdown"
             android:focusableInTouchMode="false"
-            android:hint="Choose a date"
+            android:hint="@string/choose_a_date"
             android:longClickable="false"
             android:paddingHorizontal="@dimen/_10sdp"
             android:popupBackground="@drawable/spinner_popup_background"
             android:textColorHint="#707070" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_appointment"
+            android:id="@+id/btnAppointment"
             style="@style/ButtonActiveGreen"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_40sdp"
-            android:layout_below="@+id/sch_spinner"
+            android:layout_below="@+id/schSpinner"
             android:layout_marginHorizontal="@dimen/_20sdp"
             android:layout_marginVertical="@dimen/_20sdp"
             android:background="@drawable/btn_green_bg"

@@ -107,6 +107,12 @@
     <string name="button_shop">SHOP</string>
     <string name="make_appointment">MAKE APPOINTMENT</string>
     <string name="price_30">Rp.30.000,00</string>
+    <string name="food_brand">Food Brand</string>
+    <string name="food_subtitle">Food Subtitle</string>
+    <string name="choose_a_date">Choose a date</string>
+    <string name="appointment_set">Appointment Set!</string>
+    <string name="appointment_dialog">Your appointment has been set. Please press the “OK” button to continue.</string>
+    <string name="ok">OK</string>
     <string-array name="sch_array">
         <item>Monday,April 25 2022</item>
         <item>Wednesday,April 27 2022</item>

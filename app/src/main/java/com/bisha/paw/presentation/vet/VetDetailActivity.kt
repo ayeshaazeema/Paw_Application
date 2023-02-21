@@ -4,16 +4,13 @@ import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.ArrayAdapter
 import android.widget.AutoCompleteTextView
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import com.bisha.paw.R
-import com.bisha.paw.data.Food
 import com.bisha.paw.data.VetModel
-import com.bisha.paw.presentation.food.FoodDetailActivity
 import com.bisha.paw.utils.toFormatRupiah
 
 class VetDetailActivity : AppCompatActivity() {
@@ -55,7 +52,7 @@ class VetDetailActivity : AppCompatActivity() {
             schedules
         )
 
-        val schSpinner: AutoCompleteTextView = findViewById(R.id.sch_spinner)
+        val schSpinner: AutoCompleteTextView = findViewById(R.id.schSpinner)
         schSpinner.apply {
             setAdapter(adapter)
             setOnClickListener {
@@ -67,7 +64,7 @@ class VetDetailActivity : AppCompatActivity() {
             }
         }
 
-        val btnAppointment: Button = findViewById(R.id.btn_appointment)
+        val btnAppointment: Button = findViewById(R.id.btnAppointment)
         btnAppointment.setOnClickListener {
             VetAppointmentDialog {
                 finish()

@@ -9,7 +9,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cvBottomNav"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="@dimen/_60sdp"
         android:elevation="@dimen/_20sdp"
         app:cardCornerRadius="@dimen/_20sdp"
         app:layout_constraintBottom_toBottomOf="parent"
