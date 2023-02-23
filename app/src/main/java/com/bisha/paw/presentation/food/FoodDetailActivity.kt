@@ -58,6 +58,12 @@ class FoodDetailActivity : AppCompatActivity() {
         val tvFoodPrice: TextView = findViewById(R.id.tvFoodPrice)
         val tvFoodSub: TextView = findViewById(R.id.detailFoodSub)
         val tvFoodDesc: TextView = findViewById(R.id.DescContent)
+        val ivBackFood: ImageView = findViewById(R.id.ivBackFood)
+
+        ivBackFood.setOnClickListener {
+            finish()
+        }
+
 
         tvFoodTitle.text = model.foodName
         tvFoodPrice.text = model.foodPrice.toFormatRupiah()

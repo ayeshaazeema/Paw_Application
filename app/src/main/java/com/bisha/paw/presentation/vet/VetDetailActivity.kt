@@ -79,6 +79,12 @@ class VetDetailActivity : AppCompatActivity() {
         val tvVetLocation: TextView = findViewById(R.id.detailVetLocation)
         val tvVetPrice: TextView = findViewById(R.id.tvVetRange)
         val tvVetInfo: TextView = findViewById(R.id.InfoContent)
+        val ivBackVet: ImageView = findViewById(R.id.ivBackVet)
+
+        ivBackVet.setOnClickListener {
+            finish()
+        }
+
 
         ivDetailVet.setImageResource(model.vetImg)
         tvVetName.text = model.vetName

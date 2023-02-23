@@ -30,7 +30,7 @@
                 tools:src="@tools:sample/avatars" />
 
             <ImageView
-                android:id="@+id/ivBackArticle"
+                android:id="@+id/ivBackFood"
                 android:layout_width="@dimen/_40sdp"
                 android:layout_height="@dimen/_40sdp"
                 android:layout_alignTop="@id/ivFoodDetail"

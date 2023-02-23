@@ -6,11 +6,14 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.activity.OnBackPressedCallback
 import com.bisha.paw.R
 import com.bisha.paw.data.ArticleModel
 import com.bisha.paw.data.Food
+import com.bisha.paw.presentation.MainActivity
 import com.bisha.paw.presentation.food.FoodDetailActivity
 import com.bisha.paw.utils.toFormatRupiah
+import kotlinx.android.synthetic.main.activity_food_detail.*
 
 class ArticleDetailActivity : AppCompatActivity() {
 
@@ -36,6 +39,7 @@ class ArticleDetailActivity : AppCompatActivity() {
         supportActionBar?.hide()
         initIntent()
 
+
         article?.let {
             setDetailData(it)
         }
@@ -46,6 +50,11 @@ class ArticleDetailActivity : AppCompatActivity() {
         val tvArticleTitle: TextView = findViewById(R.id.detailArticleTitle)
         val tvArticleSub: TextView = findViewById(R.id.detailArticleSub)
         val tvArticleDesc: TextView = findViewById(R.id.DescContent)
+        val ivBackArticle: ImageView = findViewById(R.id.ivBackArticle)
+
+        ivBackArticle.setOnClickListener {
+            finish()
+        }
 
         ivArticleDetail.setImageResource(model.articleImg)
         tvArticleTitle.text = model.articleTitle
