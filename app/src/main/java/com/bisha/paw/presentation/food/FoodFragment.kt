@@ -19,7 +19,7 @@ import com.bisha.paw.utils.showToast
 
 class FoodFragment : Fragment() {
     private lateinit var foodAdapter: FoodAdapter
-    private lateinit var foods: ArrayList<Food>
+    private var foods = arrayListOf<Food>()
 
     private val viewModel: MainViewModel by viewModels()
 
