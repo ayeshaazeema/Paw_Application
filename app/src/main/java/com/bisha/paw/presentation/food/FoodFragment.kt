@@ -7,18 +7,21 @@ import android.view.*
 import android.widget.Toast
 import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bisha.paw.R
-import com.bisha.paw.data.Food
+import com.bisha.paw.data.model_ui.Food
 import com.bisha.paw.presentation.category.CategoryAdapter
-import com.google.android.material.bottomsheet.BottomSheetDialog
+import com.bisha.paw.presentation.viewmodel.MainViewModel
+import com.bisha.paw.utils.observeLiveData
+import com.bisha.paw.utils.showToast
 
 class FoodFragment : Fragment() {
-    private lateinit var rvFoodFragment: FoodFragment
-    private lateinit var adapter: FoodAdapter
-    private lateinit var foods: ArrayList<Food>
-    private lateinit var bottomSheetDialog: BottomSheetDialog
+    private lateinit var foodAdapter: FoodAdapter
+    private var foods = arrayListOf<Food>()
+
+    private val viewModel: MainViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -32,15 +35,35 @@ class FoodFragment : Fragment() {
             Log.d("kokok", "SELECTED CATEGORY $it")
         }
 
+        foodAdapter = FoodAdapter {
+            FoodDetailActivity.start(requireContext(), it)
+        }
+
         rvFoodItem.apply {
             this.setHasFixedSize(true)
             this.layoutManager = GridLayoutManager(requireContext(), 2)
-            this.adapter = FoodAdapter(Food.getFoods()) {
-                FoodDetailActivity.start(requireContext(), it)
-            }
+            this.adapter = foodAdapter
         }
 
+        initProcess()
+        initObservers()
+
         return view
+    }
+
+    private fun initProcess() {
+        viewModel.getFoods()
+    }
+
+    private fun initObservers() {
+        viewModel.foodsResult.observeLiveData(
+            owner = viewLifecycleOwner,
+            context = requireContext(),
+            onSuccess = {
+                foods.addAll(it)
+                foodAdapter.setList(foods)
+            }
+        )
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
@@ -68,7 +91,7 @@ class FoodFragment : Fragment() {
         if (filteredFoods.isEmpty()) {
             Toast.makeText(requireContext(), "No Data Found..", Toast.LENGTH_SHORT).show()
         } else {
-            adapter.setList(filteredFoods)
+            foodAdapter.setList(filteredFoods)
         }
     }
 }

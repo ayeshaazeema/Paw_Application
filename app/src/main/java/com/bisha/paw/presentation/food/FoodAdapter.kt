@@ -8,13 +8,15 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bisha.paw.R
-import com.bisha.paw.data.Food
+import com.bisha.paw.data.model_ui.Food
+import com.bisha.paw.utils.setImageUrl
 import com.bisha.paw.utils.toFormatRupiah
 
 class FoodAdapter(
-    private val foods: ArrayList<Food>,
     private val onClick: (Food) -> Unit
 ) : RecyclerView.Adapter<FoodAdapter.MyViewHolder>() {
+
+    private var foods = arrayListOf<Food>()
 
     fun setList(data: ArrayList<Food>) {
         this.foods.addAll(data)
@@ -30,7 +32,8 @@ class FoodAdapter(
         fun bind(model: Food) {
             tvFoodName.text = model.foodName
             tvFoodBrand.text = model.foodBrand
-            tvFoodPrice.text = model.foodPrice.toFormatRupiah()
+            tvFoodPrice.text = model.foodPrice.toInt().toFormatRupiah()
+            ivFood.setImageUrl(itemView.context, model.urlImage)
         }
     }
 

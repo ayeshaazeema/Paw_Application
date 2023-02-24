@@ -3,10 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="@dimen/_130sdp"
-    android:layout_height="@dimen/_180sdp"
+    android:layout_height="@dimen/_160sdp"
     android:layout_margin="@dimen/_10sdp"
     app:cardCornerRadius="@dimen/_15sdp"
-    app:cardElevation="@dimen/_10sdp">
+    app:cardElevation="@dimen/_2sdp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -55,7 +55,7 @@
 
         <TextView
             android:id="@+id/tvFoodPrice"
-            style="@style/TextStyleSemiBold14"
+            style="@style/TextStyleSemiBold12"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/price"

@@ -1,4 +1,4 @@
-package com.bisha.paw.data
+package com.bisha.paw.data.model_ui
 
 import kotlin.reflect.KProperty1
 
@@ -20,10 +20,4 @@ enum class Category(val value: String) {
         }
     }
 }
-
-//
-//        fun getCategory(value: String): Map<KProperty1<Category, String>, Category> {
-//    val map = Category.values().associateBy { Category::value }
-//    return map
-//}
 

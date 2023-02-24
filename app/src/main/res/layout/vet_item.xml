@@ -7,7 +7,7 @@
     android:layout_marginHorizontal="@dimen/_20sdp"
     android:layout_marginVertical="@dimen/_5sdp"
     app:cardCornerRadius="@dimen/_15sdp"
-    app:cardElevation="@dimen/_10sdp">
+    app:cardElevation="@dimen/_2sdp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -32,6 +32,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_10sdp"
+            android:ellipsize="end"
+            android:maxLines="1"
             android:text="@string/full_name"
             android:textColor="@color/black32"
             app:layout_constraintEnd_toEndOf="parent"
@@ -43,6 +45,8 @@
             style="@style/TextStyleSemiBold12"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
             android:text="@string/hospital_name"
             android:textColor="@color/black32"
             app:layout_constraintBottom_toTopOf="@id/tvVetLocation"
@@ -55,6 +59,8 @@
             style="@style/TextStyleMedium12"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
             android:text="@string/location"
             android:textColor="@color/black50"
             app:layout_constraintBottom_toTopOf="@+id/tvVetPrice"
@@ -64,7 +70,7 @@
 
         <TextView
             android:id="@+id/tvVetPrice"
-            style="@style/TextStyleSemiBold14"
+            style="@style/TextStyleSemiBold12"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_10sdp"

@@ -7,7 +7,7 @@
     android:layout_marginHorizontal="@dimen/_10sdp"
     android:layout_marginVertical="@dimen/_10sdp"
     app:cardCornerRadius="@dimen/_15sdp"
-    app:cardElevation="@dimen/_10sdp">
+    app:cardElevation="@dimen/_2sdp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -17,7 +17,7 @@
         <com.makeramen.roundedimageview.RoundedImageView
             android:id="@+id/ivArticleItem"
             android:layout_width="0dp"
-            android:layout_height="@dimen/_100sdp"
+            android:layout_height="@dimen/_80sdp"
             android:contentDescription="@string/app_name"
             android:scaleType="centerCrop"
             app:layout_constraintEnd_toEndOf="parent"
