@@ -7,22 +7,29 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bisha.paw.R
-import com.bisha.paw.data.ArticleModel
+import com.bisha.paw.data.model_ui.Article
+import com.bisha.paw.utils.setImageUrl
 
 class DashboardArticleAdapter(
-    private val articles: ArrayList<ArticleModel>,
-    private val onClick: (ArticleModel) -> Unit
+    private val onClick: (Article) -> Unit
 ): RecyclerView.Adapter<DashboardArticleAdapter.MyViewHolder>() {
+
+    private var articles = arrayListOf<Article>()
+
+    fun setList(data: ArrayList<Article>) {
+        this.articles.addAll(data)
+        this.notifyDataSetChanged()
+    }
 
     class MyViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val articleTitle = view.findViewById<TextView>(R.id.tvNameArticleItem)
         val articleCategory = view.findViewById<TextView>(R.id.tvCategoryArticleItem)
         val articleImage = view.findViewById<ImageView>(R.id.ivArticleItem)
 
-        fun bind(model: ArticleModel) {
-            articleTitle.text = model.articleTitle
+        fun bind(model: Article) {
+            articleTitle.text = model.articleName
             articleCategory.text = model.articleCategory
-            articleImage.setImageResource(model.articleImg)
+            articleImage.setImageUrl(itemView.context, model.imageUrl)
         }
     }
 

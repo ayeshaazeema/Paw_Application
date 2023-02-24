@@ -3,16 +3,14 @@ package com.bisha.paw.presentation.food
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import com.bisha.paw.R
-import com.bisha.paw.data.ArticleModel
-import com.bisha.paw.data.Food
-import com.bisha.paw.presentation.article.ArticleDetailActivity
-import com.bisha.paw.presentation.authentication.SignInActivity
+import com.bisha.paw.data.model_ui.Food
+import com.bisha.paw.utils.setImageUrl
 import com.bisha.paw.utils.toFormatRupiah
 
 class FoodDetailActivity : AppCompatActivity() {
@@ -59,8 +57,10 @@ class FoodDetailActivity : AppCompatActivity() {
         val tvFoodSub: TextView = findViewById(R.id.detailFoodSub)
         val tvFoodDesc: TextView = findViewById(R.id.DescContent)
 
+        ivFoodDetail.setImageUrl(this, model.urlImage)
         tvFoodTitle.text = model.foodName
-        tvFoodPrice.text = model.foodPrice.toFormatRupiah()
+        tvFoodPrice.text = model.foodPrice.toInt().toFormatRupiah()
         tvFoodSub.text = model.foodBrand
+        tvFoodDesc.text = model.foodDescription
     }
 }

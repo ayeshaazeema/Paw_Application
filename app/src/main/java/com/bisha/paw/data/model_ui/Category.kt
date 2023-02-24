@@ -1,4 +1,4 @@
-package com.bisha.paw.data
+package com.bisha.paw.data.model_ui
 
 import kotlin.reflect.KProperty1
 

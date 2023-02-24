@@ -9,20 +9,30 @@ import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
 import androidx.cardview.widget.CardView
+import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bisha.paw.R
-import com.bisha.paw.data.ArticleModel
-import com.bisha.paw.data.Food
-import com.bisha.paw.presentation.article.ArticleAdapter
+import com.bisha.paw.data.model_ui.Article
+import com.bisha.paw.data.model_ui.Food
 import com.bisha.paw.presentation.article.ArticleDetailActivity
 import com.bisha.paw.presentation.food.FoodAdapter
 import com.bisha.paw.presentation.food.FoodDetailActivity
+import com.bisha.paw.presentation.viewmodel.MainViewModel
 import com.bisha.paw.utils.ArticleClickEvent
 import com.bisha.paw.utils.FoodClickEvent
 import com.bisha.paw.utils.RxEventBus
+import com.bisha.paw.utils.observeLiveData
 
 class DashboardFragment : Fragment() {
+
+    private val viewModel: MainViewModel by viewModels()
+
+    private lateinit var articleAdapter: DashboardArticleAdapter
+    private lateinit var foodAdapter: FoodAdapter
+
+    private var articles = arrayListOf<Article>()
+    private var foods = arrayListOf<Food>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -36,6 +46,14 @@ class DashboardFragment : Fragment() {
         val tvShowAllArticles = view.findViewById<TextView>(R.id.tvShowAllArticlesDashboard)
         val tvShowAllFoods = view.findViewById<TextView>(R.id.tvShowAllFoodDashboard)
         val cvDonate = view.findViewById<CardView>(R.id.cvDonate)
+
+        articleAdapter = DashboardArticleAdapter {
+            ArticleDetailActivity.start(requireContext(), it)
+        }
+
+        foodAdapter = FoodAdapter {
+            FoodDetailActivity.start(requireContext(), it)
+        }
 
         tvShowAllArticles.setOnClickListener {
             Log.d("CLICK", "ArticleClickEvent")
@@ -53,20 +71,44 @@ class DashboardFragment : Fragment() {
 
         rvArticleDashboard.apply {
             setHasFixedSize(true)
-            adapter = DashboardArticleAdapter(ArticleModel.getArticles()) {
-                ArticleDetailActivity.start(requireContext(), it)
-            }
+            adapter = articleAdapter
             layoutManager = LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false)
         }
 
         rvFoodDashboard.apply {
             setHasFixedSize(true)
-            adapter = FoodAdapter(Food.getFoods()) {
-                FoodDetailActivity.start(requireContext(), it)
-            }
+            adapter = foodAdapter
             layoutManager = LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false)
         }
 
+        initProcess()
+        initObservers()
+
         return view
+    }
+
+    private fun initProcess() {
+        viewModel.getArticles()
+        viewModel.getFoods()
+    }
+
+    private fun initObservers() {
+        viewModel.articlesResult.observeLiveData(
+            owner = viewLifecycleOwner,
+            context = requireContext(),
+            onSuccess = {
+                articles.addAll(it)
+                articleAdapter.setList(articles)
+            }
+        )
+
+        viewModel.foodsResult.observeLiveData(
+            owner = viewLifecycleOwner,
+            context = requireContext(),
+            onSuccess = {
+                foods.addAll(it)
+                foodAdapter.setList(foods)
+            }
+        )
     }
 }
