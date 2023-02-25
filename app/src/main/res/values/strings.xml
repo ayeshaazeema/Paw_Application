@@ -48,9 +48,9 @@
     <string name="dummy_email">user@email.com</string>
     <string name="dummy_name">User</string>
     <string name="sign_out">Sign Out</string>
-    <string name="search_vet">Search vet</string>
-    <string name="search_food">Search food</string>
-    <string name="search_article">Search article</string>
+    <string name="search_vet">Search Vet</string>
+    <string name="search_food">Search Food</string>
+    <string name="search_article">Search Article</string>
     <string name="price">Price</string>
     <string name="hospital_name">Hospital Name</string>
     <string name="location">Location</string>

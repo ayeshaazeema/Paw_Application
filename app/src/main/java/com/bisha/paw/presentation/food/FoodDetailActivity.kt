@@ -56,11 +56,16 @@ class FoodDetailActivity : AppCompatActivity() {
         val tvFoodPrice: TextView = findViewById(R.id.tvFoodPrice)
         val tvFoodSub: TextView = findViewById(R.id.detailFoodSub)
         val tvFoodDesc: TextView = findViewById(R.id.DescContent)
+        val ivBackFood: ImageView = findViewById(R.id.ivBackArticle)
 
         ivFoodDetail.setImageUrl(this, model.urlImage)
         tvFoodTitle.text = model.foodName
         tvFoodPrice.text = model.foodPrice.toInt().toFormatRupiah()
         tvFoodSub.text = model.foodBrand
         tvFoodDesc.text = model.foodDescription
+
+        ivBackFood.setOnClickListener {
+            finish()
+        }
     }
 }

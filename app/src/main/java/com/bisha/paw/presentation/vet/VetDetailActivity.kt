@@ -43,6 +43,17 @@ class VetDetailActivity : AppCompatActivity() {
 
         vet?.let { setDetailData(it) }
 
+        initSpinner()
+
+        val btnAppointment: Button = findViewById(R.id.btn_appointment)
+        btnAppointment.setOnClickListener {
+            VetAppointmentDialog {
+                finish()
+            }.show(supportFragmentManager, VetAppointmentDialog.VET_DIALOG)
+        }
+    }
+
+    private fun initSpinner() {
         val adapter: ArrayAdapter<String> = ArrayAdapter<String>(
             this,
             R.layout.support_simple_spinner_dropdown_item,
@@ -60,13 +71,6 @@ class VetDetailActivity : AppCompatActivity() {
                 selectedAppoinmentTime = selectedItem
             }
         }
-
-        val btnAppointment: Button = findViewById(R.id.btn_appointment)
-        btnAppointment.setOnClickListener {
-            VetAppointmentDialog {
-                finish()
-            }.show(supportFragmentManager, VetAppointmentDialog.VET_DIALOG)
-        }
     }
 
     private fun setDetailData(model: Vet) {
@@ -76,6 +80,7 @@ class VetDetailActivity : AppCompatActivity() {
         val tvVetLocation: TextView = findViewById(R.id.detailVetLocation)
         val tvVetPrice: TextView = findViewById(R.id.tvVetRange)
         val tvVetInfo: TextView = findViewById(R.id.InfoContent)
+        val ivBackVet: ImageView = findViewById(R.id.ivBackVet)
 
         ivDetailVet.setImageUrl(this, model.urlImage)
         tvVetName.text = model.vetName
@@ -83,5 +88,9 @@ class VetDetailActivity : AppCompatActivity() {
         tvVetLocation.text = model.vetLocation
         tvVetPrice.text = model.vetPrice.toInt().toFormatRupiah()
         tvVetInfo.text = model.vetInfo
+
+        ivBackVet.setOnClickListener {
+            finish()
+        }
     }
 }
