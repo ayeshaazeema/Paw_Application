@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
 import com.bisha.paw.R
-import com.bisha.paw.presentation.MainActivity
+import com.bisha.paw.presentation.main.MainActivity
 import com.bisha.paw.presentation.authentication.SignInActivity
 import com.bisha.paw.presentation.onboarding.OnboardingActivity
 import com.bisha.paw.utils.SessionManager

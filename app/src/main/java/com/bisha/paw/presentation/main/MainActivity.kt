@@ -1,4 +1,4 @@
-package com.bisha.paw.presentation
+package com.bisha.paw.presentation.main
 
 import android.content.Context
 import android.content.Intent

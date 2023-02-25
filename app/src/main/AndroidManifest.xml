@@ -19,7 +19,7 @@
             android:name=".presentation.vet.VetDetailActivity"
             android:exported="false" />
         <activity
-            android:name=".presentation.SearchActivity"
+            android:name=".presentation.main.SearchActivity"
             android:exported="false" />
         <activity
             android:name=".presentation.authentication.ForgotPasswordActivity"
@@ -34,7 +34,7 @@
             android:name=".presentation.onboarding.OnboardingActivity"
             android:exported="false" />
         <activity
-            android:name=".presentation.MainActivity"
+            android:name=".presentation.main.MainActivity"
             android:exported="false" />
         <activity
             android:name=".presentation.splash.SplashActivity"

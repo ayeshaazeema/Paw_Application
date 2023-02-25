@@ -72,6 +72,8 @@ dependencies {
     // Motion Layout
     implementation 'androidx.constraintlayout:constraintlayout:2.2.0-alpha05'
 
+    // Lottie
+    implementation 'com.airbnb.android:lottie:5.2.0'
 
     // ViewPager2
     implementation "androidx.viewpager2:viewpager2:1.0.0"

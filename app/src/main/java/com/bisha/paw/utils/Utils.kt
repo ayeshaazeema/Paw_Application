@@ -2,6 +2,7 @@ package com.bisha.paw.utils
 
 import android.content.Context
 import android.widget.ImageView
+import android.widget.SearchView
 import android.widget.Toast
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.LiveData
@@ -29,6 +30,20 @@ fun Context.getColorResource(id: Int) = resources.getColor(id)
 
 fun Context.showToast(message: String) {
     Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+}
+
+fun SearchView.onSearchQueryChanged(onChange: (String) -> Unit) {
+    this.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+        override fun onQueryTextSubmit(query: String?): Boolean {
+            onChange.invoke(query.orEmpty())
+            return false
+        }
+
+        override fun onQueryTextChange(query: String?): Boolean {
+            onChange.invoke(query.orEmpty())
+            return false
+        }
+    })
 }
 
 fun <U> LiveData<ViewState<U>>.observeLiveData(

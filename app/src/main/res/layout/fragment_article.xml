@@ -65,10 +65,10 @@
 
         </androidx.cardview.widget.CardView>
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/_40sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
             android:orientation="vertical">
 
             <androidx.recyclerview.widget.RecyclerView
@@ -82,11 +82,13 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvArticle"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                tools:listitem="@layout/article_item" />
+                android:layout_height="match_parent"
+                tools:listitem="@layout/article_item"
+                tools:itemCount="15"
+                android:layout_below="@id/rvCategory"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
 
-        </LinearLayout>
+        </RelativeLayout>
 
     </LinearLayout>
 

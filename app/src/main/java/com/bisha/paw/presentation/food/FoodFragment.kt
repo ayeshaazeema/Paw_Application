@@ -12,10 +12,10 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bisha.paw.R
 import com.bisha.paw.data.model_ui.Food
+import com.bisha.paw.presentation.main.PawLoadingDialog
 import com.bisha.paw.presentation.category.CategoryAdapter
 import com.bisha.paw.presentation.viewmodel.MainViewModel
 import com.bisha.paw.utils.observeLiveData
-import com.bisha.paw.utils.showToast
 
 class FoodFragment : Fragment() {
     private lateinit var foodAdapter: FoodAdapter
@@ -62,6 +62,13 @@ class FoodFragment : Fragment() {
             onSuccess = {
                 foods.addAll(it)
                 foodAdapter.setList(foods)
+                PawLoadingDialog.hideLoading(childFragmentManager)
+            },
+            onLoading = {
+                PawLoadingDialog.showLoading(childFragmentManager)
+            },
+            onFailure = {
+                PawLoadingDialog.hideLoading(childFragmentManager)
             }
         )
     }

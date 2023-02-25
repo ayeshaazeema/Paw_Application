@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bisha.paw.R
 import com.bisha.paw.data.model_ui.Vet
 import com.bisha.paw.databinding.FragmentVetBinding
+import com.bisha.paw.presentation.main.PawLoadingDialog
 import com.bisha.paw.presentation.viewmodel.MainViewModel
 import com.bisha.paw.utils.observeLiveData
 
@@ -61,6 +62,13 @@ class VetFragment : Fragment() {
             onSuccess = {
                 vets.addAll(it)
                 vetAdapter.setList(vets)
+                PawLoadingDialog.hideLoading(childFragmentManager)
+            },
+            onLoading = {
+                PawLoadingDialog.showLoading(childFragmentManager)
+            },
+            onFailure = {
+                PawLoadingDialog.hideLoading(childFragmentManager)
             }
         )
     }

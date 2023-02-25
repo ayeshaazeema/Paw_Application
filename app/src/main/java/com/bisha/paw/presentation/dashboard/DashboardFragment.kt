@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bisha.paw.R
 import com.bisha.paw.data.model_ui.Article
 import com.bisha.paw.data.model_ui.Food
+import com.bisha.paw.presentation.main.PawLoadingDialog
 import com.bisha.paw.presentation.article.ArticleDetailActivity
 import com.bisha.paw.presentation.food.FoodAdapter
 import com.bisha.paw.presentation.food.FoodDetailActivity
@@ -99,6 +100,13 @@ class DashboardFragment : Fragment() {
             onSuccess = {
                 articles.addAll(it)
                 articleAdapter.setList(articles)
+                PawLoadingDialog.hideLoading(childFragmentManager)
+            },
+            onLoading = {
+                PawLoadingDialog.showLoading(childFragmentManager)
+            },
+            onFailure = {
+                PawLoadingDialog.hideLoading(childFragmentManager)
             }
         )
 
@@ -108,6 +116,13 @@ class DashboardFragment : Fragment() {
             onSuccess = {
                 foods.addAll(it)
                 foodAdapter.setList(foods)
+                PawLoadingDialog.hideLoading(childFragmentManager)
+            },
+            onLoading = {
+                PawLoadingDialog.showLoading(childFragmentManager)
+            },
+            onFailure = {
+                PawLoadingDialog.hideLoading(childFragmentManager)
             }
         )
     }
