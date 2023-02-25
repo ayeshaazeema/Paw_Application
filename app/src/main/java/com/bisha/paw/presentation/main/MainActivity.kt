@@ -16,6 +16,9 @@ import com.bisha.paw.utils.FoodClickEvent
 import com.bisha.paw.utils.RxEventBus
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
+import org.greenrobot.eventbus.EventBus
+import org.greenrobot.eventbus.Subscribe
+import org.greenrobot.eventbus.ThreadMode
 
 class MainActivity : AppCompatActivity() {
 
@@ -32,7 +35,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
+        EventBus.getDefault().register(this)
         supportActionBar?.hide()
 
         // Bottom Navigation
@@ -51,24 +54,22 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
 
         bottomNavigationView.setupWithNavController(navController)
-        initRxBusEvent()
     }
 
 
-    private fun initRxBusEvent() {
-        RxEventBus.subscribe<ArticleClickEvent>()
-            .observeOn(AndroidSchedulers.mainThread())
-            .subscribe {
-                Log.d("ArticleClickEvent", "SUBCRIBED")
-                moveToOtherTab(R.id.articleFragment)
-            }.dispose()
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    fun onArticleClickEvent(event: ArticleClickEvent) {
+        moveToOtherTab(R.id.articleFragment)
+    }
 
-        RxEventBus.subscribe<FoodClickEvent>()
-            .observeOn(AndroidSchedulers.mainThread())
-            .subscribe {
-                Log.d("FoodClickEvent", "SUBCRIBED")
-                moveToOtherTab(R.id.foodFragment)
-            }.dispose()
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    fun onFoodClickEvent(event: FoodClickEvent) {
+        moveToOtherTab(R.id.foodFragment)
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        EventBus.getDefault().unregister(this)
     }
 
     private fun moveToOtherTab(tabId: Int) {

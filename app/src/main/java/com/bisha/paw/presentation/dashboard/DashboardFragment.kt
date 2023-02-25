@@ -24,13 +24,23 @@ import com.bisha.paw.utils.ArticleClickEvent
 import com.bisha.paw.utils.FoodClickEvent
 import com.bisha.paw.utils.RxEventBus
 import com.bisha.paw.utils.observeLiveData
+import org.greenrobot.eventbus.EventBus
 
 class DashboardFragment : Fragment() {
 
     private val viewModel: MainViewModel by viewModels()
 
-    private lateinit var articleAdapter: DashboardArticleAdapter
-    private lateinit var foodAdapter: FoodAdapter
+    private val articleAdapter: DashboardArticleAdapter by lazy {
+        DashboardArticleAdapter {
+            ArticleDetailActivity.start(requireContext(), it)
+        }
+    }
+
+    private val foodAdapter: FoodAdapter by lazy {
+        FoodAdapter {
+            FoodDetailActivity.start(requireContext(), it)
+        }
+    }
 
     private var articles = arrayListOf<Article>()
     private var foods = arrayListOf<Food>()
@@ -48,22 +58,12 @@ class DashboardFragment : Fragment() {
         val tvShowAllFoods = view.findViewById<TextView>(R.id.tvShowAllFoodDashboard)
         val cvDonate = view.findViewById<CardView>(R.id.cvDonate)
 
-        articleAdapter = DashboardArticleAdapter {
-            ArticleDetailActivity.start(requireContext(), it)
-        }
-
-        foodAdapter = FoodAdapter {
-            FoodDetailActivity.start(requireContext(), it)
-        }
-
         tvShowAllArticles.setOnClickListener {
-            Log.d("CLICK", "ArticleClickEvent")
-            RxEventBus.post(ArticleClickEvent())
+            EventBus.getDefault().post(ArticleClickEvent())
         }
 
         tvShowAllFoods.setOnClickListener {
-            Log.d("CLICK", "FoodClickEvent")
-            RxEventBus.post(FoodClickEvent())
+            EventBus.getDefault().post(FoodClickEvent())
         }
 
         cvDonate.setOnClickListener {
@@ -98,9 +98,10 @@ class DashboardFragment : Fragment() {
             owner = viewLifecycleOwner,
             context = requireContext(),
             onSuccess = {
+                PawLoadingDialog.hideLoading(childFragmentManager)
+
                 articles.addAll(it)
                 articleAdapter.setList(articles)
-                PawLoadingDialog.hideLoading(childFragmentManager)
             },
             onLoading = {
                 PawLoadingDialog.showLoading(childFragmentManager)
@@ -114,9 +115,10 @@ class DashboardFragment : Fragment() {
             owner = viewLifecycleOwner,
             context = requireContext(),
             onSuccess = {
+                PawLoadingDialog.hideLoading(childFragmentManager)
+
                 foods.addAll(it)
                 foodAdapter.setList(foods)
-                PawLoadingDialog.hideLoading(childFragmentManager)
             },
             onLoading = {
                 PawLoadingDialog.showLoading(childFragmentManager)
