@@ -4,7 +4,6 @@ import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -13,9 +12,7 @@ import androidx.navigation.ui.setupWithNavController
 import com.bisha.paw.R
 import com.bisha.paw.utils.ArticleClickEvent
 import com.bisha.paw.utils.FoodClickEvent
-import com.bisha.paw.utils.RxEventBus
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe
 import org.greenrobot.eventbus.ThreadMode

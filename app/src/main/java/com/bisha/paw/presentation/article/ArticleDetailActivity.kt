@@ -45,11 +45,13 @@ class ArticleDetailActivity : AppCompatActivity() {
         val tvArticleSub: TextView = findViewById(R.id.detailArticleSub)
         val tvArticleDesc: TextView = findViewById(R.id.DescContent)
         val ivBackArticle: ImageView = findViewById(R.id.ivBackArticle)
+        val tvHowToTakeCare: TextView = findViewById(R.id.HowToTakeCare)
 
         ivArticleDetail.setImageUrl(this, model.imageUrl)
         tvArticleTitle.text = model.articleName
         tvArticleSub.text = model.articleCategory
         tvArticleDesc.text = model.articleDescription
+        tvHowToTakeCare.text = model.articleHowTo
 
         ivBackArticle.setOnClickListener { finish() }
     }
