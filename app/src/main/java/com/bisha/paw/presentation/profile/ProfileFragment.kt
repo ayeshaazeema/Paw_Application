@@ -63,4 +63,3 @@ class ProfileFragment : Fragment(), View.OnClickListener {
         TODO("Not yet implemented")
     }
 }
-

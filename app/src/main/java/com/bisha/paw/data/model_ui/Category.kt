@@ -20,4 +20,3 @@ enum class Category(val value: String) {
         }
     }
 }
-

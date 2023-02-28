@@ -1,24 +1,30 @@
 package com.bisha.paw.presentation.food
 
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Filter
+import android.widget.Filterable
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bisha.paw.R
+import com.bisha.paw.data.model_ui.Article
 import com.bisha.paw.data.model_ui.Food
+import com.bisha.paw.presentation.article.searchable
 import com.bisha.paw.utils.setImageUrl
 import com.bisha.paw.utils.toFormatRupiah
 
 class FoodAdapter(
     private val onClick: (Food) -> Unit
-) : RecyclerView.Adapter<FoodAdapter.MyViewHolder>() {
+) : RecyclerView.Adapter<FoodAdapter.MyViewHolder>(), Filterable {
 
     private var foods = arrayListOf<Food>()
 
     fun setList(data: ArrayList<Food>) {
+        this.foods.clear()
         this.foods.addAll(data)
         this.notifyDataSetChanged()
     }
@@ -51,5 +57,23 @@ class FoodAdapter(
     }
 
     override fun getItemCount(): Int = foods.size
+
+    override fun getFilter(): Filter {
+        return object : Filter() {
+            override fun performFiltering(constraint: CharSequence?): FilterResults {
+                val filteredFoods = foods.searchable(constraint.toString())
+                Log.d("FILTERED", filteredFoods.toString())
+                return FilterResults().apply {
+                    values = filteredFoods
+                }
+            }
+
+            override fun publishResults(constraint: CharSequence?, results: FilterResults?) {
+                foods = results?.values as ArrayList<Food>
+                notifyDataSetChanged()
+            }
+
+        }
+    }
 
 }

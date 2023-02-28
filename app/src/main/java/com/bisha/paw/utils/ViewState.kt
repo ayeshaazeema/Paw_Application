@@ -4,7 +4,6 @@ sealed class ViewState<T> {
     class Loading<T> : ViewState<T>()
     class Default<T> : ViewState<T>()
     class Empty<T> : ViewState<T>()
-
     data class Success<T>(val data: T) : ViewState<T>()
     data class Failure<T>(val throwable: Throwable?, val message: String?) : ViewState<T>()
 

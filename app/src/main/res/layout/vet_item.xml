@@ -3,11 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/_100sdp"
+    android:layout_height="@dimen/_115sdp"
     android:layout_marginHorizontal="@dimen/_20sdp"
     android:layout_marginVertical="@dimen/_5sdp"
     app:cardCornerRadius="@dimen/_15sdp"
-    app:cardElevation="@dimen/_2sdp">
+    app:cardElevation="@dimen/_10sdp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -23,20 +23,17 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:riv_corner_radius="@dimen/_10sdp"
+            app:riv_corner_radius="15dp"
             tools:srcCompat="@tools:sample/avatars" />
 
         <TextView
             android:id="@+id/tvVetName"
-            style="@style/TextStyleSemiBold14"
-            android:layout_width="0dp"
+            style="@style/TextStyleSemiBold16"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_10sdp"
-            android:ellipsize="end"
-            android:maxLines="1"
             android:text="@string/full_name"
             android:textColor="@color/black32"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/ivVet"
             app:layout_constraintTop_toTopOf="@+id/ivVet" />
 
@@ -45,12 +42,10 @@
             style="@style/TextStyleSemiBold12"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:ellipsize="end"
-            android:maxLines="1"
+            android:layout_marginTop="10dp"
             android:text="@string/hospital_name"
             android:textColor="@color/black32"
             app:layout_constraintBottom_toTopOf="@id/tvVetLocation"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/tvVetName"
             app:layout_constraintTop_toBottomOf="@+id/tvVetName" />
 
@@ -59,28 +54,20 @@
             style="@style/TextStyleMedium12"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:ellipsize="end"
-            android:maxLines="2"
             android:text="@string/location"
             android:textColor="@color/black50"
-            app:layout_constraintBottom_toTopOf="@+id/tvVetPrice"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/tvVetHospital"
             app:layout_constraintTop_toBottomOf="@+id/tvVetHospital" />
 
         <TextView
             android:id="@+id/tvVetPrice"
-            style="@style/TextStyleSemiBold12"
-            android:layout_width="0dp"
+            style="@style/TextStyleSemiBold14"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_10sdp"
             android:text="@string/price"
             android:textColor="@color/green"
             app:layout_constraintBottom_toBottomOf="@+id/ivVet"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/ivVet"
-            app:layout_constraintTop_toBottomOf="@id/tvVetLocation" />
-
+            app:layout_constraintStart_toEndOf="@+id/ivVet" />
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 </androidx.cardview.widget.CardView>

@@ -1,8 +1,11 @@
 package com.bisha.paw.presentation.article
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Filter
+import android.widget.Filterable
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
@@ -14,11 +17,12 @@ import com.bumptech.glide.Glide
 
 class ArticleAdapter(
     private val onClick: (Article) -> Unit
-) : RecyclerView.Adapter<ArticleAdapter.MyViewHolder>() {
+) : RecyclerView.Adapter<ArticleAdapter.MyViewHolder>(), Filterable {
 
     private var articles = arrayListOf<Article>()
 
     fun setList(data: ArrayList<Article>) {
+        this.articles.clear()
         this.articles.addAll(data)
         this.notifyDataSetChanged()
     }
@@ -49,5 +53,23 @@ class ArticleAdapter(
     }
 
     override fun getItemCount(): Int = articles.size
+
+    override fun getFilter(): Filter {
+        return object : Filter() {
+            override fun performFiltering(constraint: CharSequence?): FilterResults {
+                val filteredArticles = articles.searchable(constraint.toString())
+                Log.d("FILTERED", filteredArticles.toString())
+                return FilterResults().apply {
+                    values = filteredArticles
+                }
+            }
+
+            override fun publishResults(constraint: CharSequence?, results: FilterResults?) {
+                articles = results?.values as ArrayList<Article>
+                notifyDataSetChanged()
+            }
+
+        }
+    }
 
 }

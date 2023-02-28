@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="250dp"
     android:layout_height="wrap_content"
-    android:layout_marginHorizontal="@dimen/_10sdp"
-    android:layout_marginVertical="@dimen/_10sdp"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginVertical="10dp"
     app:cardCornerRadius="@dimen/_15sdp"
-    app:cardElevation="@dimen/_2sdp">
+    app:cardElevation="10dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -17,20 +17,21 @@
         <com.makeramen.roundedimageview.RoundedImageView
             android:id="@+id/ivArticleItem"
             android:layout_width="0dp"
-            android:layout_height="@dimen/_80sdp"
+            android:layout_height="120dp"
             android:contentDescription="@string/app_name"
             android:scaleType="centerCrop"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:riv_corner_radius="@dimen/_10sdp" />
+            app:riv_corner_radius="15dp" />
 
         <TextView
             android:id="@+id/tvNameArticleItem"
             style="@style/TextStyleSemiBold14"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="10dp"
             android:ellipsize="end"
             android:maxLines="1"
             android:text="@string/name"
@@ -44,6 +45,7 @@
             style="@style/TextStyleMedium12"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
             android:ellipsize="end"
             android:maxLines="2"
             android:text="@string/category"

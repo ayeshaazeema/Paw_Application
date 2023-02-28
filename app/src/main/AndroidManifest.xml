@@ -10,37 +10,31 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Paw">
         <activity
-            android:name=".presentation.vet.VetDetailActivity"
-            android:exported="false"
-            android:parentActivityName=".presentation.MainActivity"/>
+            android:name=".presentation.article.ArticleDetailActivity"
+            android:exported="false" />
         <activity
             android:name=".presentation.food.FoodDetailActivity"
-            android:exported="false"
-            android:parentActivityName=".presentation.MainActivity"/>
+            android:exported="false" />
         <activity
-            android:name=".presentation.article.ArticleDetailActivity"
-            android:exported="false" android:parentActivityName=".presentation.MainActivity" />
+            android:name=".presentation.vet.VetDetailActivity"
+            android:exported="false" />
         <activity
-            android:name=".presentation.SearchActivity"
-            android:exported="false"
-            android:parentActivityName=".presentation.MainActivity"/>
+            android:name=".presentation.main.SearchActivity"
+            android:exported="false" />
         <activity
             android:name=".presentation.authentication.ForgotPasswordActivity"
-            android:exported="false"
-            android:parentActivityName=".presentation.MainActivity"/>
+            android:exported="false" />
         <activity
             android:name=".presentation.authentication.SignUpActivity"
-            android:exported="false"
-            android:parentActivityName=".presentation.MainActivity"/>
+            android:exported="false" />
         <activity
             android:name=".presentation.authentication.SignInActivity"
-            android:exported="true"
-            android:parentActivityName=".presentation.MainActivity"/>
+            android:exported="true" />
         <activity
             android:name=".presentation.onboarding.OnboardingActivity"
             android:exported="false" />
         <activity
-            android:name=".presentation.MainActivity"
+            android:name=".presentation.main.MainActivity"
             android:exported="false" />
         <activity
             android:name=".presentation.splash.SplashActivity"

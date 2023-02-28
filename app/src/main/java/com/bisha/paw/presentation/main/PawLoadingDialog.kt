@@ -1,19 +1,25 @@
-package com.bisha.paw.presentation.vet
+package com.bisha.paw.presentation.main
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import androidx.fragment.app.DialogFragment
+import androidx.fragment.app.FragmentManager
 import com.bisha.paw.R
 
-class VetAppointmentDialog(
-    private val onClick: () -> Unit
-) : DialogFragment() {
+class PawLoadingDialog : DialogFragment() {
 
     companion object {
-        const val VET_DIALOG = "vet_dialog"
+        const val LOADING_DIALOG = "loading_dialog"
+
+        fun showLoading(fragmentManager: FragmentManager) {
+            PawLoadingDialog().show(fragmentManager, LOADING_DIALOG)
+        }
+
+        fun hideLoading(fragmentManager: FragmentManager) {
+            (fragmentManager.findFragmentByTag(LOADING_DIALOG) as? DialogFragment)?.dismiss()
+        }
     }
 
     override fun onCreateView(
@@ -22,15 +28,7 @@ class VetAppointmentDialog(
         savedInstanceState: Bundle?
     ): View? {
         dialog?.window?.setBackgroundDrawableResource(R.drawable.dialog_round_corner)
-        val view = inflater.inflate(R.layout.dialog_appointment_layout, container, false)
-
-        val btnAppointment = view.findViewById<Button>(R.id.btn_appointment)
-        btnAppointment.setOnClickListener {
-            onClick()
-            dismiss()
-        }
-
-        return view
+        return inflater.inflate(R.layout.loading_dialog_layout, container, false)
     }
 
     override fun onStart() {
