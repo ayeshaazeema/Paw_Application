@@ -11,9 +11,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bisha.paw.R
-import com.bisha.paw.data.model_ui.Article
 import com.bisha.paw.data.model_ui.Food
-import com.bisha.paw.presentation.article.searchable
 import com.bisha.paw.utils.setImageUrl
 import com.bisha.paw.utils.toFormatRupiah
 
@@ -33,7 +31,7 @@ class FoodAdapter(
         val ivFood = view.findViewById<ImageView>(R.id.ivFood)
         val tvFoodName = view.findViewById<TextView>(R.id.tvFoodName)
         val tvFoodBrand = view.findViewById<TextView>(R.id.tvFoodBrand)
-        val tvFoodPrice = view.findViewById<TextView>(R.id.tvFoodPrice)
+        val tvFoodPrice = view.findViewById<TextView>(R.id.tvPriceFoodDetail)
 
         fun bind(model: Food) {
             tvFoodName.text = model.foodName

@@ -40,8 +40,8 @@ class CategoryAdapter(
     }
 
     class MyViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val tvCategory = view.findViewById<TextView>(R.id.tv_category)
-        val cvCategory = view.findViewById<CardView>(R.id.cv_category)
+        val tvCategory = view.findViewById<TextView>(R.id.tvCategory)
+        val cvCategory = view.findViewById<CardView>(R.id.cvCategory)
 
         fun bind(model: Category) {
             tvCategory.text = model.value

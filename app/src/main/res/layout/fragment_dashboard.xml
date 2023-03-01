@@ -10,55 +10,35 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cvProfileDashboard"
-            android:layout_width="@dimen/_50sdp"
-            android:layout_height="@dimen/_50sdp"
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/ivProfileDashboard"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
             android:layout_margin="@dimen/_20sdp"
-            android:layout_marginTop="@dimen/_20sdp"
-            android:elevation="@dimen/_20sdp"
-            app:cardCornerRadius="18dp"
+            android:contentDescription="@string/app_name"
+            android:elevation="@dimen/_2sdp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/dani_daniel"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent"
+            app:riv_corner_radius="@dimen/_10sdp" />
 
-            <ImageView
-                android:id="@+id/ivProfileDashboard"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:contentDescription="@string/app_name"
-                android:elevation="@dimen/_10sdp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/dani_daniel" />
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cvDonate"
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/ivDonate"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_150sdp"
             android:layout_margin="@dimen/_20sdp"
-            android:elevation="@dimen/_20sdp"
-            app:cardCornerRadius="@dimen/_20sdp"
+            android:contentDescription="@string/imageview"
+            android:elevation="@dimen/_2sdp"
+            android:scaleType="centerCrop"
+            app:riv_corner_radius="@dimen/_10sdp"
+            android:src="@drawable/img_donate"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/cvProfileDashboard">
-
-            <ImageView
-                android:id="@+id/ivDonate"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:contentDescription="@string/imageview"
-                android:elevation="@dimen/_10sdp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/img_donate"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/clArticleDetail" />
-
-        </androidx.cardview.widget.CardView>
+            app:layout_constraintTop_toBottomOf="@id/ivProfileDashboard" />
 
         <TextView
-            android:id="@+id/tvRecommendedArticlesDashboard"
+            android:id="@+id/tvRecommendedArticleDashboard"
             style="@style/TextStyleSemiBold14"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -67,28 +47,27 @@
             android:text="@string/recommended_articles"
             android:textColor="@color/black32"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cvDonate" />
+            app:layout_constraintTop_toBottomOf="@+id/ivDonate" />
 
         <TextView
-            android:id="@+id/tvShowAllArticlesDashboard"
+            android:id="@+id/tvShowAllArticleDashboard"
             style="@style/TextStyleMedium12"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/_20sdp"
             android:text="@string/show_all"
-            app:layout_constraintBottom_toBottomOf="@+id/tvRecommendedArticlesDashboard"
+            app:layout_constraintBottom_toBottomOf="@+id/tvRecommendedArticleDashboard"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/tvRecommendedArticlesDashboard" />
+            app:layout_constraintTop_toTopOf="@+id/tvRecommendedArticleDashboard" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvArticleDashboard"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_10sdp"
-            android:layout_marginTop="@dimen/_10sdp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvRecommendedArticlesDashboard" />
+            app:layout_constraintTop_toBottomOf="@id/tvRecommendedArticleDashboard" />
 
         <TextView
             android:id="@+id/tvRecommendedFoodDashboard"
@@ -96,7 +75,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_20sdp"
-            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_10sdp"
             android:text="@string/recommended_foods"
             android:textColor="@color/black32"
             app:layout_constraintStart_toStartOf="parent"
@@ -107,7 +86,7 @@
             style="@style/TextStyleMedium12"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
             android:text="@string/show_all"
             app:layout_constraintBottom_toBottomOf="@+id/tvRecommendedFoodDashboard"
             app:layout_constraintEnd_toEndOf="parent"
@@ -118,13 +97,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_10sdp"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:layout_marginBottom="@dimen/_40sdp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tvRecommendedFoodDashboard" />
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

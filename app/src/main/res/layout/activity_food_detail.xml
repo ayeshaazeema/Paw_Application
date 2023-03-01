@@ -7,6 +7,7 @@
     tools:context=".presentation.food.FoodDetailActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clFoodDetail1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -25,17 +26,19 @@
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
+                android:contentDescription="@string/imageview"
                 android:scaleType="centerCrop"
                 tools:src="@tools:sample/avatars" />
 
             <ImageView
-                android:id="@+id/ivBackArticle"
+                android:id="@+id/ivBackFood"
                 android:layout_width="@dimen/_40sdp"
                 android:layout_height="@dimen/_40sdp"
                 android:layout_alignTop="@id/ivFoodDetail"
                 android:layout_marginStart="@dimen/_10sdp"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:background="@drawable/background_back_button"
+                android:contentDescription="@string/imageview"
                 app:srcCompat="@drawable/ic_arrow_back_white" />
 
         </RelativeLayout>
@@ -49,35 +52,36 @@
             app:layout_constraintTop_toBottomOf="@+id/rlFoodDetail">
 
             <TextView
-                android:id="@+id/detailFoodTitle"
+                android:id="@+id/tvNameFoodDetail"
                 style="@style/TextStyleSemiBold18"
-                android:layout_width="220dp"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_20sdp"
-                android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_20sdp"
                 android:ellipsize="end"
                 android:gravity="start"
                 android:maxLines="2"
-                android:text="Food Name Title"
+                android:text="@string/name"
                 android:textColor="@color/black32"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/detailFoodSub"
+                android:id="@+id/tvBrandFoodDetail"
                 style="@style/TextStyleMedium14"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_medium"
-                android:text="Food sub"
+                android:text="@string/brand"
                 android:textColor="@color/black50"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/tvNameFoodDetail"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/detailFoodTitle"
-                app:layout_constraintTop_toBottomOf="@+id/detailFoodTitle" />
+                app:layout_constraintStart_toStartOf="@+id/tvNameFoodDetail"
+                app:layout_constraintTop_toBottomOf="@+id/tvNameFoodDetail" />
 
             <TextView
-                android:id="@+id/DescTitle"
+                android:id="@+id/tvDescriptionTitleFoodDetail"
                 style="@style/TextStyleSemiBold14"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -88,11 +92,11 @@
                 android:textColor="@color/black32"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/detailFoodSub"
-                app:layout_constraintTop_toBottomOf="@+id/detailFoodSub" />
+                app:layout_constraintStart_toStartOf="@+id/tvBrandFoodDetail"
+                app:layout_constraintTop_toBottomOf="@+id/tvPriceFoodDetail" />
 
             <TextView
-                android:id="@+id/DescContent"
+                android:id="@+id/tvDescriptionFoodDetail"
                 style="@style/TextStyleMedium12"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -101,65 +105,59 @@
                 android:textColor="@color/black32"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/DescTitle" />
+                app:layout_constraintTop_toBottomOf="@+id/tvDescriptionTitleFoodDetail" />
 
             <TextView
-                android:id="@+id/tvComposition"
+                android:id="@+id/tvCompositionTitleFoodDetail"
                 style="@style/TextStyleSemiBold14"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentBottom="true"
                 android:layout_marginTop="@dimen/_10sdp"
-                android:lineSpacingExtra="3sp"
                 android:text="@string/composition"
                 android:textColor="@color/black32"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/DescContent"
-                app:layout_constraintTop_toBottomOf="@+id/DescContent" />
+                app:layout_constraintStart_toStartOf="@+id/tvDescriptionFoodDetail"
+                app:layout_constraintTop_toBottomOf="@+id/tvDescriptionFoodDetail" />
 
             <TextView
-                android:id="@+id/tvCompositionDesc"
+                android:id="@+id/tvCompositionFoodDetail"
                 style="@style/TextStyleMedium12"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/_20sdp"
-                android:layout_marginBottom="5dp"
                 android:text="@string/shortdesc"
                 android:textColor="@color/black32"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvComposition" />
+                app:layout_constraintTop_toBottomOf="@+id/tvCompositionTitleFoodDetail" />
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnShop"
-                style="@style/TextStyleSemiBold18"
+                style="@style/ButtonActiveGreen"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_marginHorizontal="20dp"
-                android:layout_marginTop="40dp"
-                android:layout_marginBottom="30dp"
-                android:background="@drawable/btn_green_bg"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
                 android:text="@string/button_shop"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvCompositionDesc" />
+                app:layout_constraintTop_toBottomOf="@+id/tvCompositionFoodDetail" />
 
             <TextView
-                android:id="@+id/tvFoodPrice"
+                android:id="@+id/tvPriceFoodDetail"
                 style="@style/TextStyleSemiBold14"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="35dp"
-                android:text="Rp.30.000,00"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/price_30"
                 android:textColor="@color/green"
-                app:layout_constraintBottom_toBottomOf="@+id/detailFoodTitle"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/detailFoodTitle"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintEnd_toEndOf="@+id/tvBrandFoodDetail"
+                app:layout_constraintStart_toStartOf="@+id/tvBrandFoodDetail"
+                app:layout_constraintTop_toBottomOf="@+id/tvBrandFoodDetail" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

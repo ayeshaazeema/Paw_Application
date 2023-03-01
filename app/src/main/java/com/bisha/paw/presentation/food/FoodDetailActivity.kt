@@ -52,12 +52,12 @@ class FoodDetailActivity : AppCompatActivity() {
 
     private fun setDetailData(model: Food) {
         val ivFoodDetail: ImageView = findViewById(R.id.ivFoodDetail)
-        val tvFoodTitle: TextView = findViewById(R.id.detailFoodTitle)
-        val tvFoodPrice: TextView = findViewById(R.id.tvFoodPrice)
-        val tvFoodSub: TextView = findViewById(R.id.detailFoodSub)
-        val tvFoodDesc: TextView = findViewById(R.id.DescContent)
-        val ivBackFood: ImageView = findViewById(R.id.ivBackArticle)
-        val tvCompositionDesc: TextView = findViewById(R.id.tvCompositionDesc)
+        val tvFoodTitle: TextView = findViewById(R.id.tvNameFoodDetail)
+        val tvFoodPrice: TextView = findViewById(R.id.tvPriceFoodDetail)
+        val tvFoodSub: TextView = findViewById(R.id.tvBrandFoodDetail)
+        val tvFoodDesc: TextView = findViewById(R.id.tvDescriptionFoodDetail)
+        val ivBackFood: ImageView = findViewById(R.id.ivBackFood)
+        val tvCompositionDesc: TextView = findViewById(R.id.tvCompositionFoodDetail)
 
         ivFoodDetail.setImageUrl(this, model.urlImage)
         tvFoodTitle.text = model.foodName

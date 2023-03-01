@@ -11,9 +11,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bisha.paw.R
 import com.bisha.paw.data.model_ui.Article
-import com.bisha.paw.data.model_ui.Vet
 import com.bisha.paw.utils.setImageUrl
-import com.bumptech.glide.Glide
 
 class ArticleAdapter(
     private val onClick: (Article) -> Unit
@@ -28,7 +26,7 @@ class ArticleAdapter(
     }
 
     class MyViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val articleTitle = view.findViewById<TextView>(R.id.tvNameArticleItem)
+        val articleTitle = view.findViewById<TextView>(R.id.tvTitleArticleItem)
         val articleCategory = view.findViewById<TextView>(R.id.tvCategoryArticleItem)
         val articleImage = view.findViewById<ImageView>(R.id.ivArticleItem)
 

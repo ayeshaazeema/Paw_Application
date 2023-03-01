@@ -113,6 +113,7 @@
     <string name="appointment_set">Appointment Set!</string>
     <string name="appointment_dialog">Your appointment has been set. Please press the “OK” button to continue.</string>
     <string name="ok">OK</string>
+    <string name="loading">Loading...</string>
     <string-array name="sch_array">
         <item>Monday,April 25 2022</item>
         <item>Wednesday,April 27 2022</item>

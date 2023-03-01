@@ -126,7 +126,6 @@
         android:id="@+id/btnSignUp"
         style="@style/ButtonActiveYellow"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_40sdp"
         android:layout_marginBottom="@dimen/_10sdp"
         android:text="@string/sign_up"
         app:layout_constraintBottom_toTopOf="@id/tvQuestionSignUp"

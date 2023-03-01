@@ -35,7 +35,7 @@ class FoodFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_food, container, false)
-        val rvFoodItem = view.findViewById<RecyclerView>(R.id.rvFoodItem)
+        val rvFoodItem = view.findViewById<RecyclerView>(R.id.rvFood)
         val rvCategory = view.findViewById<RecyclerView>(R.id.rvCategory)
         val searchView = view.findViewById<SearchView>(R.id.svFood)
 

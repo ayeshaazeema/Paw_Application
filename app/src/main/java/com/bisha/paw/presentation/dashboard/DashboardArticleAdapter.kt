@@ -22,7 +22,7 @@ class DashboardArticleAdapter(
     }
 
     class MyViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val articleTitle = view.findViewById<TextView>(R.id.tvNameArticleItem)
+        val articleTitle = view.findViewById<TextView>(R.id.tvTitleArticleItem)
         val articleCategory = view.findViewById<TextView>(R.id.tvCategoryArticleItem)
         val articleImage = view.findViewById<ImageView>(R.id.ivArticleItem)
 

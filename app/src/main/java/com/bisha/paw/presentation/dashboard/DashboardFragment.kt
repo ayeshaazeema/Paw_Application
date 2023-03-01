@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.cardview.widget.CardView
@@ -52,9 +53,9 @@ class DashboardFragment : Fragment() {
 
         val rvArticleDashboard = view.findViewById<RecyclerView>(R.id.rvArticleDashboard)
         val rvFoodDashboard = view.findViewById<RecyclerView>(R.id.rvFoodDashboard)
-        val tvShowAllArticles = view.findViewById<TextView>(R.id.tvShowAllArticlesDashboard)
+        val tvShowAllArticles = view.findViewById<TextView>(R.id.tvShowAllArticleDashboard)
         val tvShowAllFoods = view.findViewById<TextView>(R.id.tvShowAllFoodDashboard)
-        val cvDonate = view.findViewById<CardView>(R.id.cvDonate)
+        val cvDonate = view.findViewById<ImageView>(R.id.ivDonate)
 
         tvShowAllArticles.setOnClickListener {
             EventBus.getDefault().post(ArticleClickEvent())

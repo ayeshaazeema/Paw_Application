@@ -44,7 +44,6 @@ class ArticleFragment : Fragment() {
         val rvArticle: RecyclerView = view.findViewById(R.id.rvArticle)
         val rvCategory: RecyclerView = view.findViewById(R.id.rvCategory)
         val searchView: SearchView = view.findViewById(R.id.svArticle)
-        val ivArticle: ImageView = view.findViewById(R.id.ivArticle)
 
         val linearLayoutManager = object : LinearLayoutManager(requireContext()) {
             override fun canScrollVertically() = false
@@ -61,7 +60,6 @@ class ArticleFragment : Fragment() {
             viewModel.getArticles()
         }
 
-        ivArticle.setImageResource(R.drawable.bird)
         viewModel.getArticles()
         initObservers()
         initSearchable(searchView)

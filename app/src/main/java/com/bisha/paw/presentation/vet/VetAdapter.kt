@@ -10,9 +10,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bisha.paw.R
-import com.bisha.paw.data.model_ui.Food
 import com.bisha.paw.data.model_ui.Vet
-import com.bisha.paw.presentation.food.searchable
 import com.bisha.paw.utils.setImageUrl
 import com.bisha.paw.utils.toFormatRupiah
 
@@ -29,11 +27,11 @@ class VetAdapter(
     }
 
     class MyViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val vetName = view.findViewById<TextView>(R.id.tvVetName)
-        val vetHospital = view.findViewById<TextView>(R.id.tvVetHospital)
-        val vetLocation = view.findViewById<TextView>(R.id.tvVetLocation)
-        val vetPrice = view.findViewById<TextView>(R.id.tvVetPrice)
-        val vetImage = view.findViewById<ImageView>(R.id.ivVet)
+        val vetName = view.findViewById<TextView>(R.id.tvNameVetItem)
+        val vetHospital = view.findViewById<TextView>(R.id.tvHospitalVetItem)
+        val vetLocation = view.findViewById<TextView>(R.id.tvLocationVetItem)
+        val vetPrice = view.findViewById<TextView>(R.id.tvPriceVetItem)
+        val vetImage = view.findViewById<ImageView>(R.id.ivVetItem)
 
         fun bind(model: Vet) {
             vetName.text = model.vetName

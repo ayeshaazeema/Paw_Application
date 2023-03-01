@@ -24,7 +24,7 @@ class VetAppointmentDialog(
         dialog?.window?.setBackgroundDrawableResource(R.drawable.dialog_round_corner)
         val view = inflater.inflate(R.layout.dialog_appointment_layout, container, false)
 
-        val btnAppointment = view.findViewById<Button>(R.id.btn_appointment)
+        val btnAppointment = view.findViewById<Button>(R.id.btnAppointment)
         btnAppointment.setOnClickListener {
             onClick()
             dismiss()

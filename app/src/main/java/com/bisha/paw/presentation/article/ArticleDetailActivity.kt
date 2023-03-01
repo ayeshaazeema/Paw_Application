@@ -41,11 +41,11 @@ class ArticleDetailActivity : AppCompatActivity() {
 
     private fun setDetailData(model: Article) {
         val ivArticleDetail: ImageView = findViewById(R.id.ivArticleDetail)
-        val tvArticleTitle: TextView = findViewById(R.id.detailArticleTitle)
-        val tvArticleSub: TextView = findViewById(R.id.detailArticleSub)
-        val tvArticleDesc: TextView = findViewById(R.id.DescContent)
+        val tvArticleTitle: TextView = findViewById(R.id.tvTitleArticleDetail)
+        val tvArticleSub: TextView = findViewById(R.id.tvCategoryArticleDetail)
+        val tvArticleDesc: TextView = findViewById(R.id.tvDescriptionArticleDetail)
         val ivBackArticle: ImageView = findViewById(R.id.ivBackArticle)
-        val tvHowToTakeCare: TextView = findViewById(R.id.HowToTakeCare)
+        val tvHowToTakeCare: TextView = findViewById(R.id.howToArticleDetail)
 
         ivArticleDetail.setImageUrl(this, model.imageUrl)
         tvArticleTitle.text = model.articleName

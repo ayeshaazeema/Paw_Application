@@ -45,7 +45,7 @@ class VetDetailActivity : AppCompatActivity() {
 
         initSpinner()
 
-        val btnAppointment: Button = findViewById(R.id.btn_appointment)
+        val btnAppointment: Button = findViewById(R.id.btnAppointment)
         btnAppointment.setOnClickListener {
             VetAppointmentDialog {
                 finish()
@@ -60,7 +60,7 @@ class VetDetailActivity : AppCompatActivity() {
             schedules
         )
 
-        val schSpinner: AutoCompleteTextView = findViewById(R.id.sch_spinner)
+        val schSpinner: AutoCompleteTextView = findViewById(R.id.scheduleSpinnerVetDetail)
         schSpinner.apply {
             setAdapter(adapter)
             setOnClickListener {
@@ -75,11 +75,11 @@ class VetDetailActivity : AppCompatActivity() {
 
     private fun setDetailData(model: Vet) {
         val ivDetailVet: ImageView = findViewById(R.id.ivVetDetail)
-        val tvVetName: TextView = findViewById(R.id.detailVetName)
-        val tvVetPlacename: TextView = findViewById(R.id.tvVetLocation)
-        val tvVetLocation: TextView = findViewById(R.id.detailVetLocation)
-        val tvVetPrice: TextView = findViewById(R.id.tvVetRange)
-        val tvVetInfo: TextView = findViewById(R.id.InfoContent)
+        val tvVetName: TextView = findViewById(R.id.tvNameVetDetail)
+        val tvVetPlacename: TextView = findViewById(R.id.tvLocationVetItem)
+        val tvVetLocation: TextView = findViewById(R.id.tvLocationVetDetail)
+        val tvVetPrice: TextView = findViewById(R.id.tvPriceVetDetail)
+        val tvVetInfo: TextView = findViewById(R.id.tvInformationVetDetail)
         val ivBackVet: ImageView = findViewById(R.id.ivBackVet)
 
         ivDetailVet.setImageUrl(this, model.urlImage)

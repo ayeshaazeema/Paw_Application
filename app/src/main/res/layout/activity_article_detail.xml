@@ -43,7 +43,7 @@
         </RelativeLayout>
 
         <TextView
-            android:id="@+id/detailArticleTitle"
+            android:id="@+id/tvTitleArticleDetail"
             style="@style/TextStyleBold18"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -58,7 +58,7 @@
             app:layout_constraintTop_toBottomOf="@+id/rlArticleDetail" />
 
         <TextView
-            android:id="@+id/detailArticleSub"
+            android:id="@+id/tvCategoryArticleDetail"
             style="@style/TextStyleMedium14"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -67,11 +67,11 @@
             android:textColor="@color/black50"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/detailArticleTitle"
-            app:layout_constraintTop_toBottomOf="@+id/detailArticleTitle" />
+            app:layout_constraintStart_toStartOf="@+id/tvTitleArticleDetail"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitleArticleDetail" />
 
         <TextView
-            android:id="@+id/DescTitle"
+            android:id="@+id/tvDescriptionTitleArticleDetail"
             style="@style/TextStyleSemiBold14"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -82,11 +82,11 @@
             android:textColor="@color/black32"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/detailArticleSub"
-            app:layout_constraintTop_toBottomOf="@+id/detailArticleSub" />
+            app:layout_constraintStart_toStartOf="@+id/tvCategoryArticleDetail"
+            app:layout_constraintTop_toBottomOf="@+id/tvCategoryArticleDetail" />
 
         <TextView
-            android:id="@+id/DescContent"
+            android:id="@+id/tvDescriptionArticleDetail"
             style="@style/TextStyleMedium12"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -95,10 +95,10 @@
             android:textColor="@color/black32"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/DescTitle" />
+            app:layout_constraintTop_toBottomOf="@+id/tvDescriptionTitleArticleDetail" />
 
         <TextView
-            android:id="@+id/HowToTitle"
+            android:id="@+id/howToTitleArticleDetail"
             style="@style/TextStyleSemiBold14"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -109,22 +109,22 @@
             android:textColor="@color/black32"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/DescContent"
-            app:layout_constraintTop_toBottomOf="@+id/DescContent" />
+            app:layout_constraintStart_toStartOf="@+id/tvDescriptionArticleDetail"
+            app:layout_constraintTop_toBottomOf="@+id/tvDescriptionArticleDetail" />
 
         <TextView
-            android:id="@+id/HowToTakeCare"
+            android:id="@+id/howToArticleDetail"
             style="@style/TextStyleMedium12"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/_20sdp"
-            android:layout_marginBottom="@dimen/_50sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
             android:text="@string/descdummy"
             android:textColor="@color/black32"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/HowToTitle" />
+            app:layout_constraintTop_toBottomOf="@+id/howToTitleArticleDetail" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

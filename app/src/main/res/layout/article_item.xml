@@ -6,8 +6,8 @@
     android:layout_height="@dimen/_60sdp"
     android:layout_marginHorizontal="@dimen/_20sdp"
     android:layout_marginVertical="@dimen/_5sdp"
-    app:cardCornerRadius="@dimen/_15sdp"
-    app:cardElevation="10dp">
+    app:cardCornerRadius="@dimen/_10sdp"
+    app:cardElevation="@dimen/_2sdp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -23,10 +23,10 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:riv_corner_radius="15dp" />
+            app:riv_corner_radius="@dimen/_10sdp" />
 
         <TextView
-            android:id="@+id/tvNameArticleItem"
+            android:id="@+id/tvTitleArticleItem"
             style="@style/TextStyleSemiBold14"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -45,8 +45,8 @@
             android:text="@string/category"
             android:textColor="@color/black50"
             app:layout_constraintBottom_toBottomOf="@id/ivArticleItem"
-            app:layout_constraintStart_toStartOf="@id/tvNameArticleItem"
-            app:layout_constraintTop_toBottomOf="@id/tvNameArticleItem" />
+            app:layout_constraintStart_toStartOf="@id/tvTitleArticleItem"
+            app:layout_constraintTop_toBottomOf="@id/tvTitleArticleItem" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

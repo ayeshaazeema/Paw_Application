@@ -81,7 +81,6 @@
         android:id="@+id/btnSignIn"
         style="@style/ButtonActiveYellow"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_40sdp"
         android:layout_marginBottom="@dimen/_10sdp"
         android:text="@string/sign_in"
         app:layout_constraintBottom_toTopOf="@id/tvQuestionSignIn"
