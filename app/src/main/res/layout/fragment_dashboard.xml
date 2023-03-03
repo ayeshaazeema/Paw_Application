@@ -11,19 +11,6 @@
         android:layout_height="wrap_content">
 
         <com.makeramen.roundedimageview.RoundedImageView
-            android:id="@+id/ivProfileDashboard"
-            android:layout_width="@dimen/_40sdp"
-            android:layout_height="@dimen/_40sdp"
-            android:layout_margin="@dimen/_20sdp"
-            android:contentDescription="@string/app_name"
-            android:elevation="@dimen/_2sdp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/dani_daniel"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:riv_corner_radius="@dimen/_10sdp" />
-
-        <com.makeramen.roundedimageview.RoundedImageView
             android:id="@+id/ivDonate"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_150sdp"
@@ -31,11 +18,11 @@
             android:contentDescription="@string/imageview"
             android:elevation="@dimen/_2sdp"
             android:scaleType="centerCrop"
-            app:riv_corner_radius="@dimen/_10sdp"
             android:src="@drawable/img_donate"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/ivProfileDashboard" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:riv_corner_radius="@dimen/_10sdp" />
 
         <TextView
             android:id="@+id/tvRecommendedArticleDashboard"
