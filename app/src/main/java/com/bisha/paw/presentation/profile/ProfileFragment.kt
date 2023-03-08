@@ -32,8 +32,9 @@ class ProfileFragment : Fragment(), View.OnClickListener {
         firebaseUser = FirebaseAuth.getInstance().currentUser
         refUser = FirebaseDatabase.getInstance().getReference("User").child(firebaseUser!!.uid)
         refUser!!.addValueEventListener(object : ValueEventListener {
-            override fun onCancelled(error: DatabaseError) {
 
+            override fun onCancelled(error: DatabaseError) {
+                TODO("Not yet implemented")
             }
 
             override fun onDataChange(snapshot: DataSnapshot) {
