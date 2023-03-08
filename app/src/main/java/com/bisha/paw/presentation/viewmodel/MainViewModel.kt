@@ -15,7 +15,6 @@ import kotlinx.coroutines.launch
 
 class MainViewModel : ViewModel() {
 
-    // use lazy because we're not using any Dependency Injection whatsoever
     private val repository: MainRepository by lazy {
         return@lazy MainRepository()
     }

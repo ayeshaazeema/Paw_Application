@@ -42,20 +42,19 @@ class SessionManager(private val context: Context) {
         mPreferences.edit().putBoolean(key, value).apply()
     }
 
-    private fun getString(key: String, default: String): String {
-        return mPreferences.getString(key, default).orEmpty()
-    }
-
-    private fun saveString(key: String, value: String) {
-        mPreferences.edit().putString(key, value).apply()
-    }
-
-    private fun clearAll() {
-        mPreferences.edit().clear().apply()
-    }
-
-    private fun remove(key: String) {
-        mPreferences.edit().remove(key).apply()
-    }
-
+//    private fun getString(key: String, default: String): String {
+//        return mPreferences.getString(key, default).orEmpty()
+//    }
+//
+//    private fun saveString(key: String, value: String) {
+//        mPreferences.edit().putString(key, value).apply()
+//    }
+//
+//    private fun clearAll() {
+//        mPreferences.edit().clear().apply()
+//    }
+//
+//    private fun remove(key: String) {
+//        mPreferences.edit().remove(key).apply()
+//    }
 }

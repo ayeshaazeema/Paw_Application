@@ -71,7 +71,6 @@ class VetAdapter(
                 vets = results?.values as ArrayList<Vet>
                 notifyDataSetChanged()
             }
-
         }
     }
 }

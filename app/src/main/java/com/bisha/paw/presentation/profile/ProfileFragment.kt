@@ -40,7 +40,7 @@ class ProfileFragment : Fragment(), View.OnClickListener {
                 snapshot.children.forEach { _ ->
                     val name = snapshot.child("name").value.toString()
                     val email = snapshot.child("email").value.toString()
-                    val profileImage = snapshot.child("profile_image").value.toString()
+//                    val profileImage = snapshot.child("profile_image").value.toString()
 
                     binding.tvNameProfile.text = name
                     binding.tvEmailProfile.text = email

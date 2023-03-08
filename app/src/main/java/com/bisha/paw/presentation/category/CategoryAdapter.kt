@@ -34,10 +34,10 @@ class CategoryAdapter(
         }
     }
 
-    fun setList(data: List<Category>) {
-        this.categories.addAll(data)
-        this.notifyDataSetChanged()
-    }
+//    fun setList(data: List<Category>) {
+//        this.categories.addAll(data)
+//        this.notifyDataSetChanged()
+//    }
 
     class MyViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val tvCategory = view.findViewById<TextView>(R.id.tvCategory)

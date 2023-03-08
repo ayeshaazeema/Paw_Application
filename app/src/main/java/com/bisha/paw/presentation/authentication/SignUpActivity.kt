@@ -93,7 +93,6 @@ class SignUpActivity : AppCompatActivity(), View.OnClickListener {
                             .message.toString(), Toast.LENGTH_SHORT
                     ).show()
                     finish()
-
                 }
             }
         }

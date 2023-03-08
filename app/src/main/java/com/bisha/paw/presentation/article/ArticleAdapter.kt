@@ -66,8 +66,6 @@ class ArticleAdapter(
                 articles = results?.values as ArrayList<Article>
                 notifyDataSetChanged()
             }
-
         }
     }
-
 }

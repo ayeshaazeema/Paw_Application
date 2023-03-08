@@ -95,7 +95,6 @@ class FoodFragment : Fragment() {
         foods.addAll(data)
         foodAdapter.setList(foods)
     }
-
 }
 
 fun List<Food>.searchable(query: String): List<Food> {

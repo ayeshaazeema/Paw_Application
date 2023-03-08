@@ -11,11 +11,11 @@ sealed class ViewState<T> {
         fun <T> loading(): ViewState<T> = Loading()
         fun <T> default(): ViewState<T> = Default()
         fun <T> success(data: T): ViewState<T> = Success(data)
-        fun <T> empty(): ViewState<T> = Empty()
-        fun <T> fail(throwable: Throwable, message: String?): ViewState<T> =
-            Failure(throwable, message)
+//        fun <T> empty(): ViewState<T> = Empty()
+//        fun <T> fail(throwable: Throwable, message: String?): ViewState<T> =
+//            Failure(throwable, message)
 
         fun <T> fail(message: String?): ViewState<T> = Failure(null, message)
-        fun <T> fail(throwable: Throwable): ViewState<T> = Failure(throwable, null)
+//        fun <T> fail(throwable: Throwable): ViewState<T> = Failure(throwable, null)
     }
 }

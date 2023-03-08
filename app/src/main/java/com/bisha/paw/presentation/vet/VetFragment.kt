@@ -90,7 +90,6 @@ class VetFragment : Fragment() {
         vets.addAll(data)
         vetAdapter.setList(vets)
     }
-
 }
 
 fun List<Vet>.searchable(query: String): List<Vet> {

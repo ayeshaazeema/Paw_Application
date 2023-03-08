@@ -53,7 +53,6 @@ class MainActivity : AppCompatActivity() {
         bottomNavigationView.setupWithNavController(navController)
     }
 
-
     @Subscribe(threadMode = ThreadMode.MAIN)
     fun onArticleClickEvent(event: ArticleClickEvent) {
         moveToOtherTab(R.id.articleFragment)
@@ -73,5 +72,4 @@ class MainActivity : AppCompatActivity() {
         val viewTab: View = bottomNavigationView.findViewById(tabId)
         viewTab.performClick()
     }
-
 }

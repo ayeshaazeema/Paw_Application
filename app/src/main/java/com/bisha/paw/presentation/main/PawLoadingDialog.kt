@@ -37,5 +37,4 @@ class PawLoadingDialog : DialogFragment() {
         val height = (resources.displayMetrics.heightPixels * 0.40).toInt()
         dialog?.window?.setLayout(width, ViewGroup.LayoutParams.WRAP_CONTENT)
     }
-
 }

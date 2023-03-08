@@ -48,5 +48,4 @@ class DashboardArticleAdapter(
     }
 
     override fun getItemCount(): Int = articles.size
-
 }
